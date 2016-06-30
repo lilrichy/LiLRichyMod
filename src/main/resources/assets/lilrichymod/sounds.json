@@ -1,0 +1,20 @@
+{
+  "blockTableCraftSound": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "BlockTableSound",
+        "stream": false
+      }
+    ]
+  },
+  "blockTableCraftSound2": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "BlockTableSound2",
+        "stream": false
+      }
+    ]
+  }
+}

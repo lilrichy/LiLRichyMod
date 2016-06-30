@@ -1,0 +1,20 @@
+{
+    "variants": {
+        "east=false,north=false,south=false,type=0,west=false,": { "model": "lilrichymod:panes/pane_nsew" },
+        "east=false,north=true,south=false,type=0,west=false,": { "model": "lilrichymod:panes/pane_n" },
+        "east=true,north=false,south=false,type=0,west=false,": { "model": "lilrichymod:panes/pane_n", "y": 90 },
+        "east=false,north=false,south=true,type=0,west=false,": { "model": "lilrichymod:panes/pane_n", "y": 180 },
+        "east=false,north=false,south=false,type=0,west=true,": { "model": "lilrichymod:panes/pane_n", "y": 270 },
+        "east=true,north=true,south=false,type=0,west=false,": { "model": "lilrichymod:panes/pane_ne" },
+        "east=true,north=false,south=true,type=0,west=false,": { "model": "lilrichymod:panes/pane_ne", "y": 90 },
+        "east=false,north=false,south=true,type=0,west=true,": { "model": "lilrichymod:panes/pane_ne", "y": 180 },
+        "east=false,north=true,south=false,type=0,west=true,": { "model": "lilrichymod:panes/pane_ne", "y": 270 },
+        "east=false,north=true,south=true,type=0,west=false,": { "model": "lilrichymod:panes/pane_ns" },
+        "east=true,north=false,south=false,type=0,west=true,": { "model": "lilrichymod:panes/pane_ns", "y": 90 },
+        "east=true,north=true,south=true,type=0,west=false,": { "model": "lilrichymod:panes/pane_nse" },
+        "east=true,north=false,south=true,type=0,west=true,": { "model": "lilrichymod:panes/pane_nse", "y": 90 },
+        "east=false,north=true,south=true,type=0,west=true,": { "model": "lilrichymod:panes/pane_nse", "y": 180 },
+        "east=true,north=true,south=false,type=0,west=true,": { "model": "lilrichymod:panes/pane_nse", "y": 270 },
+        "east=true,north=true,south=true,type=0,west=true,": { "model": "lilrichymod:panes/pane_nsew" }
+    }
+}

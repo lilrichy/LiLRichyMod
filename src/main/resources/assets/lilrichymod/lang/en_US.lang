@@ -1,0 +1,199 @@
+itemGroup.lilrichymod=LiLRichy Mod
+
+#ITEMS
+item.deathSock.name=Death Sock
+item.concreteMix.name=Concrete Mix
+item.crushedConcrete.name=Crushed Concrete
+item.essenceOfBeard.name=Essence of Beard
+
+#BLOCK TABLE
+tile.blockTable.name=Block Table
+
+#Lectern
+tile.lilrichymod:lectern.name=Lectern
+
+#BLOCKS------------------------------------------------------------------------------------------------
+#COTTAGE
+tile.cottageWall.name=Cottage Wall
+tile.cottageWallArchedBeam.name=Cottage Wall with Arched Beam
+tile.cottageWallArchedBeamDark.name=Cottage Wall with Arched Beam Dark
+tile.cottageWallDark.name=Cottage Wall Dark
+tile.cottageWallPanelDark.name=Cottage Wall Panel Dark
+tile.cottageWallPanelLight.name=Cottage Wall Panel Light
+tile.cottageWallXDark.name=Cottage Crossed Wall Dark
+tile.cottageWallXLight.name=Cottage Crossed Wall Light
+tile.cottageWindowDark.name=Cottage Window Dark
+tile.cottageWindowLight.name=Cottage Window Light
+
+#METAL
+tile.metalArmor.name=Metal Armor
+tile.metalBatteredRobot.name=Metal Battered Robot
+tile.metalBrushedSteel.name=Metal Brushed Steel
+tile.metalBrushedSteelDark.name=Metal Brushed Steel Dark
+tile.metalBubbleGrip.name=Metal Bubble Grip
+tile.metalLaserEtched.name=Metal Laser Etched
+tile.metalNeedlepointSteel.name=Metal Needlepoint Steel
+tile.metalPlating.name=Metal Plating
+tile.metalPlatingDark.name=Metal Plating Dark
+tile.metalRustedIronGrip.name=Metal Rusted Iron Grip
+tile.metalSeafoamTarnish.name=Metal Sea Foam Tarnish
+tile.metalStained.name=Metal Stained
+
+tile.metalBatteredRobotBlue.name=Metal Battered Robot Blue
+tile.metalBatteredRobotOrange.name=Metal Battered Robot Orange
+tile.metalBatteredRobotPurple.name=Metal Battered Robot Purple
+
+#LAVA
+tile.lavaBowl.name=Lava Bowl
+tile.lavaCracks.name=Lava Cracks
+tile.lavaDeepFire.name=Lava Deep Fire
+tile.lavaPelesLake.name=Lava Pele's Lake
+tile.lavaSearingGorge.name=Lava Searing Gorge
+tile.lavaSlumberingVolcano.name=Lava Slumbering Volcano
+
+tile.lavaBowlBlue.name=Lava Bowl Blue
+tile.lavaBowlGreen.name=Lava Bowl Green
+tile.lavaBowlPurple.name=Lava Bowl Purple
+
+#MARBLE
+tile.marbleBlack.name=Black Marble
+tile.marbleBlancoAurora.name=Blanco Aurora Marble
+tile.marbleBlancoNafin.name=Blanco Nafin Marble
+tile.marbleSpottedBianco.name=Spotted Bianco Marble
+
+#CONCRETE
+tile.concrete.name=Concrete
+tile.concreteArrangedBricks.name=Arranged Concrete Bricks
+tile.concreteBricks.name=Concrete Bricks
+tile.concreteBricksDark.name=Dark Concrete Bricks
+tile.concreteFancyBlocks.name=Fancy Concrete Blocks
+tile.concreteOldSquares.name=Old Concrete Squares
+tile.concreteRocks.name=Concrete Rocks
+tile.concreteSquares.name=Concrete Squares
+tile.concreteSmallBricks.name=Small Concrete Bricks
+tile.concreteSmallTexturedSquares.name=Small Textured Concrete Squares
+tile.concreteTexturedBlocks.name=Textured Concrete Blocks
+
+#STONE
+tile.stoneCracked.name=Cracked Stone
+tile.stoneArrangedBricks.name=Arranged Stone Bricks
+tile.stoneBlocks.name=Stone Blocks
+tile.stoneBlocksDark.name=Dark Stone Blocks
+tile.stoneMinerals.name=Stone Minerals
+
+tile.stoneMineralsBlue.name=Stone Minerals Blue
+tile.stoneMineralsOrange.name=Stone Minerals Orange
+tile.stoneMineralsPurple.name=Stone Minerals Purple
+#End of Blocks---------------------------------------------------------------------------------------------------
+
+
+#Stairs----------------------------------------------------------------------------------------------------------
+#METAL
+tile.lilrichymod:decorativeBlocks/metalBatteredRobotStairs.name=Metal Battered Robot Stairs
+tile.lilrichymod:decorativeBlocks/metalBatteredRobotBlueStairs.name=Metal Battered Robot Blue Stairs
+tile.lilrichymod:decorativeBlocks/metalBatteredRobotOrangeStairs.name=Metal Battered Robot Orange Stairs
+tile.lilrichymod:decorativeBlocks/metalBatteredRobotPurpleStairs.name=Metal Battered Robot Purple Stairs
+tile.lilrichymod:decorativeBlocks/metalBubbleGripStairs.name=Metal Bubble Grip Stairs
+tile.lilrichymod:decorativeBlocks/metalNeedlepointSteelStairs.name=Metal Needlepoint Steel Stairs
+tile.lilrichymod:decorativeBlocks/metalRustedIronGripStairs.name=Metal Rusted Iron Grip Stairs
+tile.lilrichymod:decorativeBlocks/metalSeafoamTarnishStairs.name=Metal Sea Foam Tarnish Stairs
+tile.lilrichymod:decorativeBlocks/metalStainedStairs.name=Metal Stained Stairs
+
+#LAVA
+tile.lilrichymod:decorativeBlocks/lavaBowlStairs.name=Lava Bowl Stairs
+tile.lilrichymod:decorativeBlocks/lavaBowlBlueStairs.name=Lava Bowl Blue Stairs
+tile.lilrichymod:decorativeBlocks/lavaBowlGreenStairs.name=Lava Bowl Green Stairs
+tile.lilrichymod:decorativeBlocks/lavaBowlPurpleStairs.name=Lava Bowl Purple Stairs
+tile.lilrichymod:decorativeBlocks/lavaCracksStairs.name=Lava Cracks Stairs
+tile.lilrichymod:decorativeBlocks/lavaDeepFireStairs.name=Lava Deep Fire Stairs
+tile.lilrichymod:decorativeBlocks/lavaPelesLakeStairs.name=Lava Pele's Lake Stairs
+tile.lilrichymod:decorativeBlocks/lavaSearingGorgeStairs.name=Lava Searing Gorge Stairs
+tile.lilrichymod:decorativeBlocks/lavaSlumberingVolcanoStairs.name=Lava Slumbering Volcano Stairs
+
+#MARBLE
+tile.lilrichymod:decorativeBlocks/marbleBlackStairs.name=Black Marble Stairs
+tile.lilrichymod:decorativeBlocks/marbleBlancoAuroraStairs.name=Blanco Aurora Marble Stairs
+tile.lilrichymod:decorativeBlocks/marbleBlancoNafinStairs.name=Blanco Nafin Marble Stairs
+tile.lilrichymod:decorativeBlocks/marbleSpottedBiancoStairs.name=Spotted Bianco Marble Stairs
+
+#CONCRETE
+tile.lilrichymod:decorativeBlocks/arrangedConcreteBricksStairs.name=Arranged Concrete Bricks Stairs
+tile.lilrichymod:decorativeBlocks/fancyConcreteBlocksStairs.name=Fancy Concrete Blocks Stairs
+tile.lilrichymod:decorativeBlocks/concreteBricksStairs.name=Concrete Bricks Stairs
+tile.lilrichymod:decorativeBlocks/concreteBricksDarkStairs.name=Dark Concrete Bricks Stairs
+tile.lilrichymod:decorativeBlocks/concreteRocksStairs.name=Concrete Rocks Stairs
+tile.lilrichymod:decorativeBlocks/concreteTexturedBlocksStairs.name=Textured Concrete Blocks Stairs
+tile.lilrichymod:decorativeBlocks/oldConcreteSquaresStairs.name=Old Concrete Squares Stairs
+tile.lilrichymod:decorativeBlocks/concreteSquaresStairs.name=Concrete Squares Stairs
+tile.lilrichymod:decorativeBlocks/smallConcreteBricksStairs.name=Small Concrete Bricks Stairs
+tile.lilrichymod:decorativeBlocks/smallConcreteTexturedSquaresStairs.name=Small Textured Concrete Squares Stairs
+
+#STONE
+tile.lilrichymod:decorativeBlocks/crackedStoneStairs.name=Cracked Stone Stairs
+tile.lilrichymod:decorativeBlocks/arrangedStoneBricksStairs.name=Arranged Stone Bricks Stairs
+tile.lilrichymod:decorativeBlocks/stoneBlocksStairs.name=Stone Blocks Stairs
+tile.lilrichymod:decorativeBlocks/stoneBlocksDarkStairs.name=Dark Stone Blocks Stairs
+tile.lilrichymod:decorativeBlocks/stoneMineralsStairs.name=Stone Minerals Stairs
+tile.lilrichymod:decorativeBlocks/stoneMineralsBlueStairs.name=Stone Minerals Blue Stairs
+tile.lilrichymod:decorativeBlocks/stoneMineralsOrangeStairs.name=Stone Minerals Orange Stairs
+tile.lilrichymod:decorativeBlocks/stoneMineralsPurpleStairs.name=Stone Minerals Purple Stairs
+#End of Stairs --------------------------------------------------------------------------------------------
+
+#PANELS PLANKS
+tile.lilrichymod:panels/acaciaPanel.name=Acacia Planks Paneling
+tile.lilrichymod:panels/big_oakPanel.name=Dark Oak Planks Paneling
+tile.lilrichymod:panels/birchPanel.name=Birch Planks Paneling
+tile.lilrichymod:panels/junglePanel.name=Jungle Planks Paneling
+tile.lilrichymod:panels/oakPanel.name=Oak Planks Paneling
+tile.lilrichymod:panels/sprucePanel.name=Spruce Planks Paneling
+
+#PANELS LOGS
+tile.lilrichymod:panels/log_acaciaPanel.name=Acacia Wood Paneling
+tile.lilrichymod:panels/log_big_oakPanel.name=Dark Oak Wood Paneling
+tile.lilrichymod:panels/log_birchPanel.name=Birch Wood Paneling
+tile.lilrichymod:panels/log_junglePanel.name=Jungle Wood Paneling
+tile.lilrichymod:panels/log_oakPanel.name=Oak Wood Paneling
+tile.lilrichymod:panels/log_sprucePanel.name=Spruce Wood Paneling
+
+#DETECTORS
+tile.lilrichymod:playerDetector.name=Player Detector
+tile.lilrichymod:advancedDetector.name=Advanced Detector
+gui.lilrichymod.AdvancedDetector.button.invert=Inverted
+gui.lilrichymod.AdvancedDetector.button.regular=Regular
+
+#CROPS
+tile.beardedAzalea.name=Bearded Azalea
+item.beardedAzaleaSeed.name=Bearded Azalea Seeds
+
+#CLEAR GLASS
+tile.DecoClearGlass.clearGlassBlack.name=Clear Black Glass
+tile.DecoClearGlass.clearGlassBlue.name=Clear Blue Glass
+tile.DecoClearGlass.clearGlassBrown.name=Clear Brown Glass
+tile.DecoClearGlass.clearGlassCyan.name=Clear Cyan Glass
+tile.DecoClearGlass.clearGlassGray.name=Clear Gray Glass
+tile.DecoClearGlass.clearGlassGreen.name=Clear Green Glass
+tile.DecoClearGlass.clearGlassLightBlue.name=Clear Light Blue Glass
+tile.DecoClearGlass.clearGlassLime.name=Clear Lime Glass
+tile.DecoClearGlass.clearGlassMagenta.name=Clear Magenta Glass
+tile.DecoClearGlass.clearGlassOrange.name=Clear Orange Glass
+tile.DecoClearGlass.clearGlassPink.name=Clear Pink Glass
+tile.DecoClearGlass.clearGlassPurple.name=Clear Purple Glass
+tile.DecoClearGlass.clearGlassRed.name=Clear Red Glass
+tile.DecoClearGlass.clearGlassSilver.name=Clear Silver Glass
+tile.DecoClearGlass.clearGlassYellow.name=Clear Yellow Glass
+
+#FROSTY GLASS
+tile.DecoGlass.frostyGlassBlue.name=Frosty Blue Glass
+tile.DecoGlass.frostyGlassGreen.name=Frosty Green Glass
+tile.DecoGlass.frostyGlassPurple.name=Frosty Purple Glass
+
+#Glass Panes
+tile.lilrichymod:glass/clearGlassBluePane.name=Clear Blue Glass Pane
+tile.lilrichymod:glass/clearGlassGreenPane.name=Clear Green Glass Pane
+tile.lilrichymod:glass/clearGlassPinkPane.name=Clear Pink Glass Pane
+tile.lilrichymod:glass/clearGlassBrownPane.name=Clear Brown Glass Pane
+
+tile.lilrichymod:glass/frostyGlassBluePane.name=Frosty Blue Glass Pane
+tile.lilrichymod:glass/frostyGlassGreenPane.name=Frosty Green Glass Pane
+tile.lilrichymod:glass/frostyGlassPurplePane.name=Frosty Purple Glass Pane
+

@@ -1,0 +1,16 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "minecraft:cube_all",
+        "transform": "forge:default-block"
+    },
+    "variants": {
+        "type": {
+            "0": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/stonearrangedBricks" } },
+            "1": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/stoneBlocks" } },
+            "2": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/stoneBlocksDark" } },
+            "3": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/stoneCracked" } },
+            "4": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/stoneMinerals" } }
+        }
+    }
+}

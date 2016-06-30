@@ -1,0 +1,23 @@
+ItemStack inkSack = new ItemStack(Items.dye, 1, 0);
+ItemStack redDye = new ItemStack(Items.dye, 1, 1);
+ItemStack greenDye = new ItemStack(Items.dye, 1, 2);
+
+Color List: "black", "red", "green", "brown", "blue", "purple", "cyan", "silver", "gray", "pink", "lime", "yellow", "lightBlue", "magenta", "orange", "white"
+
+Specific Metas
+0 Ink Sac
+1 Rose Red
+2 Cactus Green
+3 Cocoa Beans
+4 Lapis Lazula
+5 Purple Dye
+6 Cyan Dye
+7 Light Gray Dye
+8 Gray Dye
+9 Pink Dye
+10 Lime Dye
+11 Dandelion Yellow
+12 Light Blue Dye
+13 Magenta Dye
+14 Orange Dye
+15 Bone Meal

@@ -1,0 +1,11 @@
+LiLRichy Mod Change Log
+Version = Minecraft Change . Forge Change . Mod change += incremental NEVER Reset
+Update version in this file, build.gradle, gradle.properties, Reference
+
+
+v2.0.0
+Port mod from Minecraft v1.7.10 to v1.8.9
+New Model For Block Table
+Added 6 New Metal Blocks
+Added Clear Glass blocks for all 16 colors
+Added Convenience recipe for a leaver to be crafted from a Stone and stick.

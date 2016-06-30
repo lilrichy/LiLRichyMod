@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:block/pane_nsw",
+    "textures": {
+        "edge": "lilrichymod:blocks/panels/acaciaPanelTop",
+        "pane": "lilrichymod:blocks/panels/acaciaPanelSide"
+    }
+}

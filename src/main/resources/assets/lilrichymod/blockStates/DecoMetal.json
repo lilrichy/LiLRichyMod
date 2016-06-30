@@ -1,0 +1,23 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "minecraft:cube_all",
+        "transform": "forge:default-block"
+    },
+    "variants": {
+        "type": {
+            "0": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/metalArmor" } },
+            "1": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/metalBatteredRobot" } },
+            "2": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/metalBrushedSteel" } },
+            "3": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/metalBrushedSteelDark" } },
+            "4": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/metalBubbleGrip" } },
+            "5": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/metalLaserEtched" } },
+            "6": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/metalNeedlepointSteel" } },
+            "7": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/metalPlating" } },
+            "8": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/metalPlatingDark" } },
+            "9": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/metalRustedIronGrip" } },
+            "10": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/metalSeafoamTarnish" } },
+            "11": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/metalStained" } }
+        }
+    }
+}

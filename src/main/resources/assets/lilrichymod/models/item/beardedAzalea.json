@@ -1,0 +1,6 @@
+{
+    "parent": "lilrichymod:item/standard_item",
+    "textures": {
+        "layer0": "lilrichymod:items/crops/beardedAzalea"
+    }
+}

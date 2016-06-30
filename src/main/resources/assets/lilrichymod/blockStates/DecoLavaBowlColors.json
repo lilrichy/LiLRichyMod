@@ -1,0 +1,14 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "minecraft:cube_all",
+        "transform": "forge:default-block"
+    },
+    "variants": {
+        "type": {
+            "0": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/lavaBowlBlue" } },
+            "1": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/lavaBowlGreen" } },
+            "2": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/lavaBowlPurple" } }
+        }
+    }
+}

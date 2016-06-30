@@ -1,0 +1,21 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "minecraft:cube_all",
+        "transform": "forge:default-block"
+    },
+    "variants": {
+        "type": {
+            "0": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/cottageWall" } },
+            "1": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/cottageWallArchedBeam" } },
+            "2": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/cottageWallArchedBeamDark" } },
+            "3": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/cottageWallDark" } },
+            "4": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/cottageWallPanelDark" } },
+            "5": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/cottageWallPanelLight" } },
+            "6": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/cottageWallXDark" } },
+            "7": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/cottageWallXLight" } },
+            "8": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/cottageWindowDark" } },
+            "9": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/cottageWindowLight" } }
+        }
+    }
+}

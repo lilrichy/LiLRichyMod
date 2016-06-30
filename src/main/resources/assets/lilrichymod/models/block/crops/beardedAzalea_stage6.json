@@ -1,0 +1,6 @@
+{
+    "parent": "lilrichymod:block/crops/cross",
+    "textures": {
+        "crop": "lilrichymod:blocks/crops/beardedAzalea_stage_6"
+    }
+}

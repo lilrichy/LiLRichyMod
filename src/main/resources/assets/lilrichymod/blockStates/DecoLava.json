@@ -1,0 +1,17 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "minecraft:cube_all",
+        "transform": "forge:default-block"
+    },
+    "variants": {
+        "type": {
+            "0": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/lavaBowl" } },
+            "1": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/lavaCracks" } },
+            "2": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/lavaDeepFire" } },
+            "3": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/lavaPelesLake" } },
+            "4": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/lavaSearingGorge" } },
+            "5": { "textures": {  "all": "lilrichymod:blocks/decorativeBlocks/lavaSlumberingVolcano" } }
+        }
+    }
+}
