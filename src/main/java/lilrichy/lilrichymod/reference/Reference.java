@@ -1,7 +1,5 @@
 package lilrichy.lilrichymod.reference;
 
-import lilrichy.lilrichymod.blocks.BlockConcrete;
-
 public class Reference {
 
     public static final String MOD_ID = "lilrichymod";
@@ -43,7 +41,7 @@ public class Reference {
     }
 
     //Blocks
-    public static enum ModBlocks{
+    public static enum ModBlocks {
 
         CONCRETE("concrete", "BlockConcrete"),
         CONCRETE_ARRANGED_BRICKS("concreteArrangedBricks", "BlockConcreteArrangedBricks"),
@@ -76,7 +74,7 @@ public class Reference {
         LAVA_DEEP_FIRE("lavaDeepFire", "BlockLavaDeepFire"),
         LAVA_PELES_LAKE("lavaPelesLake", "BlockLavaPelesLake"),
         LAVA_SEARING_GORGE("lavaSearingGorge", "BlockLavaSearingGorge"),
-        LAVA_SLUMBERING_VOLCANO("lavaSlumberingVolcano","BlockLavaSlumberingVolcano"),
+        LAVA_SLUMBERING_VOLCANO("lavaSlumberingVolcano", "BlockLavaSlumberingVolcano"),
 
         MARBLE_BLACK("marbleBlack", "BlockMarbleBlack"),
         MARBLE_BLANCO_AURORA("marbleBlancoAurora", "BlockMarbleBlancoAurora"),
@@ -106,14 +104,24 @@ public class Reference {
         STONE_MINERALS("stoneMinerals", "BlockStoneMinerals"),
         STONE_MINERALS_BLUE("stoneMineralsBlue", "BlockStoneMineralsBlue"),
         STONE_MINERALS_ORANGE("stoneMineralsOrange", "BlockStoneMineralsOrange"),
-        STONE_MINERALS_PURPLE("stoneMineralsPurple", "BlockStoneMineralsPurple");
+        STONE_MINERALS_PURPLE("stoneMineralsPurple", "BlockStoneMineralsPurple"),
 
-
-
-
-
-
-
+        CLEAR_GLASS("clearGlass", "BlockClearGlass"),
+        CLEAR_GLASS_BLACK("clearGlassBlack", "BlockClearGlassBlack"),
+        CLEAR_GLASS_BLUE("clearGlassBlue", "BlockClearGlassBlue"),
+        CLEAR_GLASS_BROWN("clearGlassBrown", "BlockClearGlassBrown"),
+        CLEAR_GLASS_CYAN("clearGlassCyan", "BlockClearGlassCyan"),
+        CLEAR_GLASS_GRAY("clearGlassGray", "BlockClearGlassGray"),
+        CLEAR_GLASS_GREEN("clearGlassGreen", "BlockClearGlassGreen"),
+        CLEAR_GLASS_LIGHT_BLUE("clearGlassLightBlue", "BlockClearGlassLightBlue"),
+        CLEAR_GLASS_LIME("clearGlassLime", "BlockClearGlassLime"),
+        CLEAR_GLASS_MAGENTA("clearGlassMagenta", "BlockClearGlassMagenta"),
+        CLEAR_GLASS_ORANGE("clearGlassOrange", "BlockClearGlassOrange"),
+        CLEAR_GLASS_PINK("clearGlassPink", "BlockClearGlassPink"),
+        CLEAR_GLASS_PURPLE("clearGlassPurple", "BlockClearGlassPurple"),
+        CLEAR_GLASS_RED("clearGlassRed", "BlockClearGlassRed"),
+        CLEAR_GLASS_SILVER("clearGlassSilver", "BlockClearGlassSilver"),
+        CLEAR_GLASS_Yellow("clearGlassYellow", "BlockClearGlassYellow");
 
         private String unlocalizedName;
         private String registryName;
@@ -126,7 +134,6 @@ public class Reference {
         public String getUnlocalizedName() {
             return unlocalizedName;
         }
-
         public String getRegistryName() {
             return registryName;
         }

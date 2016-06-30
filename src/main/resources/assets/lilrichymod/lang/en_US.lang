@@ -166,21 +166,22 @@ tile.beardedAzalea.name=Bearded Azalea
 item.beardedAzaleaSeed.name=Bearded Azalea Seeds
 
 #CLEAR GLASS
-tile.DecoClearGlass.clearGlassBlack.name=Clear Black Glass
-tile.DecoClearGlass.clearGlassBlue.name=Clear Blue Glass
-tile.DecoClearGlass.clearGlassBrown.name=Clear Brown Glass
-tile.DecoClearGlass.clearGlassCyan.name=Clear Cyan Glass
-tile.DecoClearGlass.clearGlassGray.name=Clear Gray Glass
-tile.DecoClearGlass.clearGlassGreen.name=Clear Green Glass
-tile.DecoClearGlass.clearGlassLightBlue.name=Clear Light Blue Glass
-tile.DecoClearGlass.clearGlassLime.name=Clear Lime Glass
-tile.DecoClearGlass.clearGlassMagenta.name=Clear Magenta Glass
-tile.DecoClearGlass.clearGlassOrange.name=Clear Orange Glass
-tile.DecoClearGlass.clearGlassPink.name=Clear Pink Glass
-tile.DecoClearGlass.clearGlassPurple.name=Clear Purple Glass
-tile.DecoClearGlass.clearGlassRed.name=Clear Red Glass
-tile.DecoClearGlass.clearGlassSilver.name=Clear Silver Glass
-tile.DecoClearGlass.clearGlassYellow.name=Clear Yellow Glass
+tile.clearGlass.name=Clear Glass
+tile.clearGlassBlack.name=Clear Black Glass
+tile.clearGlassBlue.name=Clear Blue Glass
+tile.clearGlassBrown.name=Clear Brown Glass
+tile.clearGlassCyan.name=Clear Cyan Glass
+tile.clearGlassGray.name=Clear Gray Glass
+tile.clearGlassGreen.name=Clear Green Glass
+tile.clearGlassLightBlue.name=Clear Light Blue Glass
+tile.clearGlassLime.name=Clear Lime Glass
+tile.clearGlassMagenta.name=Clear Magenta Glass
+tile.clearGlassOrange.name=Clear Orange Glass
+tile.clearGlassPink.name=Clear Pink Glass
+tile.clearGlassPurple.name=Clear Purple Glass
+tile.clearGlassRed.name=Clear Red Glass
+tile.clearGlassSilver.name=Clear Silver Glass
+tile.clearGlassYellow.name=Clear Yellow Glass
 
 #FROSTY GLASS
 tile.DecoGlass.frostyGlassBlue.name=Frosty Blue Glass

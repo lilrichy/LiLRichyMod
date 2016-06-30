@@ -76,6 +76,23 @@ public class ModBlocks {
     public static Block stoneMineralsOrange;
     public static Block stoneMineralsPurple;
 
+    public static Block clearGlass;
+    public static Block clearGlassBlack;
+    public static Block clearGlassBlue;
+    public static Block clearGlassBrown;
+    public static Block clearGlassCyan;
+    public static Block clearGlassGray;
+    public static Block clearGlassGreen;
+    public static Block clearGlassLightBlue;
+    public static Block clearGlassLime;
+    public static Block clearGlassMagenta;
+    public static Block clearGlassOrange;
+    public static Block clearGlassPink;
+    public static Block clearGlassPurple;
+    public static Block clearGlassRed;
+    public static Block clearGlassSilver;
+    public static Block clearGlassYellow;
+
 
     public static void init() {
         concrete = new BlockConcrete();
@@ -141,6 +158,23 @@ public class ModBlocks {
         stoneMineralsOrange = new BlockStoneMineralsOrange();
         stoneMineralsPurple = new BlockStoneMineralsPurple();
 
+        clearGlass = new BlockClearGlass();
+        clearGlassBlack = new BlockClearGlassBlack();
+        clearGlassBlue = new BlockClearGlassBlue();
+        clearGlassBrown = new BlockClearGlassBrown();
+        clearGlassCyan = new BlockClearGlassCyan();
+        clearGlassGray = new BlockClearGlassGray();
+        clearGlassGreen = new BlockClearGlassGreen();
+        clearGlassLightBlue = new BlockClearGlassLightBlue();
+        clearGlassLime = new BlockClearGlassLime();
+        clearGlassMagenta = new BlockClearGlassMagenta();
+        clearGlassOrange = new BlockClearGlassOrange();
+        clearGlassPink = new BlockClearGlassPink();
+        clearGlassPurple = new BlockClearGlassPurple();
+        clearGlassRed = new BlockClearGlassRed();
+        clearGlassSilver = new BlockClearGlassSilver();
+        clearGlassYellow = new BlockClearGlassYellow();
+
     }
 
     public static void register() {
@@ -205,6 +239,23 @@ public class ModBlocks {
         registerBlock(stoneMineralsBlue);
         registerBlock(stoneMineralsOrange);
         registerBlock(stoneMineralsPurple);
+
+        registerBlock(clearGlass);
+        registerBlock(clearGlassBlack);
+        registerBlock(clearGlassBlue);
+        registerBlock(clearGlassBrown);
+        registerBlock(clearGlassCyan);
+        registerBlock(clearGlassGray);
+        registerBlock(clearGlassGreen);
+        registerBlock(clearGlassLightBlue);
+        registerBlock(clearGlassLime);
+        registerBlock(clearGlassMagenta);
+        registerBlock(clearGlassOrange);
+        registerBlock(clearGlassPink);
+        registerBlock(clearGlassPurple);
+        registerBlock(clearGlassRed);
+        registerBlock(clearGlassSilver);
+        registerBlock(clearGlassYellow);
     }
 
     public static void registerRenders() {
@@ -269,212 +320,35 @@ public class ModBlocks {
         registerRender(stoneMineralsBlue);
         registerRender(stoneMineralsOrange);
         registerRender(stoneMineralsPurple);
-            }
+
+        registerRender(clearGlass);
+        registerRender(clearGlassBlack);
+        registerRender(clearGlassBlue);
+        registerRender(clearGlassBrown);
+        registerRender(clearGlassCyan);
+        registerRender(clearGlassGray);
+        registerRender(clearGlassGreen);
+        registerRender(clearGlassLightBlue);
+        registerRender(clearGlassLime);
+        registerRender(clearGlassMagenta);
+        registerRender(clearGlassOrange);
+        registerRender(clearGlassPink);
+        registerRender(clearGlassPurple);
+        registerRender(clearGlassRed);
+        registerRender(clearGlassSilver);
+        registerRender(clearGlassYellow);
+
+    }
 
     public static void registerRender(Block block) {
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(
                 Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName(), "inventory"));
     }
 
-    private static void registerBlock(Block block){
+    private static void registerBlock(Block block) {
         GameRegistry.register(block);
         ItemBlock itemBlock = new ItemBlock(block);
         itemBlock.setRegistryName(block.getRegistryName());
         GameRegistry.register(itemBlock);
     }
-
-
-//-------------------------------------Old Code---------------------------------------------------------------
-
-   /* //Crops
- //todo public static final LiLRichyCrop beardedAzalea = new BeardedAzalea(Names.Crops.BEARDED_AZALEA);
-
-    //Concrete
-    public static Block concrete_block = new BlockConcrete(Names.Blocks.CONCRETE, Material.ROCK);
-
-    public static Block deco_concrete = new DecoSubBlocks("DecoConcrete", Material.ROCK,
-            Names.CraftingToolTips.CRAFT_WITH, Names.CraftingToolTips.CONCRETE_BLOCKS, DecoBlockVarStrings.concreteTypes, DecoBlockVarStrings.concreteTypes.length);
-    //Cottage
-    public static Block deco_cottage = new DecoSubBlocks("DecoCottage", Material.WOOD,
-            Names.CraftingToolTips.CRAFT_WITH, Names.CraftingToolTips.COTTAGE_BLOCKS, DecoBlockVarStrings.cottageTypes, DecoBlockVarStrings.cottageTypes.length);
-
-    //Lava
-    public static Block deco_lava = new DecoSubBlocks("DecoLava", Material.ROCK,
-            Names.CraftingToolTips.CRAFT_WITH, Names.CraftingToolTips.LAVA_BLOCKS, DecoBlockVarStrings.lavaTypes, DecoBlockVarStrings.lavaTypes.length);
-    public static Block deco_lavaBowlColors = new DecoSubBlocks("DecoLavaBowlColors", Material.ROCK,
-            Names.CraftingToolTips.CRAFT_WITH, Names.CraftingToolTips.LAVA_BOWL_COLORS, DecoBlockVarStrings.lavaBowlTypes, DecoBlockVarStrings.lavaBowlTypes.length);
-
-    //Marble
-    public static Block deco_marble = new DecoSubBlocks("DecoMarble", Material.ROCK,
-            Names.CraftingToolTips.CRAFT_WITH, Names.CraftingToolTips.MARBLE_BLOCKS, DecoBlockVarStrings.marbleTypes, DecoBlockVarStrings.marbleTypes.length);
-
-    //Metal
-    public static Block deco_metal = new DecoSubBlocks("DecoMetal", Material.IRON,
-            Names.CraftingToolTips.CRAFT_WITH, Names.CraftingToolTips.METAL_BLOCKS, DecoBlockVarStrings.metalTypes, DecoBlockVarStrings.metalTypes.length);
-    public static Block deco_metalRobotColors = new DecoSubBlocks("DecoMetalRobotColors", Material.IRON,
-            Names.CraftingToolTips.CRAFT_WITH, Names.CraftingToolTips.METAL_ROBOT_COLORS, DecoBlockVarStrings.metalRobotTypes, DecoBlockVarStrings.metalRobotTypes.length);
-
-    //Stone
-    public static Block deco_stone = new DecoSubBlocks("DecoStone", Material.ROCK,
-            Names.CraftingToolTips.CRAFT_WITH, Names.CraftingToolTips.STONE_BLOCKS, DecoBlockVarStrings.stoneTypes, DecoBlockVarStrings.stoneTypes.length);
-    public static Block deco_stoneMineralsColors = new DecoSubBlocks("DecoStoneMineralsColors", Material.ROCK,
-            Names.CraftingToolTips.CRAFT_WITH, Names.CraftingToolTips.STONE_MINERALS_COLORS_CRAFT, DecoBlockVarStrings.stoneMineralsTypes, DecoBlockVarStrings.stoneMineralsTypes.length);
-
-    //Glass
-   //Todo
-    *//* public static Block deco_ClearGlass = new GlassBlocks("DecoClearGlass", Material.glass,
-            Names.CraftingToolTips.CRAFT_WITH, Names.CraftingToolTips.GLASS_CLEAR, DecoBlockVarStrings.clearGlassTypes, DecoBlockVarStrings.clearGlassTypes.length);*//*
-
-    //Panels
-    public static Block deco_paneling = new LiLRichyPanel("DecoPaneling", Material.WOOD, true,
-            DecoBlockVarStrings.panelingTypes,DecoBlockVarStrings.panelingTypes.length);
-
-    *//**
-     * Initial Registry
-     * Register the blocks to the game and to ore dictionary
-     * if block has sub blocks then use registerOreDicMeta toregister to Ore Dictionary
-     * Decorative blocks should also register Ore Dictionary - SmeltToConcrete to allow them to be
-     * smelted back into concrete blocks.
-     * Color Versions of Blocks should also Ore Dictionary there main version.
-     *//*
-    public static void register() {
-        //Crops
-      //todo  GameRegistry.registerBlock(beardedAzalea, CropItemBlock.class, beardedAzalea.getUnlocalizedName().substring(5));
-
-        //Concrete
-        GameRegistry.registerBlock(concrete_block, concrete_block.getUnlocalizedName().substring(5));
-        OreDictionary.registerOre(Names.OreDicNames.CONCRETE, concrete_block);
-
-        GameRegistry.registerBlock(deco_concrete, ItemBlockMeta.class, "DecoConcrete");
-        registerOreDicMeta(deco_concrete, Names.OreDicNames.CONCRETE);
-        registerOreDicMeta(deco_concrete, Names.OreDicNames.SMELT_TO_CONCRETE);
-
-        //Cottage
-        GameRegistry.registerBlock(deco_cottage, ItemBlockMeta.class, "DecoCottage");
-        registerOreDicMeta(deco_cottage, Names.OreDicNames.COTTAGE);
-        registerOreDicMeta(deco_cottage, Names.OreDicNames.SMELT_TO_CONCRETE);
-
-        //Lava
-        GameRegistry.registerBlock(deco_lava, ItemBlockMeta.class, "DecoLava");
-        registerOreDicMeta(deco_lava, Names.OreDicNames.LAVA);
-        registerOreDicMeta(deco_lava, Names.OreDicNames.SMELT_TO_CONCRETE);
-        GameRegistry.registerBlock(deco_lavaBowlColors, ItemBlockMeta.class, "DecoLavaBowlColors");
-        registerOreDicMeta(deco_lavaBowlColors, Names.OreDicNames.LAVA_BOWL);
-        registerOreDicMeta(deco_lavaBowlColors, Names.OreDicNames.LAVA);
-        registerOreDicMeta(deco_lavaBowlColors, Names.OreDicNames.SMELT_TO_CONCRETE);
-
-        //Marble
-        GameRegistry.registerBlock(deco_marble, ItemBlockMeta.class, "DecoMarble");
-        registerOreDicMeta(deco_marble, Names.OreDicNames.MARBLE);
-        registerOreDicMeta(deco_marble, Names.OreDicNames.SMELT_TO_CONCRETE);
-
-        //Metal
-        GameRegistry.registerBlock(deco_metal, ItemBlockMeta.class, "DecoMetal");
-        registerOreDicMeta(deco_metal, Names.OreDicNames.METAL);
-        registerOreDicMeta(deco_metal, Names.OreDicNames.SMELT_TO_CONCRETE);
-        GameRegistry.registerBlock(deco_metalRobotColors, ItemBlockMeta.class, "DecoMetalRobotColors");
-        registerOreDicMeta(deco_metalRobotColors, Names.OreDicNames.METAL_ROBOT);
-        registerOreDicMeta(deco_metalRobotColors, Names.OreDicNames.METAL);
-        registerOreDicMeta(deco_metalRobotColors, Names.OreDicNames.SMELT_TO_CONCRETE);
-
-        //Stone
-        GameRegistry.registerBlock(deco_stone, ItemBlockMeta.class, "DecoStone");
-        registerOreDicMeta(deco_stone, Names.OreDicNames.STONE);
-        registerOreDicMeta(deco_stone, Names.OreDicNames.SMELT_TO_CONCRETE);
-        GameRegistry.registerBlock(deco_stoneMineralsColors, ItemBlockMeta.class, "DecoStoneMineralsColors");
-        registerOreDicMeta(deco_stoneMineralsColors, Names.OreDicNames.STONE_MINERALS);
-        registerOreDicMeta(deco_stoneMineralsColors, Names.OreDicNames.STONE);
-        registerOreDicMeta(deco_stoneMineralsColors, Names.OreDicNames.SMELT_TO_CONCRETE);
-
-//// TODO: 6/29/2016
-      *//*  //Glass
-        GameRegistry.registerBlock(deco_ClearGlass, ItemBlockMeta.class, "DecoClearGlass");
-        registerOreDicMeta(deco_ClearGlass, Names.OreDicNames.GLASS_CLEAR);
-        registerOreDicMeta(deco_ClearGlass, "blockGlass");*//*
-
-        //Paneling
-        GameRegistry.registerBlock(deco_paneling, ItemBlockMeta.class, "DecoPaneling");
-    }
-
-    *//**
-     * Register the block to be rendered as an item.
-     *//*
-    public static void registerRenders() {
-
-        //Crops
-    //todo    registerRender(beardedAzalea);
-
-        //Concrete
-        registerRender(concrete_block);
-        for (int i = 0; i < DecoBlockVarStrings.concreteTypes.length; i++) registerRender(deco_concrete, i);
-
-        //Cottage
-        for (int i = 0; i < DecoBlockVarStrings.cottageTypes.length; i++) registerRender(deco_cottage, i);
-
-        //Lava
-        for (int i = 0; i < DecoBlockVarStrings.lavaTypes.length; i++) registerRender(deco_lava, i);
-        for (int i = 0; i < DecoBlockVarStrings.lavaBowlTypes.length; i++) registerRender(deco_lavaBowlColors, i);
-
-        //Marble
-        for (int i = 0; i < DecoBlockVarStrings.marbleTypes.length; i++) registerRender(deco_marble, i);
-
-        //Metal
-        for (int i = 0; i < DecoBlockVarStrings.metalTypes.length; i++) registerRender(deco_metal, i);
-        for (int i = 0; i < DecoBlockVarStrings.metalRobotTypes.length; i++) registerRender(deco_metalRobotColors, i);
-
-        //Stone
-        for (int i = 0; i < DecoBlockVarStrings.stoneTypes.length; i++) registerRender(deco_stone, i);
-        for (int i = 0; i < DecoBlockVarStrings.stoneMineralsTypes.length; i++)
-            registerRender(deco_stoneMineralsColors, i);
-
-        //Glass
-     //todo   for (int i = 0; i < DecoBlockVarStrings.clearGlassTypes.length; i++) registerRender(deco_ClearGlass, i);
-
-        //Paneling
-       for (int i =0; i<DecoBlockVarStrings.panelingTypes.length; i++) registerRender(deco_paneling, i);
-    }
-
-    *//**
-     *  -------------------------------------------Do Not Change Below-----------------------------------------------
-     *//*
-
-    *//**
-     * Register the Item Renderer for a normal Block
-     *
-     * @param block The block to render as an Item.
-     *//*
-    public static void registerRender(Block block) {
-        Item item = Item.getItemFromBlock(block);
-        ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(
-                Reference.MOD_ID + ":" + item.getUnlocalizedName().substring(5)));
-    }
-
-    *//**
-     * Register a Block with meta Data / Sub Blocks to be rendered as an Item
-     * This uses "type=decovar" in the .json files this can be changed to anything as
-     * long as it matches the sub block values and the json files.
-     *
-     * @param block The block to render as an item.
-     * @param meta  The meta value of the block.
-     *//*
-    public static void registerRender(Block block, int meta) {
-        Item item = Item.getItemFromBlock(block);
-        ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(
-                Reference.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "type="+meta));
-    }
-
-    *//**
-     * Register a block's Sub blocks to the Ore Dictionary
-     *
-     * @param block The Main Block that has the sub types.
-     * @param name  The string of the Ore Dictionary Value.
-     *//*
-    public static void registerOreDicMeta(Block block, String name) {
-
-        Item item = Item.getItemFromBlock(block);
-        ArrayList<ItemStack> list = new ArrayList<ItemStack>();
-        block.getSubBlocks(item, null, list);
-
-        for (ItemStack aList : list) OreDictionary.registerOre(name, aList);
-    }*/
 }
