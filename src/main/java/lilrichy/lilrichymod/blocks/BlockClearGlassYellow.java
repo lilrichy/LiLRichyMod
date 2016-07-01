@@ -24,7 +24,6 @@ public class BlockClearGlassYellow extends Block {
         this.setCreativeTab(CreativeTabLiLRichyMod.LR_Tab);
         this.setHardness(0.3F);
         this.setSoundType(SoundType.GLASS);
-        this.setLightLevel(1.0F);
     }
 
     @Override

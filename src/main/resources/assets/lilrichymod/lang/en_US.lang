@@ -12,6 +12,10 @@ tile.blockTable.name=Block Table
 #Lectern
 tile.lilrichymod:lectern.name=Lectern
 
+#Wards
+tile.animalWard.name=Animal Ward
+tile.mobWard.name=Mob Ward
+
 #BLOCKS------------------------------------------------------------------------------------------------
 #COTTAGE
 tile.cottageWall.name=Cottage Wall

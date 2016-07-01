@@ -2,8 +2,8 @@ package lilrichy.lilrichymod.creativeTab;
 
 
 
+import lilrichy.lilrichymod.init.ModItems;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -19,7 +19,7 @@ public class CreativeTabLiLRichyMod {
         @Override
       //todo
          public Item getTabIconItem() {
-            return Item.getItemFromBlock(Blocks.BRICK_BLOCK);
+            return ModItems.essenceOfBeard;
                     //ModBlocks.concrete_block);
         }
     };

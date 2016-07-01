@@ -3,6 +3,7 @@ package lilrichy.lilrichymod.recipes;
 
 import lilrichy.lilrichymod.init.ModItems;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -11,19 +12,16 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  */
 public class ItemRecipes {
     public static void init() {
-        //DeathSock
-      //  GameRegistry.addRecipe(new ItemStack(ModItems.deathSock), "  w", "  w", "www", 'w', new ItemStack(Blocks.wool));
-    //    GameRegistry.addRecipe(new ItemStack(ModItems.deathSock), "w  ", "w  ", "www", 'w', new ItemStack(Blocks.wool));
 
         //Concrete Mix
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.concreteMix, 4),
                 new ItemStack(Blocks.SAND), new ItemStack(Blocks.GRAVEL), new ItemStack(Blocks.GRAVEL),
                 new ItemStack(Blocks.COBBLESTONE));
 
-     /*   //Seed of Beared Azailia
-        GameRegistry.addRecipe(new ItemStack(ModItems.seedBearedAzailia, 1), " r ", "ese", " r ",
-                'r', new ItemStack(Items.rotten_flesh), 'e', new ItemStack(Items.spider_eye),
-                's', new ItemStack(Items.wheat_seeds));
-        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.seedBearedAzailia), new ItemStack(ModItems.essanceOfBeared));*/
+        //Seed of Beared Azailia
+        GameRegistry.addRecipe(new ItemStack(ModItems.beardedAzaleaSeed, 1), " r ", "ese", " r ",
+                'r', new ItemStack(Items.ROTTEN_FLESH), 'e', new ItemStack(Items.SPIDER_EYE),
+                's', new ItemStack(Items.WHEAT_SEEDS));
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.beardedAzaleaSeed), new ItemStack(ModItems.essenceOfBeard));
     }
 }

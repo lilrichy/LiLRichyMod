@@ -2,6 +2,11 @@ LiLRichy Mod Change Log
 Version = Minecraft Change . Forge Change . Mod change += incremental NEVER Reset
 Update version in this file, build.gradle, gradle.properties, Reference
 
+v3.0
+Port mod from Minecraft v1.8.9 to 1.9.4
+Rewrite of blocks, items, recipies, tile entities.
+Rework the way blocks are crafted.
+
 
 v2.0.0
 Port mod from Minecraft v1.7.10 to v1.8.9

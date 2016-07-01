@@ -121,7 +121,11 @@ public class Reference {
         CLEAR_GLASS_PURPLE("clearGlassPurple", "BlockClearGlassPurple"),
         CLEAR_GLASS_RED("clearGlassRed", "BlockClearGlassRed"),
         CLEAR_GLASS_SILVER("clearGlassSilver", "BlockClearGlassSilver"),
-        CLEAR_GLASS_Yellow("clearGlassYellow", "BlockClearGlassYellow");
+        CLEAR_GLASS_Yellow("clearGlassYellow", "BlockClearGlassYellow"),
+
+
+        ANIMAL_WARD("animalWard", "BlockAnimalWard"),
+        MOB_WARD("mobWard", "BlockMobWard");
 
         private String unlocalizedName;
         private String registryName;

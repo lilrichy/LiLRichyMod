@@ -93,6 +93,9 @@ public class ModBlocks {
     public static Block clearGlassSilver;
     public static Block clearGlassYellow;
 
+    public static Block animalWard;
+    public static Block mobWard;
+
 
     public static void init() {
         concrete = new BlockConcrete();
@@ -175,6 +178,9 @@ public class ModBlocks {
         clearGlassSilver = new BlockClearGlassSilver();
         clearGlassYellow = new BlockClearGlassYellow();
 
+        animalWard = new BlockAnimalWard();
+        mobWard = new BlockMobWard();
+
     }
 
     public static void register() {
@@ -256,6 +262,9 @@ public class ModBlocks {
         registerBlock(clearGlassRed);
         registerBlock(clearGlassSilver);
         registerBlock(clearGlassYellow);
+
+        registerBlock(animalWard);
+        registerBlock(mobWard);
     }
 
     public static void registerRenders() {
@@ -337,6 +346,9 @@ public class ModBlocks {
         registerRender(clearGlassRed);
         registerRender(clearGlassSilver);
         registerRender(clearGlassYellow);
+
+        registerRender(animalWard);
+        registerRender(mobWard);
 
     }
 
