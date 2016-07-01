@@ -4,6 +4,7 @@ import lilrichy.lilrichymod.handler.ConfigurationHandler;
 import lilrichy.lilrichymod.handler.EventHandler;
 import lilrichy.lilrichymod.init.ModBlocks;
 import lilrichy.lilrichymod.init.ModItems;
+import lilrichy.lilrichymod.init.ModTileEntity;
 import lilrichy.lilrichymod.proxy.CommonProxy;
 import lilrichy.lilrichymod.recipes.Recipes;
 import lilrichy.lilrichymod.reference.Reference;
@@ -52,7 +53,7 @@ public class LiLRichyMod {
 
         //Mod Tile Entities
         LogHelper.info("Loading Tile Entity's ");
-        //ModTileEntity.Init();
+        ModTileEntity.Init();
         GameRegistry.registerTileEntity(TileEntityAnimalWard.class, "lilrichymod:TileEntityAnimalWard");
         GameRegistry.registerTileEntity(TileEntityMobWard.class, "lilrichymod:TileEntityMobWard");
 

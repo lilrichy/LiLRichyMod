@@ -1,28 +1,27 @@
-/*
 package lilrichy.lilrichymod.blocks.blockTable;
 
 
 import lilrichy.lilrichymod.recipes.BlockTableRecipes;
-import lilrichy.lilrichymod.tileEntity.TileEntityLiLRichyMod;
+import lilrichy.lilrichymod.reference.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.ClickType;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
-import net.minecraft.network.NetworkManager;
-import net.minecraft.network.Packet;
-
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ITickable;
+import net.minecraft.util.text.ITextComponent;
 
 import java.util.ArrayList;
 
-*/
 /**
- * Created by Rich on 12/8/2015.
- *//*
+*Created by Rich on 12/8/2015.
+*/
 
-public class TileEntityBlockTable extends TileEntityLiLRichyMod implements IInventory, ITickable {
+
+public class TileEntityBlockTable extends TileEntity implements IInventory, ITickable {
     public static final int PLAYER_SLOTS_TOTAL = 36;
     public static final int INPUT_SLOTS_COUNT = 2;
     public static final int OUTPUT_SLOTS_COUNT = 15;
@@ -74,13 +73,13 @@ public class TileEntityBlockTable extends TileEntityLiLRichyMod implements IInve
         return null;
     }
 
-    public void doCrafting(int slot, int clickButton, int clickID, EntityPlayer player) {
+    public void doCrafting(int slot, int clickButton, ClickType clickID, EntityPlayer player) {
         if (inputHasItems() && getCurrentRecipe() != null && getStackInSlot(slot) != null) {
             this.decrStackSize(0, decreaseAmt);
             this.decrStackSize(1, decreaseAmt);
             player.inventory.addItemStackToInventory(getStackInSlot(slot));
-            worldObj.playSoundEffect((double) this.pos.getX() + 0.5D, (double) this.pos.getY() + 0.5D,
-                    (double) this.pos.getZ() + 0.5D, Reference.MOD_ID + ":" + "blockTableCraftSound", 0.3F, .1f);
+           // worldObj.playSoundEffect((double) this.pos.getX() + 0.5D, (double) this.pos.getY() + 0.5D,
+            //        (double) this.pos.getZ() + 0.5D, Reference.MOD_ID + ":" + "blockTableCraftSound", 0.3F, .1f);
             this.markDirty();
 
         }
@@ -146,23 +145,23 @@ public class TileEntityBlockTable extends TileEntityLiLRichyMod implements IInve
 // NBT, Packets, and slot methods.
 // -----------------------------------------------------------------------------------------------------------
 
-    @Override
-    public void writeToNBT(NBTTagCompound tag) {
-        super.writeToNBT(tag);
-        tag.setInteger("direction", direction);
-        NBTTagList nbttaglist = new NBTTagList();
-        if (getStackInSlot(FIRST_INPUT_SLOT) != null) {
-            NBTTagCompound nbttagcompound1 = new NBTTagCompound();
-            getStackInSlot(FIRST_INPUT_SLOT).writeToNBT(nbttagcompound1);
-            nbttaglist.appendTag(nbttagcompound1);
-        }
-        if (getStackInSlot(FIRST_INPUT_SLOT + 1) != null) {
-            NBTTagCompound nbttagcompound1 = new NBTTagCompound();
-            getStackInSlot(FIRST_INPUT_SLOT + 1).writeToNBT(nbttagcompound1);
-            nbttaglist.appendTag(nbttagcompound1);
-        }
-        tag.setTag("Items", nbttaglist);
-    }
+//    @Override
+//    public void writeToNBT(NBTTagCompound tag) {
+//        super.writeToNBT(tag);
+//        tag.setInteger("direction", direction);
+//        NBTTagList nbttaglist = new NBTTagList();
+//        if (getStackInSlot(FIRST_INPUT_SLOT) != null) {
+//            NBTTagCompound nbttagcompound1 = new NBTTagCompound();
+//            getStackInSlot(FIRST_INPUT_SLOT).writeToNBT(nbttagcompound1);
+//            nbttaglist.appendTag(nbttagcompound1);
+//        }
+//        if (getStackInSlot(FIRST_INPUT_SLOT + 1) != null) {
+//            NBTTagCompound nbttagcompound1 = new NBTTagCompound();
+//            getStackInSlot(FIRST_INPUT_SLOT + 1).writeToNBT(nbttagcompound1);
+//            nbttaglist.appendTag(nbttagcompound1);
+//        }
+//        tag.setTag("Items", nbttaglist);
+//    }
 
     @Override
     public void readFromNBT(NBTTagCompound tag) {
@@ -175,17 +174,17 @@ public class TileEntityBlockTable extends TileEntityLiLRichyMod implements IInve
         setInventorySlotContents(FIRST_INPUT_SLOT + 1, ItemStack.loadItemStackFromNBT(nbttagcompound1));
     }
 
-    @Override
-    public Packet getDescriptionPacket() {
-        NBTTagCompound var1 = new NBTTagCompound();
-        writeToNBT(var1);
-        return new S35PacketUpdateTileEntity(pos, 1, var1);
-    }
-
-    @Override
-    public void onDataPacket(NetworkManager net, S35PacketUpdateTileEntity pkt) {
-        readFromNBT(pkt.getNbtCompound());
-    }
+//    @Override
+//    public Packet getDescriptionPacket() {
+//        NBTTagCompound var1 = new NBTTagCompound();
+//        writeToNBT(var1);
+//        return new S35PacketUpdateTileEntity(pos, 1, var1);
+//    }
+//
+//    @Override
+//    public void onDataPacket(NetworkManager net, S35PacketUpdateTileEntity pkt) {
+//        readFromNBT(pkt.getNbtCompound());
+//    }
 
 // -----------------------------------------------------------------------------------------------------------
 // The following methods must be implemented but don't really affect the way the table works
@@ -275,26 +274,18 @@ public class TileEntityBlockTable extends TileEntityLiLRichyMod implements IInve
 
     }
 
-    */
-/*@Override
-    public ItemStack getStackInSlotOnClosing(int slotIndex) {
-        ItemStack itemStack = getStackInSlot(slotIndex);
-        if (itemStack != null) setInventorySlotContents(slotIndex, null);
-        return itemStack;
-    }
+//    @Override
+//    public ItemStack getStackInSlotOnClosing(int slotIndex) {
+//        ItemStack itemStack = getStackInSlot(slotIndex);
+//        if (itemStack != null) setInventorySlotContents(slotIndex, null);
+//        return itemStack;
+//    }
 
-    @Override
-    public void closeInventory() {
-    }
 
-    @Override
-    public void openInventory() {
-    }
-*//*
 
     @Override
     public String getName() {
-        return ModTileEntity.blockTable.getUnlocalizedName() + ".name";
+        return Reference.ModBlocks.BLOCK_TABLE.getUnlocalizedName();
     }
 
     @Override
@@ -303,8 +294,9 @@ public class TileEntityBlockTable extends TileEntityLiLRichyMod implements IInve
     }
 
     @Override
-    public IChatComponent getDisplayName() {
+    public ITextComponent getDisplayName() {
         return null;
     }
+
+
 }
-*/

@@ -1,6 +1,7 @@
 package lilrichy.lilrichymod.init;
 
 import lilrichy.lilrichymod.blocks.*;
+import lilrichy.lilrichymod.blocks.blockTable.BlockTable;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -96,6 +97,8 @@ public class ModBlocks {
     public static Block animalWard;
     public static Block mobWard;
 
+    public static Block blockTable;
+
 
     public static void init() {
         concrete = new BlockConcrete();
@@ -181,6 +184,8 @@ public class ModBlocks {
         animalWard = new BlockAnimalWard();
         mobWard = new BlockMobWard();
 
+        blockTable = new BlockTable();
+
     }
 
     public static void register() {
@@ -265,6 +270,8 @@ public class ModBlocks {
 
         registerBlock(animalWard);
         registerBlock(mobWard);
+
+        registerBlock(blockTable);
     }
 
     public static void registerRenders() {
@@ -349,6 +356,8 @@ public class ModBlocks {
 
         registerRender(animalWard);
         registerRender(mobWard);
+
+        registerRender(blockTable);
 
     }
 

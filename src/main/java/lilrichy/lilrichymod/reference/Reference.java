@@ -125,7 +125,9 @@ public class Reference {
 
 
         ANIMAL_WARD("animalWard", "BlockAnimalWard"),
-        MOB_WARD("mobWard", "BlockMobWard");
+        MOB_WARD("mobWard", "BlockMobWard"),
+
+        BLOCK_TABLE("blockTable", "BlockBlockTable");
 
         private String unlocalizedName;
         private String registryName;
