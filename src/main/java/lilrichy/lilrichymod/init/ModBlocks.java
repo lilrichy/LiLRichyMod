@@ -2,12 +2,15 @@ package lilrichy.lilrichymod.init;
 
 import lilrichy.lilrichymod.blocks.*;
 import lilrichy.lilrichymod.blocks.blockTable.BlockTable;
+import lilrichy.lilrichymod.reference.Names;
+import lilrichy.lilrichymod.reference.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 
 /**
  * Created by LiLRichy on 2/15/2016.
@@ -26,6 +29,8 @@ public class ModBlocks {
     public static Block concreteSquares;
     public static Block concreteTexturedBlocks;
 
+//----------------------------------------------------------------------------------------------------------------------
+
     public static Block cottageWall;
     public static Block cottageWallArchedBeam;
     public static Block cottageWallArchedBeamDark;
@@ -37,6 +42,8 @@ public class ModBlocks {
     public static Block cottageWindowDark;
     public static Block cottageWindowLight;
 
+//----------------------------------------------------------------------------------------------------------------------
+
     public static Block lavaBowl;
     public static Block lavaBowlBlue;
     public static Block lavaBowlGreen;
@@ -47,10 +54,14 @@ public class ModBlocks {
     public static Block lavaSearingGorge;
     public static Block lavaSlumberingVolcano;
 
+//----------------------------------------------------------------------------------------------------------------------
+
     public static Block marbleBlack;
     public static Block marbleBlancoAurora;
     public static Block marbleBlancoNafin;
     public static Block marbleSpottedBianco;
+
+//----------------------------------------------------------------------------------------------------------------------
 
     public static Block metalArmor;
     public static Block metalBatteredRobot;
@@ -68,6 +79,8 @@ public class ModBlocks {
     public static Block metalSeafoamTarnish;
     public static Block metalStained;
 
+//----------------------------------------------------------------------------------------------------------------------
+
     public static Block stoneArrangedBricks;
     public static Block stoneBlocks;
     public static Block stoneBlocksDark;
@@ -76,6 +89,8 @@ public class ModBlocks {
     public static Block stoneMineralsBlue;
     public static Block stoneMineralsOrange;
     public static Block stoneMineralsPurple;
+
+//----------------------------------------------------------------------------------------------------------------------
 
     public static Block clearGlass;
     public static Block clearGlassBlack;
@@ -93,6 +108,8 @@ public class ModBlocks {
     public static Block clearGlassRed;
     public static Block clearGlassSilver;
     public static Block clearGlassYellow;
+
+//----------------------------------------------------------------------------------------------------------------------
 
     public static Block animalWard;
     public static Block mobWard;
@@ -113,6 +130,8 @@ public class ModBlocks {
         concreteSquares = new BlockConcreteSquares();
         concreteTexturedBlocks = new BlockConcreteTexturedBlocks();
 
+//----------------------------------------------------------------------------------------------------------------------
+
         cottageWall = new BlockCottageWall();
         cottageWallArchedBeam = new BlockCottageWallArchedBeam();
         cottageWallArchedBeamDark = new BlockCottageWallArchedBeamDark();
@@ -124,6 +143,8 @@ public class ModBlocks {
         cottageWindowDark = new BlockCottageWindowDark();
         cottageWindowLight = new BlockCottageWindowLight();
 
+//----------------------------------------------------------------------------------------------------------------------
+
         lavaBowl = new BlockLavaBowl();
         lavaBowlBlue = new BlockLavaBowlBlue();
         lavaBowlGreen = new BlockLavaBowlGreen();
@@ -134,10 +155,14 @@ public class ModBlocks {
         lavaSearingGorge = new BlockLavaSearingGorge();
         lavaSlumberingVolcano = new BlockLavaSlumberingVolcano();
 
+//----------------------------------------------------------------------------------------------------------------------
+
         marbleBlack = new BlockMarbleBlack();
         marbleBlancoAurora = new BlockMarbleBlancoAurora();
         marbleBlancoNafin = new BlockMarbleBlancoNafin();
         marbleSpottedBianco = new BlockMarbleSpottedBianco();
+
+//----------------------------------------------------------------------------------------------------------------------
 
         metalArmor = new BlockMetalArmor();
         metalBatteredRobot = new BlockMetalBatteredRobot();
@@ -155,6 +180,8 @@ public class ModBlocks {
         metalSeafoamTarnish = new BlockMetalSeafoamTarnish();
         metalStained = new BlockMetalStained();
 
+//----------------------------------------------------------------------------------------------------------------------
+
         stoneArrangedBricks = new BlockStoneArrangedBricks();
         stoneBlocks = new BlockStoneBlocks();
         stoneBlocksDark = new BlockStoneBlocksDark();
@@ -163,6 +190,8 @@ public class ModBlocks {
         stoneMineralsBlue = new BlockStoneMineralsBlue();
         stoneMineralsOrange = new BlockStoneMineralsOrange();
         stoneMineralsPurple = new BlockStoneMineralsPurple();
+
+//----------------------------------------------------------------------------------------------------------------------
 
         clearGlass = new BlockClearGlass();
         clearGlassBlack = new BlockClearGlassBlack();
@@ -181,6 +210,8 @@ public class ModBlocks {
         clearGlassSilver = new BlockClearGlassSilver();
         clearGlassYellow = new BlockClearGlassYellow();
 
+//----------------------------------------------------------------------------------------------------------------------
+
         animalWard = new BlockAnimalWard();
         mobWard = new BlockMobWard();
 
@@ -190,83 +221,306 @@ public class ModBlocks {
 
     public static void register() {
         registerBlock(concrete);
+        OreDictionary.registerOre(Reference.ModBlocks.CONCRETE.getUnlocalizedName(), concrete);
+        OreDictionary.registerOre(Names.OreDicNames.CONCRETE, concrete);
+
         registerBlock(concreteArrangedBricks);
+        OreDictionary.registerOre(Reference.ModBlocks.CONCRETE_ARRANGED_BRICKS.getUnlocalizedName(), concreteArrangedBricks);
+        OreDictionary.registerOre(Names.OreDicNames.CONCRETE, concreteArrangedBricks);
+
+
         registerBlock(concreteBricks);
+        OreDictionary.registerOre(Reference.ModBlocks.CONCRETE_BRICKS.getUnlocalizedName(), concreteBricks);
+        OreDictionary.registerOre(Names.OreDicNames.CONCRETE, concreteBricks);
+
         registerBlock(concreteBricksDark);
+        OreDictionary.registerOre(Reference.ModBlocks.CONCRETE_BRICKS_DARK.getUnlocalizedName(), concreteBricksDark);
+        OreDictionary.registerOre(Names.OreDicNames.CONCRETE, concreteBricksDark);
+
         registerBlock(concreteFancyBlocks);
+        OreDictionary.registerOre(Reference.ModBlocks.CONCRETE_FANCY_BLOCKS.getUnlocalizedName(), concreteFancyBlocks);
+        OreDictionary.registerOre(Names.OreDicNames.CONCRETE, concreteFancyBlocks);
+
         registerBlock(concreteOldSquares);
+        OreDictionary.registerOre(Reference.ModBlocks.CONCRETE_OLD_SQUARES.getUnlocalizedName(), concreteOldSquares);
+        OreDictionary.registerOre(Names.OreDicNames.CONCRETE, concreteOldSquares);
+
         registerBlock(concreteRocks);
+        OreDictionary.registerOre(Reference.ModBlocks.CONCRETE_ROCKS.getUnlocalizedName(), concreteRocks);
+        OreDictionary.registerOre(Names.OreDicNames.CONCRETE, concreteRocks);
+
         registerBlock(concreteSmallBricks);
+        OreDictionary.registerOre(Reference.ModBlocks.CONCRETE_SMALL_BRICKS.getUnlocalizedName(), concreteSmallBricks);
+        OreDictionary.registerOre(Names.OreDicNames.CONCRETE, concreteSmallBricks);
+
         registerBlock(concreteSmallTexturedSquares);
+        OreDictionary.registerOre(Reference.ModBlocks.CONCRETE_SMALL_TEXTURED_SQUARES.getUnlocalizedName(), concreteSmallTexturedSquares);
+        OreDictionary.registerOre(Names.OreDicNames.CONCRETE, concreteSmallTexturedSquares);
+
         registerBlock(concreteSquares);
+        OreDictionary.registerOre(Reference.ModBlocks.CONCRETE_SQUARES.getUnlocalizedName(), concreteSquares);
+        OreDictionary.registerOre(Names.OreDicNames.CONCRETE, concreteSquares);
+
         registerBlock(concreteTexturedBlocks);
+        OreDictionary.registerOre(Reference.ModBlocks.CONCRETE_TEXTURED_BLOCKS.getUnlocalizedName(), concreteTexturedBlocks);
+        OreDictionary.registerOre(Names.OreDicNames.CONCRETE, concreteTexturedBlocks);
+
+//----------------------------------------------------------------------------------------------------------------------        registerBlock(cottageWall);
 
         registerBlock(cottageWall);
+        OreDictionary.registerOre(Reference.ModBlocks.COTTAGE_WALL.getUnlocalizedName(), cottageWall);
+        OreDictionary.registerOre(Names.OreDicNames.COTTAGE, cottageWall);
+
         registerBlock(cottageWallArchedBeam);
+        OreDictionary.registerOre(Reference.ModBlocks.COTTAGE_WALL_ARCHED_BEAM.getUnlocalizedName(), cottageWallArchedBeam);
+        OreDictionary.registerOre(Names.OreDicNames.COTTAGE, cottageWallArchedBeam);
+
         registerBlock(cottageWallArchedBeamDark);
+        OreDictionary.registerOre(Reference.ModBlocks.COTTAGE_WALL_ARCHED_BEAM_DARK.getUnlocalizedName(), cottageWallArchedBeamDark);
+        OreDictionary.registerOre(Names.OreDicNames.COTTAGE, cottageWallArchedBeamDark);
+
         registerBlock(cottageWallDark);
+        OreDictionary.registerOre(Reference.ModBlocks.COTTAGE_WALL_DARK.getUnlocalizedName(), cottageWallDark);
+        OreDictionary.registerOre(Names.OreDicNames.COTTAGE, cottageWallDark);
+
         registerBlock(cottageWallPanelDark);
+        OreDictionary.registerOre(Reference.ModBlocks.COTTAGE_WALL_PANEL_DARK.getUnlocalizedName(), cottageWallPanelDark);
+        OreDictionary.registerOre(Names.OreDicNames.COTTAGE, cottageWallPanelDark);
+
         registerBlock(cottageWallPanelLight);
+        OreDictionary.registerOre(Reference.ModBlocks.COTTAGE_WALL_PANEL_LIGHT.getUnlocalizedName(), cottageWallPanelLight);
+        OreDictionary.registerOre(Names.OreDicNames.COTTAGE, cottageWallPanelLight);
+
         registerBlock(cottageWallXDark);
+        OreDictionary.registerOre(Reference.ModBlocks.COTTAGE_WALL_X_DARK.getUnlocalizedName(), cottageWallXDark);
+        OreDictionary.registerOre(Names.OreDicNames.COTTAGE, cottageWallXDark);
+
         registerBlock(cottageWallXLight);
+        OreDictionary.registerOre(Reference.ModBlocks.COTTAGE_WALL_X_LIGHT.getUnlocalizedName(), cottageWallXLight);
+        OreDictionary.registerOre(Names.OreDicNames.COTTAGE, cottageWallXLight);
+
         registerBlock(cottageWindowDark);
+        OreDictionary.registerOre(Reference.ModBlocks.COTTAGE_WINDOW_DARK.getUnlocalizedName(), cottageWindowDark);
+        OreDictionary.registerOre(Names.OreDicNames.COTTAGE, cottageWindowDark);
+
         registerBlock(cottageWindowLight);
+        OreDictionary.registerOre(Reference.ModBlocks.COTTAGE_WINDOW_LIGHT.getUnlocalizedName(), cottageWindowLight);
+        OreDictionary.registerOre(Names.OreDicNames.COTTAGE, cottageWindowLight);
 
+//----------------------------------------------------------------------------------------------------------------------
         registerBlock(lavaBowl);
+        OreDictionary.registerOre(Reference.ModBlocks.LAVA_BOWL.getUnlocalizedName(), lavaBowl);
+        OreDictionary.registerOre(Names.OreDicNames.LAVA, lavaBowl);
+
         registerBlock(lavaBowlBlue);
+        OreDictionary.registerOre(Reference.ModBlocks.LAVA_BOWL_BLUE.getUnlocalizedName(), lavaBowlBlue);
+        OreDictionary.registerOre(Names.OreDicNames.LAVA, lavaBowlBlue);
+
         registerBlock(lavaBowlGreen);
+        OreDictionary.registerOre(Reference.ModBlocks.LAVA_BOWL_GREEN.getUnlocalizedName(), lavaBowlGreen);
+        OreDictionary.registerOre(Names.OreDicNames.LAVA, lavaBowlGreen);
+
         registerBlock(lavaBowlPurple);
+        OreDictionary.registerOre(Reference.ModBlocks.LAVA_BOWL_PURPLE.getUnlocalizedName(), lavaBowlPurple);
+        OreDictionary.registerOre(Names.OreDicNames.LAVA, lavaBowlPurple);
+
         registerBlock(lavaCracks);
+        OreDictionary.registerOre(Reference.ModBlocks.LAVA_CRACKS.getUnlocalizedName(), lavaCracks);
+        OreDictionary.registerOre(Names.OreDicNames.LAVA, lavaCracks);
+
         registerBlock(lavaDeepFire);
+        OreDictionary.registerOre(Reference.ModBlocks.LAVA_DEEP_FIRE.getUnlocalizedName(), lavaDeepFire);
+        OreDictionary.registerOre(Names.OreDicNames.LAVA, lavaDeepFire);
+
         registerBlock(lavaPelesLake);
+        OreDictionary.registerOre(Reference.ModBlocks.LAVA_PELES_LAKE.getUnlocalizedName(), lavaPelesLake);
+        OreDictionary.registerOre(Names.OreDicNames.LAVA, lavaPelesLake);
+
         registerBlock(lavaSearingGorge);
+        OreDictionary.registerOre(Reference.ModBlocks.LAVA_SEARING_GORGE.getUnlocalizedName(), lavaSearingGorge);
+        OreDictionary.registerOre(Names.OreDicNames.LAVA, lavaSearingGorge);
+
         registerBlock(lavaSlumberingVolcano);
+        OreDictionary.registerOre(Reference.ModBlocks.LAVA_SLUMBERING_VOLCANO.getUnlocalizedName(), lavaSlumberingVolcano);
+        OreDictionary.registerOre(Names.OreDicNames.LAVA, lavaSlumberingVolcano);
 
+//----------------------------------------------------------------------------------------------------------------------
         registerBlock(marbleBlack);
+        OreDictionary.registerOre(Reference.ModBlocks.MARBLE_BLACK.getUnlocalizedName(), marbleBlack);
+        OreDictionary.registerOre(Names.OreDicNames.MARBLE, marbleBlack);
+
         registerBlock(marbleBlancoAurora);
+        OreDictionary.registerOre(Reference.ModBlocks.MARBLE_BLANCO_AURORA.getUnlocalizedName(), marbleBlancoAurora);
+        OreDictionary.registerOre(Names.OreDicNames.MARBLE, marbleBlancoAurora);
+
         registerBlock(marbleBlancoNafin);
+        OreDictionary.registerOre(Reference.ModBlocks.MARBLE_BLANCO_NAFIN.getUnlocalizedName(), marbleBlancoNafin);
+        OreDictionary.registerOre(Names.OreDicNames.MARBLE, marbleBlancoNafin);
+
         registerBlock(marbleSpottedBianco);
+        OreDictionary.registerOre(Reference.ModBlocks.MARBLE_SPOTTED_BIANCO.getUnlocalizedName(), marbleSpottedBianco);
+        OreDictionary.registerOre(Names.OreDicNames.MARBLE, marbleSpottedBianco);
+
+//----------------------------------------------------------------------------------------------------------------------
         registerBlock(metalArmor);
+        OreDictionary.registerOre(Reference.ModBlocks.METAL_ARMOR.getUnlocalizedName(), metalArmor);
+        OreDictionary.registerOre(Names.OreDicNames.METAL, metalArmor);
+
         registerBlock(metalBatteredRobot);
+        OreDictionary.registerOre(Reference.ModBlocks.METAL_BATTERED_ROBOT.getUnlocalizedName(), metalBatteredRobot);
+        OreDictionary.registerOre(Names.OreDicNames.METAL, metalBatteredRobot);
+
         registerBlock(metalBatteredRobotBlue);
+        OreDictionary.registerOre(Reference.ModBlocks.METAL_BATTERED_ROBOT_BLUE.getUnlocalizedName(), metalBatteredRobotBlue);
+        OreDictionary.registerOre(Names.OreDicNames.METAL, metalBatteredRobotBlue);
+
         registerBlock(metalBatteredRobotOrange);
+        OreDictionary.registerOre(Reference.ModBlocks.METAL_BATTERED_ROBOT_ORANGE.getUnlocalizedName(), metalBatteredRobotOrange);
+        OreDictionary.registerOre(Names.OreDicNames.METAL, metalBatteredRobotOrange);
+
         registerBlock(metalBatteredRobotPurple);
+        OreDictionary.registerOre(Reference.ModBlocks.METAL_BATTERED_ROBOT_PURPLE.getUnlocalizedName(), metalBatteredRobotPurple);
+        OreDictionary.registerOre(Names.OreDicNames.METAL, metalBatteredRobotPurple);
+
         registerBlock(metalBrushedSteel);
+        OreDictionary.registerOre(Reference.ModBlocks.METAL_BRUSHED_STEEL.getUnlocalizedName(), metalBrushedSteel);
+        OreDictionary.registerOre(Names.OreDicNames.METAL, metalBrushedSteel);
+
         registerBlock(metalBrushedSteelDark);
+        OreDictionary.registerOre(Reference.ModBlocks.METAL_BRUSHED_STEEL_DARK.getUnlocalizedName(), metalBrushedSteelDark);
+        OreDictionary.registerOre(Names.OreDicNames.METAL, metalBrushedSteelDark);
+
         registerBlock(metalBubbleGrip);
+        OreDictionary.registerOre(Reference.ModBlocks.METAL_BUBBLE_GRIP.getUnlocalizedName(), metalBubbleGrip);
+        OreDictionary.registerOre(Names.OreDicNames.METAL, metalBubbleGrip);
+
         registerBlock(metalLaserEtched);
+        OreDictionary.registerOre(Reference.ModBlocks.METAL_LASER_ETCHED.getUnlocalizedName(), metalLaserEtched);
+        OreDictionary.registerOre(Names.OreDicNames.METAL, metalLaserEtched);
+
         registerBlock(metalNeedlepointSteel);
+        OreDictionary.registerOre(Reference.ModBlocks.METAL_NEEDLEPOINT_STEEL.getUnlocalizedName(), metalNeedlepointSteel);
+        OreDictionary.registerOre(Names.OreDicNames.METAL, metalNeedlepointSteel);
+
         registerBlock(metalPlating);
+        OreDictionary.registerOre(Reference.ModBlocks.METAL_PLATING.getUnlocalizedName(), metalPlating);
+        OreDictionary.registerOre(Names.OreDicNames.METAL, metalPlating);
+
         registerBlock(metalPlatingDark);
+        OreDictionary.registerOre(Reference.ModBlocks.METAL_PLATING_DARK.getUnlocalizedName(), metalPlatingDark);
+        OreDictionary.registerOre(Names.OreDicNames.METAL, metalPlatingDark);
+
         registerBlock(metalRustedIronGrip);
+        OreDictionary.registerOre(Reference.ModBlocks.METAL_RUSTED_IRON_GRIP.getUnlocalizedName(), metalRustedIronGrip);
+        OreDictionary.registerOre(Names.OreDicNames.METAL, metalRustedIronGrip);
+
         registerBlock(metalSeafoamTarnish);
+        OreDictionary.registerOre(Reference.ModBlocks.METAL_SEAFOAM_TARNISH.getUnlocalizedName(), metalSeafoamTarnish);
+        OreDictionary.registerOre(Names.OreDicNames.METAL, metalSeafoamTarnish);
+
         registerBlock(metalStained);
+        OreDictionary.registerOre(Reference.ModBlocks.METAL_STAINED.getUnlocalizedName(), metalStained);
+        OreDictionary.registerOre(Names.OreDicNames.METAL, metalStained);
 
+//----------------------------------------------------------------------------------------------------------------------
         registerBlock(stoneArrangedBricks);
-        registerBlock(stoneBlocks);
-        registerBlock(stoneBlocksDark);
-        registerBlock(stoneCracked);
-        registerBlock(stoneMinerals);
-        registerBlock(stoneMineralsBlue);
-        registerBlock(stoneMineralsOrange);
-        registerBlock(stoneMineralsPurple);
+        OreDictionary.registerOre(Reference.ModBlocks.STONE_ARRANGED_BRICKS.getUnlocalizedName(), stoneArrangedBricks);
+        OreDictionary.registerOre(Names.OreDicNames.STONE, stoneArrangedBricks);
 
+        registerBlock(stoneBlocks);
+        OreDictionary.registerOre(Reference.ModBlocks.STONE_BLOCKS.getUnlocalizedName(), stoneBlocks);
+        OreDictionary.registerOre(Names.OreDicNames.STONE, stoneBlocks);
+
+        registerBlock(stoneBlocksDark);
+        OreDictionary.registerOre(Reference.ModBlocks.STONE_BLOCKS_DARK.getUnlocalizedName(), stoneBlocksDark);
+        OreDictionary.registerOre(Names.OreDicNames.STONE, stoneBlocksDark);
+
+        registerBlock(stoneCracked);
+        OreDictionary.registerOre(Reference.ModBlocks.STONE_CRACKED.getUnlocalizedName(), stoneCracked);
+        OreDictionary.registerOre(Names.OreDicNames.STONE, stoneCracked);
+
+        registerBlock(stoneMinerals);
+        OreDictionary.registerOre(Reference.ModBlocks.STONE_MINERALS.getUnlocalizedName(), stoneMinerals);
+        OreDictionary.registerOre(Names.OreDicNames.STONE, stoneMinerals);
+
+        registerBlock(stoneMineralsBlue);
+        OreDictionary.registerOre(Reference.ModBlocks.STONE_MINERALS_BLUE.getUnlocalizedName(), stoneMineralsBlue);
+        OreDictionary.registerOre(Names.OreDicNames.STONE, stoneMineralsBlue);
+
+        registerBlock(stoneMineralsOrange);
+        OreDictionary.registerOre(Reference.ModBlocks.STONE_MINERALS_ORANGE.getUnlocalizedName(), stoneMineralsOrange);
+        OreDictionary.registerOre(Names.OreDicNames.STONE, stoneMineralsOrange);
+
+        registerBlock(stoneMineralsPurple);
+        OreDictionary.registerOre(Reference.ModBlocks.STONE_MINERALS_PURPLE.getUnlocalizedName(), stoneMineralsPurple);
+        OreDictionary.registerOre(Names.OreDicNames.STONE, stoneMineralsPurple);
+
+//----------------------------------------------------------------------------------------------------------------------
         registerBlock(clearGlass);
+        OreDictionary.registerOre(Reference.ModBlocks.CLEAR_GLASS.getUnlocalizedName(), clearGlass);
+        OreDictionary.registerOre("blockGlass", clearGlass);
+
         registerBlock(clearGlassBlack);
+        OreDictionary.registerOre(Reference.ModBlocks.CLEAR_GLASS_BLACK.getUnlocalizedName(), clearGlassBlack);
+        OreDictionary.registerOre("blockGlass", clearGlassBlack);
+
         registerBlock(clearGlassBlue);
+        OreDictionary.registerOre(Reference.ModBlocks.CLEAR_GLASS_BLUE.getUnlocalizedName(), clearGlassBlue);
+        OreDictionary.registerOre("blockGlass", clearGlassBlue);
+
         registerBlock(clearGlassBrown);
+        OreDictionary.registerOre(Reference.ModBlocks.CLEAR_GLASS_BROWN.getUnlocalizedName(), clearGlassBrown);
+        OreDictionary.registerOre("blockGlass", clearGlassBrown);
+
         registerBlock(clearGlassCyan);
+        OreDictionary.registerOre(Reference.ModBlocks.CLEAR_GLASS_CYAN.getUnlocalizedName(), clearGlassCyan);
+        OreDictionary.registerOre("blockGlass", clearGlassCyan);
+
         registerBlock(clearGlassGray);
+        OreDictionary.registerOre(Reference.ModBlocks.CLEAR_GLASS_GRAY.getUnlocalizedName(), clearGlassGray);
+        OreDictionary.registerOre("blockGlass", clearGlassGray);
+
         registerBlock(clearGlassGreen);
+        OreDictionary.registerOre(Reference.ModBlocks.CLEAR_GLASS_GREEN.getUnlocalizedName(), clearGlassGreen);
+        OreDictionary.registerOre("blockGlass", clearGlassGreen);
+
         registerBlock(clearGlassLightBlue);
+        OreDictionary.registerOre(Reference.ModBlocks.CLEAR_GLASS_LIGHT_BLUE.getUnlocalizedName(), clearGlassLightBlue);
+        OreDictionary.registerOre("blockGlass", clearGlassLightBlue);
+
         registerBlock(clearGlassLime);
+        OreDictionary.registerOre(Reference.ModBlocks.CLEAR_GLASS_LIME.getUnlocalizedName(), clearGlassLime);
+        OreDictionary.registerOre("blockGlass", clearGlassLime);
+
         registerBlock(clearGlassMagenta);
+        OreDictionary.registerOre(Reference.ModBlocks.CLEAR_GLASS_MAGENTA.getUnlocalizedName(), clearGlassMagenta);
+        OreDictionary.registerOre("blockGlass", clearGlassMagenta);
+
         registerBlock(clearGlassOrange);
+        OreDictionary.registerOre(Reference.ModBlocks.CLEAR_GLASS_ORANGE.getUnlocalizedName(), clearGlassOrange);
+        OreDictionary.registerOre("blockGlass", clearGlassOrange);
+
         registerBlock(clearGlassPink);
+        OreDictionary.registerOre(Reference.ModBlocks.CLEAR_GLASS_PINK.getUnlocalizedName(), clearGlassPink);
+        OreDictionary.registerOre("blockGlass", clearGlassPink);
+
         registerBlock(clearGlassPurple);
+        OreDictionary.registerOre(Reference.ModBlocks.CLEAR_GLASS_PURPLE.getUnlocalizedName(), clearGlassPurple);
+        OreDictionary.registerOre("blockGlass", clearGlassPurple);
+
         registerBlock(clearGlassRed);
+        OreDictionary.registerOre(Reference.ModBlocks.CLEAR_GLASS_RED.getUnlocalizedName(), clearGlassRed);
+        OreDictionary.registerOre("blockGlass", clearGlassRed);
+
         registerBlock(clearGlassSilver);
+        OreDictionary.registerOre(Reference.ModBlocks.CLEAR_GLASS_SILVER.getUnlocalizedName(), clearGlassSilver);
+        OreDictionary.registerOre("blockGlass", clearGlassSilver);
+
         registerBlock(clearGlassYellow);
+        OreDictionary.registerOre(Reference.ModBlocks.CLEAR_GLASS_Yellow.getUnlocalizedName(), clearGlassYellow);
+        OreDictionary.registerOre("blockGlass", clearGlassYellow);
+
+//----------------------------------------------------------------------------------------------------------------------
 
         registerBlock(animalWard);
         registerBlock(mobWard);
@@ -287,6 +541,8 @@ public class ModBlocks {
         registerRender(concreteSquares);
         registerRender(concreteTexturedBlocks);
 
+//----------------------------------------------------------------------------------------------------------------------
+
         registerRender(cottageWall);
         registerRender(cottageWallArchedBeam);
         registerRender(cottageWallArchedBeamDark);
@@ -298,6 +554,8 @@ public class ModBlocks {
         registerRender(cottageWindowDark);
         registerRender(cottageWindowLight);
 
+//----------------------------------------------------------------------------------------------------------------------
+
         registerRender(lavaBowl);
         registerRender(lavaBowlBlue);
         registerRender(lavaBowlGreen);
@@ -308,10 +566,15 @@ public class ModBlocks {
         registerRender(lavaSearingGorge);
         registerRender(lavaSlumberingVolcano);
 
+//----------------------------------------------------------------------------------------------------------------------
+
         registerRender(marbleBlack);
         registerRender(marbleBlancoAurora);
         registerRender(marbleBlancoNafin);
         registerRender(marbleSpottedBianco);
+
+//----------------------------------------------------------------------------------------------------------------------
+
         registerRender(metalArmor);
         registerRender(metalBatteredRobot);
         registerRender(metalBatteredRobotBlue);
@@ -328,6 +591,8 @@ public class ModBlocks {
         registerRender(metalSeafoamTarnish);
         registerRender(metalStained);
 
+//----------------------------------------------------------------------------------------------------------------------
+
         registerRender(stoneArrangedBricks);
         registerRender(stoneBlocks);
         registerRender(stoneBlocksDark);
@@ -336,6 +601,8 @@ public class ModBlocks {
         registerRender(stoneMineralsBlue);
         registerRender(stoneMineralsOrange);
         registerRender(stoneMineralsPurple);
+
+//----------------------------------------------------------------------------------------------------------------------
 
         registerRender(clearGlass);
         registerRender(clearGlassBlack);
@@ -353,6 +620,8 @@ public class ModBlocks {
         registerRender(clearGlassRed);
         registerRender(clearGlassSilver);
         registerRender(clearGlassYellow);
+
+//----------------------------------------------------------------------------------------------------------------------
 
         registerRender(animalWard);
         registerRender(mobWard);

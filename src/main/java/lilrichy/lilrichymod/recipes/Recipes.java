@@ -4,6 +4,7 @@ package lilrichy.lilrichymod.recipes;
 import lilrichy.lilrichymod.handler.ConfigurationHandler;
 import lilrichy.lilrichymod.init.ModBlocks;
 import lilrichy.lilrichymod.init.ModItems;
+import lilrichy.lilrichymod.reference.Names;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -17,7 +18,7 @@ public class Recipes {
     public static void init() {
 
         blockRecipes();
-        tileRecipes();
+        tileEntityRecipes();
         //StairsRecipes.init();
         //PanesRecipes.init();
 
@@ -35,7 +36,7 @@ public class Recipes {
             }
         }
 
-        //Recipe to make coal and charcoal dust into black dye
+        //Make coal and charcoal dust into black dye
         if (ConfigurationHandler.coalDustRecipe) {
             if (OreDictionary.doesOreNameExist("dustCoal"))
                 for (ItemStack aList : OreDictionary.getOres("dustCoal"))
@@ -51,20 +52,42 @@ public class Recipes {
         GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.concrete),
                 new ItemStack(ModItems.crushedConcrete), new ItemStack(ModItems.crushedConcrete),
                 new ItemStack(ModItems.crushedConcrete), new ItemStack(ModItems.crushedConcrete));
+
+        //Clear Glass
+        for (ItemStack aList : OreDictionary.getOres("blockGlass")) {
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.clearGlass, 8), "ggg", "geg", "ggg",
+                    'g', new ItemStack(aList.getItem()), 'e', new ItemStack(ModItems.essenceOfBeard));
+        }
     }
 
     public static void smeltingRecipes() {
         //Concrete
         GameRegistry.addSmelting(new ItemStack(ModItems.concreteMix), new ItemStack(ModBlocks.concrete), 0.1f);
 
-//        //Smelt Blocks back to Concrete
-//        for (ItemStack aList : OreDictionary.getOres(Names.OreDicNames.SMELT_TO_CONCRETE)) {
-//            GameRegistry.addSmelting(new ItemStack(aList.getItem(), 1, aList.getItem().getDamage(aList)), new ItemStack(ModBlocks.concrete), 0.1f);
-//        }
+        //Smelt Blocks back to Concrete
+        for (ItemStack aList : OreDictionary.getOres(Names.OreDicNames.CONCRETE)) {
+            GameRegistry.addSmelting(new ItemStack(aList.getItem(), 1, aList.getItem().getDamage(aList)), new ItemStack(ModBlocks.concrete), 0.1f);
+        }
+        for (ItemStack aList : OreDictionary.getOres(Names.OreDicNames.COTTAGE)) {
+            GameRegistry.addSmelting(new ItemStack(aList.getItem(), 1, aList.getItem().getDamage(aList)), new ItemStack(ModBlocks.concrete), 0.1f);
+        }
+        for (ItemStack aList : OreDictionary.getOres(Names.OreDicNames.LAVA)) {
+            GameRegistry.addSmelting(new ItemStack(aList.getItem(), 1, aList.getItem().getDamage(aList)), new ItemStack(ModBlocks.concrete), 0.1f);
+        }
+        for (ItemStack aList : OreDictionary.getOres(Names.OreDicNames.MARBLE)) {
+            GameRegistry.addSmelting(new ItemStack(aList.getItem(), 1, aList.getItem().getDamage(aList)), new ItemStack(ModBlocks.concrete), 0.1f);
+        }
+        for (ItemStack aList : OreDictionary.getOres(Names.OreDicNames.METAL)) {
+            GameRegistry.addSmelting(new ItemStack(aList.getItem(), 1, aList.getItem().getDamage(aList)), new ItemStack(ModBlocks.concrete), 0.1f);
+        }
+        for (ItemStack aList : OreDictionary.getOres(Names.OreDicNames.STONE)) {
+            GameRegistry.addSmelting(new ItemStack(aList.getItem(), 1, aList.getItem().getDamage(aList)), new ItemStack(ModBlocks.concrete), 0.1f);
+        }
     }
 
-    public static void tileRecipes() {
+    public static void tileEntityRecipes() {
 
+        //Wards
         GameRegistry.addRecipe(new ItemStack(ModBlocks.animalWard, 1), "cwb", "wew", "mwp",
                 'c', new ItemStack(Items.CHICKEN), 'w', new ItemStack(Blocks.WOOL), 'b', new ItemStack(Items.BEEF),
                 'e', new ItemStack(ModItems.essenceOfBeard), 'm', new ItemStack(Items.MUTTON), 'p', new ItemStack(Items.PORKCHOP));
@@ -74,6 +97,11 @@ public class Recipes {
                 'd', new ItemStack(Blocks.DIAMOND_BLOCK), 'g', new ItemStack(Items.GUNPOWDER),
                 'e', new ItemStack(ModItems.essenceOfBeard), 's', new ItemStack(Items.SPIDER_EYE),
                 'f', new ItemStack(Items.ROTTEN_FLESH), 'b', new ItemStack(Items.BONE));
+
+        //Block Table
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.blockTable, 1), " c ", "iei", "ppp",
+                'p', new ItemStack(Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE), 'c', new ItemStack(ModBlocks.concrete),
+                'e', new ItemStack(ModItems.essenceOfBeard), 'i', new ItemStack(Items.IRON_INGOT));
 
 
         //// TODO: 6/29/2016
@@ -85,9 +113,6 @@ public class Recipes {
         GameRegistry.addRecipe(new ItemStack(ModTileEntity.advancedDetector, 1), "idi", "dtd", "idi",
                 'i', new ItemStack(Items.gold_ingot), 'd', new ItemStack(Items.diamond), 't', new ItemStack(ModTileEntity.playerDetector));
 
-        //Block Table
-        GameRegistry.addRecipe(new ItemStack(ModTileEntity.blockTable, 1), "www", "pwp", "p p",
-                'w', new ItemStack(Blocks.heavy_weighted_pressure_plate), 'p', new ItemStack(Blocks.planks));
 
         //Lectern
         GameRegistry.addRecipe(new ItemStack(ModTileEntity.lectern, 1), "sss", " p ", " s ",

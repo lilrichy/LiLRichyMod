@@ -1,4 +1,3 @@
-/*
 package lilrichy.lilrichymod.blocks.blockTable;
 
 
@@ -6,10 +5,9 @@ import lilrichy.lilrichymod.gui.GuiLiLRichyMod;
 import lilrichy.lilrichymod.reference.Names;
 import net.minecraft.entity.player.InventoryPlayer;
 
-*/
 /**
  * Created by Rich on 12/10/2015.
- *//*
+ */
 
 public class GuiBlockTable extends GuiLiLRichyMod {
     private TileEntityBlockTable tileEntity;
@@ -29,4 +27,3 @@ public class GuiBlockTable extends GuiLiLRichyMod {
         super.initGui();
     }
 }
-*/

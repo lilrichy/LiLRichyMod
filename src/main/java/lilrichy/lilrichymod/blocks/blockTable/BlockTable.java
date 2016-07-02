@@ -1,7 +1,9 @@
 package lilrichy.lilrichymod.blocks.blockTable;
 
 
+import lilrichy.lilrichymod.LiLRichyMod;
 import lilrichy.lilrichymod.creativeTab.CreativeTabLiLRichyMod;
+import lilrichy.lilrichymod.handler.GuiHandler;
 import lilrichy.lilrichymod.reference.Reference;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.SoundType;
@@ -10,11 +12,15 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
+import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+
+import javax.annotation.Nullable;
 
 /**
  * Created by Rich on 12/8/2015.
@@ -30,10 +36,10 @@ public class BlockTable extends BlockContainer {
         this.setSoundType(SoundType.STONE);
     }
 
-
-    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ) {
-        if (!worldIn.isRemote) {
-         //   playerIn.openGui(LiLRichyMod.instance, GuiHandler.GuiIDs.BLOCK_TABLE.ordinal(), worldIn, pos.getX(), pos.getY(), pos.getZ());
+    @Override
+    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, @Nullable ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
+      if (!worldIn.isRemote) {
+            playerIn.openGui(LiLRichyMod.instance, GuiHandler.GuiIDs.BLOCK_TABLE.ordinal(), worldIn, pos.getX(), pos.getY(), pos.getZ());
         }
         return true;
     }
