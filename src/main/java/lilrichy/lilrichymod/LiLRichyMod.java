@@ -42,16 +42,15 @@ public class LiLRichyMod {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         MinecraftForge.EVENT_BUS.register(new ConfigurationHandler());
 
-        //Mod Items
-        LogHelper.info("Loading Items");
-        ModItems.init();
-        ModItems.register();
-
         //Mod Blocks
         LogHelper.info("Blocks Loading");
         ModBlocks.init();
         ModBlocks.register();
-        // ModBlocksGlass.init();
+
+        //Mod Items
+        LogHelper.info("Loading Items");
+        ModItems.init();
+        ModItems.register();
 
         //Mod Tile Entities
         LogHelper.info("Loading Tile Entity's ");

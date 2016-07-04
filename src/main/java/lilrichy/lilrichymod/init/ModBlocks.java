@@ -2,6 +2,7 @@ package lilrichy.lilrichymod.init;
 
 import lilrichy.lilrichymod.blocks.*;
 import lilrichy.lilrichymod.blocks.blockTable.BlockTable;
+import lilrichy.lilrichymod.blocks.crops.BeardedAzalea;
 import lilrichy.lilrichymod.reference.Names;
 import lilrichy.lilrichymod.reference.Reference;
 import net.minecraft.block.Block;
@@ -116,6 +117,8 @@ public class ModBlocks {
 
     public static Block blockTable;
 
+    public static BeardedAzalea beardedAzalea;
+
 
     public static void init() {
         concrete = new BlockConcrete();
@@ -216,6 +219,8 @@ public class ModBlocks {
         mobWard = new BlockMobWard();
 
         blockTable = new BlockTable();
+
+        beardedAzalea = new BeardedAzalea();
 
     }
 
@@ -526,6 +531,8 @@ public class ModBlocks {
         registerBlock(mobWard);
 
         registerBlock(blockTable);
+
+        registerBlock(beardedAzalea);
     }
 
     public static void registerRenders() {
@@ -627,6 +634,8 @@ public class ModBlocks {
         registerRender(mobWard);
 
         registerRender(blockTable);
+
+        registerRender(beardedAzalea);
 
     }
 

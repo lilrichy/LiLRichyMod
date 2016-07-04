@@ -1,14 +1,16 @@
 package lilrichy.lilrichymod.init;
 
 
-import lilrichy.lilrichymod.items.ItemBeardedAzaleaSeed;
+import lilrichy.lilrichymod.creativeTab.CreativeTabLiLRichyMod;
 import lilrichy.lilrichymod.items.ItemConcreteMix;
 import lilrichy.lilrichymod.items.ItemCrushedConcrete;
 import lilrichy.lilrichymod.items.ItemEssenceOfBeard;
 import lilrichy.lilrichymod.reference.Reference;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemSeeds;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
@@ -25,7 +27,8 @@ public class ModItems {
     public static void init() {
 
         concreteMix = new ItemConcreteMix();
-        beardedAzaleaSeed = new ItemBeardedAzaleaSeed();
+        beardedAzaleaSeed = new ItemSeeds(ModBlocks.beardedAzalea, Blocks.FARMLAND).setCreativeTab(CreativeTabLiLRichyMod.LR_Tab).setUnlocalizedName(Reference.ModItems.BEARDED_AZALEA_SEED.getUnlocalizedName())
+        .setRegistryName(Reference.ModItems.BEARDED_AZALEA_SEED.getRegistryName());
         crushedConcrete = new ItemCrushedConcrete();
         essenceOfBeard = new ItemEssenceOfBeard();
     }

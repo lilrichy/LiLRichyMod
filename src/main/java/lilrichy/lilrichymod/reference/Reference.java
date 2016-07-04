@@ -127,7 +127,9 @@ public class Reference {
         ANIMAL_WARD("animalWard", "BlockAnimalWard"),
         MOB_WARD("mobWard", "BlockMobWard"),
 
-        BLOCK_TABLE("blockTable", "BlockBlockTable");
+        BLOCK_TABLE("blockTable", "BlockBlockTable"),
+
+        BEARDED_AZALEA("beardedAzalea", "BlockBeardedAzalea");
 
         private String unlocalizedName;
         private String registryName;
