@@ -88,6 +88,8 @@ tile.stoneMinerals.name=Stone Minerals
 tile.stoneMineralsBlue.name=Stone Minerals Blue
 tile.stoneMineralsOrange.name=Stone Minerals Orange
 tile.stoneMineralsPurple.name=Stone Minerals Purple
+
+tile.charcoalBlock.name=Block of Charcoal
 #End of Blocks---------------------------------------------------------------------------------------------------
 
 

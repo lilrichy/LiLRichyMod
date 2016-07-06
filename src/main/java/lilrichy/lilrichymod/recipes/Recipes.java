@@ -58,6 +58,15 @@ public class Recipes {
             GameRegistry.addRecipe(new ItemStack(ModBlocks.clearGlass, 8), "ggg", "geg", "ggg",
                     'g', new ItemStack(aList.getItem()), 'e', new ItemStack(ModItems.essenceOfBeard));
         }
+
+        //Charcoal Block
+        GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.charcoalBlock),
+                new ItemStack(Items.COAL, 1, 1), new ItemStack(Items.COAL, 1, 1),new ItemStack(Items.COAL, 1, 1),
+        new ItemStack(Items.COAL, 1, 1),new ItemStack(Items.COAL, 1, 1),new ItemStack(Items.COAL, 1, 1),
+        new ItemStack(Items.COAL, 1, 1),new ItemStack(Items.COAL, 1, 1),new ItemStack(Items.COAL, 1, 1));
+
+        GameRegistry.addShapelessRecipe(new ItemStack(Items.COAL, 9, 1),
+                new ItemStack(ModBlocks.charcoalBlock));
     }
 
     public static void smeltingRecipes() {

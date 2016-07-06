@@ -2,6 +2,7 @@ package lilrichy.lilrichymod;
 
 import lilrichy.lilrichymod.handler.ConfigurationHandler;
 import lilrichy.lilrichymod.handler.EventHandler;
+import lilrichy.lilrichymod.handler.FuelHandler;
 import lilrichy.lilrichymod.handler.GuiHandler;
 import lilrichy.lilrichymod.init.ModBlocks;
 import lilrichy.lilrichymod.init.ModItems;
@@ -17,6 +18,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStoppingEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION,
         acceptedMinecraftVersions = Reference.ACCEPTED_VERSIONS)
@@ -52,6 +54,7 @@ public class LiLRichyMod {
         //PacketDescriptionHandler.init();
         //NetworkHandler.init();
         MinecraftForge.EVENT_BUS.register(new EventHandler());
+        GameRegistry.registerFuelHandler(new FuelHandler());
 
         //Gui
         NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());

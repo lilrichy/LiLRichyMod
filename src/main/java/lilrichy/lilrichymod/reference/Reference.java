@@ -123,6 +123,7 @@ public class Reference {
         CLEAR_GLASS_SILVER("clearGlassSilver", "BlockClearGlassSilver"),
         CLEAR_GLASS_Yellow("clearGlassYellow", "BlockClearGlassYellow"),
 
+        CHARCOAL_BLOCK("charcoalBlock", "BlockCharcoalBlock"),
 
         ANIMAL_WARD("animalWard", "BlockAnimalWard"),
         MOB_WARD("mobWard", "BlockMobWard"),
