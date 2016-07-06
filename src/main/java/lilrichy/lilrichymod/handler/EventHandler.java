@@ -1,7 +1,7 @@
 package lilrichy.lilrichymod.handler;
 
-import lilrichy.lilrichymod.tileEntity.TileEntityAnimalWard;
-import lilrichy.lilrichymod.tileEntity.TileEntityMobWard;
+import lilrichy.lilrichymod.blocks.wards.TileEntityAnimalWard;
+import lilrichy.lilrichymod.blocks.wards.TileEntityMobWard;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraftforge.event.entity.living.LivingSpawnEvent;

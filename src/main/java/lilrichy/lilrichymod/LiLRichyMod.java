@@ -5,12 +5,9 @@ import lilrichy.lilrichymod.handler.EventHandler;
 import lilrichy.lilrichymod.handler.GuiHandler;
 import lilrichy.lilrichymod.init.ModBlocks;
 import lilrichy.lilrichymod.init.ModItems;
-import lilrichy.lilrichymod.init.ModTileEntity;
 import lilrichy.lilrichymod.proxy.CommonProxy;
 import lilrichy.lilrichymod.recipes.Recipes;
 import lilrichy.lilrichymod.reference.Reference;
-import lilrichy.lilrichymod.tileEntity.TileEntityAnimalWard;
-import lilrichy.lilrichymod.tileEntity.TileEntityMobWard;
 import lilrichy.lilrichymod.utility.LogHelper;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -20,7 +17,6 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStoppingEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION,
         acceptedMinecraftVersions = Reference.ACCEPTED_VERSIONS)
@@ -37,14 +33,13 @@ public class LiLRichyMod {
         LogHelper.info("LILRICHY MOD IS BOOTING UP!!!!!!!!!");
         LogHelper.info("PreInit:");
 
-        LogHelper.info("Loading Config File");
         //Config File
+        LogHelper.info("Loading Config File");
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         MinecraftForge.EVENT_BUS.register(new ConfigurationHandler());
 
         //Mod Blocks
         LogHelper.info("Blocks Loading");
-        ModBlocks.init();
         ModBlocks.register();
 
         //Mod Items
@@ -52,14 +47,8 @@ public class LiLRichyMod {
         ModItems.init();
         ModItems.register();
 
-        //Mod Tile Entities
-        LogHelper.info("Loading Tile Entity's ");
-        ModTileEntity.Init();
-        GameRegistry.registerTileEntity(TileEntityAnimalWard.class, "lilrichymod:TileEntityAnimalWard");
-        GameRegistry.registerTileEntity(TileEntityMobWard.class, "lilrichymod:TileEntityMobWard");
-
+        //Handlers
         LogHelper.info("Loading Handlers");
-        //Network Handlers
         //PacketDescriptionHandler.init();
         //NetworkHandler.init();
         MinecraftForge.EVENT_BUS.register(new EventHandler());

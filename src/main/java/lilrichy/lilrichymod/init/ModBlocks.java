@@ -1,8 +1,22 @@
 package lilrichy.lilrichymod.init;
 
-import lilrichy.lilrichymod.blocks.*;
 import lilrichy.lilrichymod.blocks.blockTable.BlockTable;
+import lilrichy.lilrichymod.blocks.blockTable.TileEntityBlockTable;
 import lilrichy.lilrichymod.blocks.crops.BeardedAzalea;
+import lilrichy.lilrichymod.blocks.decorativeBlocks.clearGlass.*;
+import lilrichy.lilrichymod.blocks.decorativeBlocks.concrete.*;
+import lilrichy.lilrichymod.blocks.decorativeBlocks.cottage.*;
+import lilrichy.lilrichymod.blocks.decorativeBlocks.lava.*;
+import lilrichy.lilrichymod.blocks.decorativeBlocks.marble.BlockMarbleBlack;
+import lilrichy.lilrichymod.blocks.decorativeBlocks.marble.BlockMarbleBlancoAurora;
+import lilrichy.lilrichymod.blocks.decorativeBlocks.marble.BlockMarbleBlancoNafin;
+import lilrichy.lilrichymod.blocks.decorativeBlocks.marble.BlockMarbleSpottedBianco;
+import lilrichy.lilrichymod.blocks.decorativeBlocks.metal.*;
+import lilrichy.lilrichymod.blocks.decorativeBlocks.stone.*;
+import lilrichy.lilrichymod.blocks.wards.BlockAnimalWard;
+import lilrichy.lilrichymod.blocks.wards.BlockMobWard;
+import lilrichy.lilrichymod.blocks.wards.TileEntityAnimalWard;
+import lilrichy.lilrichymod.blocks.wards.TileEntityMobWard;
 import lilrichy.lilrichymod.reference.Names;
 import lilrichy.lilrichymod.reference.Reference;
 import net.minecraft.block.Block;
@@ -18,212 +32,116 @@ import net.minecraftforge.oredict.OreDictionary;
  */
 public class ModBlocks {
 
-    public static Block concrete;
-    public static Block concreteArrangedBricks;
-    public static Block concreteBricks;
-    public static Block concreteBricksDark;
-    public static Block concreteFancyBlocks;
-    public static Block concreteOldSquares;
-    public static Block concreteRocks;
-    public static Block concreteSmallBricks;
-    public static Block concreteSmallTexturedSquares;
-    public static Block concreteSquares;
-    public static Block concreteTexturedBlocks;
+    public static Block concrete = new BlockConcrete();
+    public static Block concreteArrangedBricks = new BlockConcreteArrangedBricks();
+    public static Block concreteBricks = new BlockConcreteBricks();
+    public static Block concreteBricksDark = new BlockConcreteBricksDark();
+    public static Block concreteFancyBlocks = new BlockConcreteFancyBlocks();
+    public static Block concreteOldSquares = new BlockConcreteOldSquares();
+    public static Block concreteRocks = new BlockConcreteRocks();
+    public static Block concreteSmallBricks = new BlockConcreteSmallBricks();
+    public static Block concreteSmallTexturedSquares = new BlockConcreteSmallTexturedSquares();
+    public static Block concreteSquares = new BlockConcreteSquares();
+    public static Block concreteTexturedBlocks = new BlockConcreteTexturedBlocks();
 
 //----------------------------------------------------------------------------------------------------------------------
 
-    public static Block cottageWall;
-    public static Block cottageWallArchedBeam;
-    public static Block cottageWallArchedBeamDark;
-    public static Block cottageWallDark;
-    public static Block cottageWallPanelDark;
-    public static Block cottageWallPanelLight;
-    public static Block cottageWallXDark;
-    public static Block cottageWallXLight;
-    public static Block cottageWindowDark;
-    public static Block cottageWindowLight;
+    public static Block cottageWall = new BlockCottageWall();
+    public static Block cottageWallArchedBeam = new BlockCottageWallArchedBeam();
+    public static Block cottageWallArchedBeamDark = new BlockCottageWallArchedBeamDark();
+    public static Block cottageWallDark = new BlockCottageWallDark();
+    public static Block cottageWallPanelDark = new BlockCottageWallPanelDark();
+    public static Block cottageWallPanelLight = new BlockCottageWallPanelLight();
+    public static Block cottageWallXDark = new BlockCottageWallXDark();
+    public static Block cottageWallXLight = new BlockCottageWallXLight();
+    public static Block cottageWindowDark = new BlockCottageWindowDark();
+    public static Block cottageWindowLight = new BlockCottageWindowLight();
+//----------------------------------------------------------------------------------------------------------------------
+
+
+    public static Block lavaBowl = new BlockLavaBowl();
+    public static Block lavaBowlBlue = new BlockLavaBowlBlue();
+    public static Block lavaBowlGreen = new BlockLavaBowlGreen();
+    public static Block lavaBowlPurple = new BlockLavaBowlPurple();
+    public static Block lavaCracks = new BlockLavaCracks();
+    public static Block lavaDeepFire = new BlockLavaDeepFire();
+    public static Block lavaPelesLake = new BlockLavaPelesLake();
+    public static Block lavaSearingGorge = new BlockLavaSearingGorge();
+    public static Block lavaSlumberingVolcano = new BlockLavaSlumberingVolcano();
 
 //----------------------------------------------------------------------------------------------------------------------
 
-    public static Block lavaBowl;
-    public static Block lavaBowlBlue;
-    public static Block lavaBowlGreen;
-    public static Block lavaBowlPurple;
-    public static Block lavaCracks;
-    public static Block lavaDeepFire;
-    public static Block lavaPelesLake;
-    public static Block lavaSearingGorge;
-    public static Block lavaSlumberingVolcano;
+    public static Block marbleBlack = new BlockMarbleBlack();
+    public static Block marbleBlancoAurora = new BlockMarbleBlancoAurora();
+    public static Block marbleBlancoNafin = new BlockMarbleBlancoNafin();
+    public static Block marbleSpottedBianco = new BlockMarbleSpottedBianco();
 
 //----------------------------------------------------------------------------------------------------------------------
 
-    public static Block marbleBlack;
-    public static Block marbleBlancoAurora;
-    public static Block marbleBlancoNafin;
-    public static Block marbleSpottedBianco;
+    public static Block metalArmor = new BlockMetalArmor();
+    public static Block metalBatteredRobot = new BlockMetalBatteredRobot();
+    public static Block metalBatteredRobotBlue = new BlockMetalBatteredRobotBlue();
+    public static Block metalBatteredRobotOrange = new BlockMetalBatteredRobotOrange();
+    public static Block metalBatteredRobotPurple = new BlockMetalBatteredRobotPurple();
+    public static Block metalBrushedSteel = new BlockMetalBrushedSteel();
+    public static Block metalBrushedSteelDark = new BlockMetalBrushedSteelDark();
+    public static Block metalBubbleGrip = new BlockMetalBubbleGrip();
+    public static Block metalLaserEtched = new BlockMetalLaserEtched();
+    public static Block metalNeedlepointSteel = new BlockMetalNeedlepointSteel();
+    public static Block metalPlating = new BlockMetalPlating();
+    public static Block metalPlatingDark = new BlockMetalPlatingDark();
+    public static Block metalRustedIronGrip = new BlockMetalRustedIronGrip();
+    public static Block metalSeafoamTarnish = new BlockMetalSeafoamTarnish();
+    public static Block metalStained = new BlockMetalStained();
 
 //----------------------------------------------------------------------------------------------------------------------
 
-    public static Block metalArmor;
-    public static Block metalBatteredRobot;
-    public static Block metalBatteredRobotBlue;
-    public static Block metalBatteredRobotOrange;
-    public static Block metalBatteredRobotPurple;
-    public static Block metalBrushedSteel;
-    public static Block metalBrushedSteelDark;
-    public static Block metalBubbleGrip;
-    public static Block metalLaserEtched;
-    public static Block metalNeedlepointSteel;
-    public static Block metalPlating;
-    public static Block metalPlatingDark;
-    public static Block metalRustedIronGrip;
-    public static Block metalSeafoamTarnish;
-    public static Block metalStained;
+    public static Block stoneArrangedBricks = new BlockStoneArrangedBricks();
+    public static Block stoneBlocks = new BlockStoneBlocks();
+    public static Block stoneBlocksDark = new BlockStoneBlocksDark();
+    public static Block stoneCracked = new BlockStoneCracked();
+    public static Block stoneMinerals = new BlockStoneMinerals();
+    public static Block stoneMineralsBlue = new BlockStoneMineralsBlue();
+    public static Block stoneMineralsOrange = new BlockStoneMineralsOrange();
+    public static Block stoneMineralsPurple = new BlockStoneMineralsPurple();
 
 //----------------------------------------------------------------------------------------------------------------------
 
-    public static Block stoneArrangedBricks;
-    public static Block stoneBlocks;
-    public static Block stoneBlocksDark;
-    public static Block stoneCracked;
-    public static Block stoneMinerals;
-    public static Block stoneMineralsBlue;
-    public static Block stoneMineralsOrange;
-    public static Block stoneMineralsPurple;
+    public static Block clearGlass = new BlockClearGlass();
+    public static Block clearGlassBlack = new BlockClearGlassBlack();
+    public static Block clearGlassBlue = new BlockClearGlassBlue();
+    public static Block clearGlassBrown = new BlockClearGlassBrown();
+    public static Block clearGlassCyan = new BlockClearGlassCyan();
+    public static Block clearGlassGray = new BlockClearGlassGray();
+    public static Block clearGlassGreen = new BlockClearGlassGreen();
+    public static Block clearGlassLightBlue = new BlockClearGlassLightBlue();
+    public static Block clearGlassLime = new BlockClearGlassLime();
+    public static Block clearGlassMagenta = new BlockClearGlassMagenta();
+    public static Block clearGlassOrange = new BlockClearGlassOrange();
+    public static Block clearGlassPink = new BlockClearGlassPink();
+    public static Block clearGlassPurple = new BlockClearGlassPurple();
+    public static Block clearGlassRed = new BlockClearGlassRed();
+    public static Block clearGlassSilver = new BlockClearGlassSilver();
+    public static Block clearGlassYellow = new BlockClearGlassYellow();
 
 //----------------------------------------------------------------------------------------------------------------------
 
-    public static Block clearGlass;
-    public static Block clearGlassBlack;
-    public static Block clearGlassBlue;
-    public static Block clearGlassBrown;
-    public static Block clearGlassCyan;
-    public static Block clearGlassGray;
-    public static Block clearGlassGreen;
-    public static Block clearGlassLightBlue;
-    public static Block clearGlassLime;
-    public static Block clearGlassMagenta;
-    public static Block clearGlassOrange;
-    public static Block clearGlassPink;
-    public static Block clearGlassPurple;
-    public static Block clearGlassRed;
-    public static Block clearGlassSilver;
-    public static Block clearGlassYellow;
+    public static Block animalWard = new BlockAnimalWard();
+    public static Block mobWard = new BlockMobWard();
+    public static Block blockTable = new BlockTable();
+//    public static Block playerDetector = new BlockPlayerDetector(false, Reference.ModBlocks.PLAYER_DETECTOR.getUnlocalizedName(),
+//            Reference.ModBlocks.PLAYER_DETECTOR.getRegistryName());
+//    public static Block playerDetectorActivated = new BlockPlayerDetector(true,Reference.ModBlocks.PLAYER_DETECTOR_ACTIVATED.getUnlocalizedName(),
+//            Reference.ModBlocks.PLAYER_DETECTOR_ACTIVATED.getRegistryName());
+//----------------------------------------------------------------------------------------------------------------------
+
+    public static BeardedAzalea beardedAzalea = new BeardedAzalea();
 
 //----------------------------------------------------------------------------------------------------------------------
 
-    public static Block animalWard;
-    public static Block mobWard;
 
-    public static Block blockTable;
-
-    public static BeardedAzalea beardedAzalea;
-
-
-    public static void init() {
-        concrete = new BlockConcrete();
-        concreteArrangedBricks = new BlockConcreteArrangedBricks();
-        concreteBricks = new BlockConcreteBricks();
-        concreteBricksDark = new BlockConcreteBricksDark();
-        concreteFancyBlocks = new BlockConcreteFancyBlocks();
-        concreteOldSquares = new BlockConcreteOldSquares();
-        concreteRocks = new BlockConcreteRocks();
-        concreteSmallBricks = new BlockConcreteSmallBricks();
-        concreteSmallTexturedSquares = new BlockConcreteSmallTexturedSquares();
-        concreteSquares = new BlockConcreteSquares();
-        concreteTexturedBlocks = new BlockConcreteTexturedBlocks();
-
-//----------------------------------------------------------------------------------------------------------------------
-
-        cottageWall = new BlockCottageWall();
-        cottageWallArchedBeam = new BlockCottageWallArchedBeam();
-        cottageWallArchedBeamDark = new BlockCottageWallArchedBeamDark();
-        cottageWallDark = new BlockCottageWallDark();
-        cottageWallPanelDark = new BlockCottageWallPanelDark();
-        cottageWallPanelLight = new BlockCottageWallPanelLight();
-        cottageWallXDark = new BlockCottageWallXDark();
-        cottageWallXLight = new BlockCottageWallXLight();
-        cottageWindowDark = new BlockCottageWindowDark();
-        cottageWindowLight = new BlockCottageWindowLight();
-
-//----------------------------------------------------------------------------------------------------------------------
-
-        lavaBowl = new BlockLavaBowl();
-        lavaBowlBlue = new BlockLavaBowlBlue();
-        lavaBowlGreen = new BlockLavaBowlGreen();
-        lavaBowlPurple = new BlockLavaBowlPurple();
-        lavaCracks = new BlockLavaCracks();
-        lavaDeepFire = new BlockLavaDeepFire();
-        lavaPelesLake = new BlockLavaPelesLake();
-        lavaSearingGorge = new BlockLavaSearingGorge();
-        lavaSlumberingVolcano = new BlockLavaSlumberingVolcano();
-
-//----------------------------------------------------------------------------------------------------------------------
-
-        marbleBlack = new BlockMarbleBlack();
-        marbleBlancoAurora = new BlockMarbleBlancoAurora();
-        marbleBlancoNafin = new BlockMarbleBlancoNafin();
-        marbleSpottedBianco = new BlockMarbleSpottedBianco();
-
-//----------------------------------------------------------------------------------------------------------------------
-
-        metalArmor = new BlockMetalArmor();
-        metalBatteredRobot = new BlockMetalBatteredRobot();
-        metalBatteredRobotBlue = new BlockMetalBatteredRobotBlue();
-        metalBatteredRobotOrange = new BlockMetalBatteredRobotOrange();
-        metalBatteredRobotPurple = new BlockMetalBatteredRobotPurple();
-        metalBrushedSteel = new BlockMetalBrushedSteel();
-        metalBrushedSteelDark = new BlockMetalBrushedSteelDark();
-        metalBubbleGrip = new BlockMetalBubbleGrip();
-        metalLaserEtched = new BlockMetalLaserEtched();
-        metalNeedlepointSteel = new BlockMetalNeedlepointSteel();
-        metalPlating = new BlockMetalPlating();
-        metalPlatingDark = new BlockMetalPlatingDark();
-        metalRustedIronGrip = new BlockMetalRustedIronGrip();
-        metalSeafoamTarnish = new BlockMetalSeafoamTarnish();
-        metalStained = new BlockMetalStained();
-
-//----------------------------------------------------------------------------------------------------------------------
-
-        stoneArrangedBricks = new BlockStoneArrangedBricks();
-        stoneBlocks = new BlockStoneBlocks();
-        stoneBlocksDark = new BlockStoneBlocksDark();
-        stoneCracked = new BlockStoneCracked();
-        stoneMinerals = new BlockStoneMinerals();
-        stoneMineralsBlue = new BlockStoneMineralsBlue();
-        stoneMineralsOrange = new BlockStoneMineralsOrange();
-        stoneMineralsPurple = new BlockStoneMineralsPurple();
-
-//----------------------------------------------------------------------------------------------------------------------
-
-        clearGlass = new BlockClearGlass();
-        clearGlassBlack = new BlockClearGlassBlack();
-        clearGlassBlue = new BlockClearGlassBlue();
-        clearGlassBrown = new BlockClearGlassBrown();
-        clearGlassCyan = new BlockClearGlassCyan();
-        clearGlassGray = new BlockClearGlassGray();
-        clearGlassGreen = new BlockClearGlassGreen();
-        clearGlassLightBlue = new BlockClearGlassLightBlue();
-        clearGlassLime = new BlockClearGlassLime();
-        clearGlassMagenta = new BlockClearGlassMagenta();
-        clearGlassOrange = new BlockClearGlassOrange();
-        clearGlassPink = new BlockClearGlassPink();
-        clearGlassPurple = new BlockClearGlassPurple();
-        clearGlassRed = new BlockClearGlassRed();
-        clearGlassSilver = new BlockClearGlassSilver();
-        clearGlassYellow = new BlockClearGlassYellow();
-
-//----------------------------------------------------------------------------------------------------------------------
-
-        animalWard = new BlockAnimalWard();
-        mobWard = new BlockMobWard();
-
-        blockTable = new BlockTable();
-
-        beardedAzalea = new BeardedAzalea();
-
-    }
-
+    //// TODO: 7/6/2016 Add in the tool tips for crafting recipies to blocks made in the block table.
+    
     public static void register() {
         registerBlock(concrete);
         OreDictionary.registerOre(Reference.ModBlocks.CONCRETE.getUnlocalizedName(), concrete);
@@ -270,7 +188,7 @@ public class ModBlocks {
         OreDictionary.registerOre(Reference.ModBlocks.CONCRETE_TEXTURED_BLOCKS.getUnlocalizedName(), concreteTexturedBlocks);
         OreDictionary.registerOre(Names.OreDicNames.CONCRETE, concreteTexturedBlocks);
 
-//----------------------------------------------------------------------------------------------------------------------        registerBlock(cottageWall);
+//----------------------------------------------------------------------------------------------------------------------        
 
         registerBlock(cottageWall);
         OreDictionary.registerOre(Reference.ModBlocks.COTTAGE_WALL.getUnlocalizedName(), cottageWall);
@@ -528,12 +446,25 @@ public class ModBlocks {
 //----------------------------------------------------------------------------------------------------------------------
 
         registerBlock(animalWard);
+        GameRegistry.registerTileEntity(TileEntityAnimalWard.class, "lilrichymod:TileEntityAnimalWard");
+
         registerBlock(mobWard);
+        GameRegistry.registerTileEntity(TileEntityMobWard.class, "lilrichymod:TileEntityMobWard");
 
         registerBlock(blockTable);
+        GameRegistry.registerTileEntity(TileEntityBlockTable.class, "lilrichymod:TileEntityBlockTable");
+
+//        registerBlock(playerDetector);
+//        registerBlock(playerDetectorActivated);
+//        GameRegistry.registerTileEntity(TileEntityPlayerDetector.class, "lilrichy:TileEntityPlayerDetector");
+
+//----------------------------------------------------------------------------------------------------------------------
 
         registerBlock(beardedAzalea);
+
     }
+
+//----------------------------------------------------------------------------------------------------------------------
 
     public static void registerRenders() {
         registerRender(concrete);
@@ -632,12 +563,17 @@ public class ModBlocks {
 
         registerRender(animalWard);
         registerRender(mobWard);
-
         registerRender(blockTable);
+//        registerRender(playerDetector);
+//        registerRender(playerDetectorActivated);
+
+//----------------------------------------------------------------------------------------------------------------------
 
         registerRender(beardedAzalea);
 
     }
+
+//----------------------------------------------------------------------------------------------------------------------
 
     public static void registerRender(Block block) {
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(

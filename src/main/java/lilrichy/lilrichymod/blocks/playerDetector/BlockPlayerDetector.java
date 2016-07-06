@@ -1,99 +1,120 @@
 //package lilrichy.lilrichymod.blocks.playerDetector;
 //
-//import com.blogspot.richardreigens.lilrichymod.creativeTab.CreativeTabLiLRichyMod;
-//import com.blogspot.richardreigens.lilrichymod.reference.Names;
-//import com.blogspot.richardreigens.lilrichymod.reference.Reference;
+//import lilrichy.lilrichymod.creativeTab.CreativeTabLiLRichyMod;
+//import lilrichy.lilrichymod.init.ModBlocks;
 //import net.minecraft.block.BlockContainer;
+//import net.minecraft.block.SoundType;
 //import net.minecraft.block.material.Material;
 //import net.minecraft.block.state.IBlockState;
 //import net.minecraft.entity.item.EntityItem;
 //import net.minecraft.entity.player.EntityPlayer;
+//import net.minecraft.init.SoundEvents;
+//import net.minecraft.item.Item;
 //import net.minecraft.item.ItemBlock;
 //import net.minecraft.item.ItemStack;
 //import net.minecraft.tileentity.TileEntity;
-//import net.minecraft.util.BlockPos;
 //import net.minecraft.util.EnumFacing;
+//import net.minecraft.util.EnumHand;
+//import net.minecraft.util.EnumParticleTypes;
+//import net.minecraft.util.SoundCategory;
+//import net.minecraft.util.math.BlockPos;
 //import net.minecraft.world.IBlockAccess;
 //import net.minecraft.world.World;
+//import net.minecraftforge.fml.relauncher.Side;
+//import net.minecraftforge.fml.relauncher.SideOnly;
+//
+//import javax.annotation.Nullable;
+//import java.util.Random;
+//
 //
 ///**
 // * Created by Rich on 11/23/2015.
 // */
 //public class BlockPlayerDetector extends BlockContainer {
-// /*   IIcon sideOff;
-//    IIcon sideOn;
-//    IIcon topBottom;*/
+//    /*   IIcon sideOff;
+//       IIcon sideOn;
+//       IIcon topBottom;*/
+//    private final boolean isActivated;
 //
-//    public BlockPlayerDetector(Material material) {
-//        super(material);
-//        this.setStepSound(soundTypeMetal);
-//        this.setUnlocalizedName(Names.Blocks.PLAYER_DETECTOR);
+//
+//    public BlockPlayerDetector(boolean isActivated, String name, String rName) {
+//        super(Material.ROCK);
+//        setUnlocalizedName(name);
+//        setRegistryName(rName);
 //        this.setCreativeTab(CreativeTabLiLRichyMod.LR_Tab);
-//        this.setHardness(5f);
-//        this.setResistance(0.5f);
+//        this.setHardness(2f);
+//        this.setSoundType(SoundType.STONE);
+//        this.isActivated = isActivated;
 //    }
 //
-//    @Override
-//    public String getUnlocalizedName() {
-//        return String.format("tile.%s%s", Reference.MOD_ID.toLowerCase() + ":", getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+//
+//    @Nullable
+//    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+//        return Item.getItemFromBlock(ModBlocks.playerDetector);
 //    }
 //
-//    protected String getUnwrappedUnlocalizedName(String unlocalizedName) {
-//        return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
-//    }
+//    @SideOnly(Side.CLIENT)
+//    @SuppressWarnings("incomplete-switch")
+//    public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rand) {
+//        if (this.isActivated) {
+//            double d0 = (double) pos.getX() + 0.5D;
+//            double d1 = (double) pos.getY() + rand.nextDouble() * 6.0D / 16.0D;
+//            double d2 = (double) pos.getZ() + 0.5D;
+//            double d3 = 0.52D;
+//            double d4 = rand.nextDouble() * 0.6D - 0.3D;
 //
-//   /* @Override
-//    public void registerBlockIcons(IIconRegister iconRegister) {
-//        sideOff = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + "detector/playerDetectorOFF");
-//        sideOn = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + "detector/playerDetectorON");
-//        topBottom = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + "detector/playerDetectorTopBottom");
-//    }
+//            worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 - d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D, new int[0]);
+//            worldIn.spawnParticle(EnumParticleTypes.REDSTONE, d0 - d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D, new int[0]);
 //
-//    public IIcon getIcon(IBlockAccess world, int x, int y, int z, int side) {
-//        TEPlayerDetector te = (TEPlayerDetector) world.getTileEntity(x, y, z);
-//        ItemStack stack = te.getCamouflage();
-//        if (stack != null && stack.getItem() instanceof ItemBlock) {
-//            Block block = ((ItemBlock) stack.getItem()).field_150939_a;
-//            return block.getIcon(side, stack.getItemDamage());
-//        } else {
-//            IIcon side_icon;
-//            TileEntity tile = world.getTileEntity(x, y, z);
-//            if (tile instanceof TEPlayerDetector && ((TEPlayerDetector) tile).activated)
-//                side_icon = sideOn;
-//            else
-//                side_icon = sideOff;
+//            worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 + d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D, new int[0]);
+//            worldIn.spawnParticle(EnumParticleTypes.REDSTONE, d0 + d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D, new int[0]);
 //
-//            if (side == 0)
-//                return topBottom;
-//            else if (side == 1)
-//                return topBottom;
-//            else
-//                return side_icon;
+//            worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 + d4, d1, d2 - d3, 0.0D, 0.0D, 0.0D, new int[0]);
+//            worldIn.spawnParticle(EnumParticleTypes.REDSTONE, d0 + d4, d1, d2 - d3, 0.0D, 0.0D, 0.0D, new int[0]);
+//
+//            worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 + d4, d1, d2 + d3, 0.0D, 0.0D, 0.0D, new int[0]);
+//            worldIn.spawnParticle(EnumParticleTypes.REDSTONE, d0 + d4, d1, d2 + d3, 0.0D, 0.0D, 0.0D, new int[0]);
 //        }
 //    }
 //
-//    @Override
-//    public IIcon getIcon(int side, int meta) {
-//        if (side == 0)
-//            return topBottom;
-//        else if (side == 1)
-//            return topBottom;
+//    public static void setState(boolean active, World worldIn, BlockPos pos)
+//    {
+//        IBlockState iblockstate = worldIn.getBlockState(pos);
+//        TileEntity tileentity = worldIn.getTileEntity(pos);
+//
+//        if (active)
+//        {
+//            worldIn.setBlockState(pos, ModBlocks.playerDetectorActivated.getDefaultState(), 3);
+//            worldIn.setBlockState(pos, ModBlocks.playerDetectorActivated.getDefaultState(), 3);
+//
+//        }
 //        else
-//            return sideOn;
+//        {
+//            worldIn.setBlockState(pos, ModBlocks.playerDetector.getDefaultState(), 3);
+//            worldIn.setBlockState(pos, ModBlocks.playerDetector.getDefaultState(), 3);
+//        }
+//
+//
+//        if (tileentity != null)
+//        {
+//            tileentity.validate();
+//            worldIn.setTileEntity(pos, tileentity);
+//        }
 //    }
-//*/
+//
+//
 //    @Override
 //    public TileEntity createNewTileEntity(World world, int metadata) {
-//        return new TEPlayerDetector();
+//        return new TileEntityPlayerDetector();
 //    }
 //
 //    @Override
-//    public boolean canConnectRedstone(IBlockAccess world, BlockPos pos, EnumFacing side) {
+//    public boolean canConnectRedstone(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing side) {
 //        return true;
 //    }
 //
 //    @Override
-//    public boolean canProvidePower() {
+//    public boolean canProvidePower(IBlockState state) {
 //        return true;
 //    }
 //
@@ -103,7 +124,7 @@
 //    }
 //
 //    @Override
-//    public boolean isSideSolid(IBlockAccess world, BlockPos pos, EnumFacing side) {
+//    public boolean isSideSolid(IBlockState base_state, IBlockAccess world, BlockPos pos, EnumFacing side) {
 //        return true;
 //    }
 //
@@ -113,9 +134,9 @@
 //    }
 //
 //    @Override
-//    public int getWeakPower(IBlockAccess worldIn, BlockPos pos, IBlockState state, EnumFacing side) {
-//        TileEntity te = worldIn.getTileEntity(pos);
-//        TEPlayerDetector detector = (te != null && te instanceof TEPlayerDetector) ? (TEPlayerDetector) te : null;
+//    public int getWeakPower(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side) {
+//        TileEntity te = blockAccess.getTileEntity(pos);
+//        TileEntityPlayerDetector detector = (te != null && te instanceof TileEntityPlayerDetector) ? (TileEntityPlayerDetector) te : null;
 //        if (detector != null)
 //            return detector.activated ? 15 : 0;
 //        else
@@ -123,9 +144,9 @@
 //    }
 //
 //    @Override
-//    public int getStrongPower(IBlockAccess worldIn, BlockPos pos, IBlockState state, EnumFacing side) {
-//        TileEntity te = worldIn.getTileEntity(pos);
-//        TEPlayerDetector detector = (te != null && te instanceof TEPlayerDetector) ? (TEPlayerDetector) te : null;
+//    public int getStrongPower(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side) {
+//        TileEntity te = blockAccess.getTileEntity(pos);
+//        TileEntityPlayerDetector detector = (te != null && te instanceof TileEntityPlayerDetector) ? (TileEntityPlayerDetector) te : null;
 //        if (detector != null)
 //            return detector.activated ? 15 : 0;
 //        else
@@ -133,26 +154,26 @@
 //    }
 //
 //    @Override
-//    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumFacing side, float hitX, float hitY, float hitZ) {
+//    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, @Nullable ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
 //        if (!world.isRemote) {
-//            TEPlayerDetector te = (TEPlayerDetector) world.getTileEntity(pos);
+//            TileEntityPlayerDetector te = (TileEntityPlayerDetector) world.getTileEntity(pos);
 //            //check if sneaking and if using empty hand and if block has camo then remove camo
-//            if (player.isSneaking() && player.getCurrentEquippedItem() == null) {
+//            if (player.isSneaking() && player.getActiveItemStack() == null) {
 //                if (te.getCamouflage() != null) {
 //                    ItemStack camoItemStack = te.getCamouflage();
 //                    te.setCamouflage(null);
-//                    world.playSoundEffect((double) pos.getX() + 0.5D, (double) pos.getY() + 0.5D, (double) pos.getZ() + 0.5D, "random.click", 0.3F, .1f);
-//                    EntityItem itemEntity = new EntityItem(world,pos.getX(),pos.getY(),pos.getZ(), camoItemStack);
+//                    world.playSound(pos.getX() + 0.5D, pos.getY() + 0.5D, pos.getZ() + 0.5D, SoundEvents.UI_BUTTON_CLICK, SoundCategory.BLOCKS, 0.3F, .1f, false);
+//                    EntityItem itemEntity = new EntityItem(world, pos.getX(), pos.getY(), pos.getZ(), camoItemStack);
 //                    world.spawnEntityInWorld(itemEntity);
 //                }
 //            } else {
 //                //check if player has item in hand that is a BLOCK and then set camo
-//                ItemStack playerItem = player.getCurrentEquippedItem();
+//                ItemStack playerItem = player.getActiveItemStack();
 //                if (playerItem != null && te.getCamouflage() == null) {
 //                    if (playerItem.getItem() instanceof ItemBlock) {
 //                        ItemStack camoStack = playerItem.splitStack(1);
 //                        te.setCamouflage(camoStack);
-//                        world.playSoundEffect((double) pos.getX() + 0.5D, (double) pos.getY() + 0.5D, (double) pos.getZ() + 0.5D, "random.click", 0.3F, 1f);
+//                        world.playSound(pos.getX() + 0.5D, pos.getY() + 0.5D, pos.getZ() + 0.5D, SoundEvents.UI_BUTTON_CLICK, SoundCategory.BLOCKS, 0.3F, .1f, false);
 //                    }
 //                }
 //            }
@@ -164,10 +185,5 @@
 //    public void breakBlock(World world, BlockPos pos, IBlockState state) {
 //        super.breakBlock(world, pos, state);
 //        world.notifyBlockOfStateChange(pos, world.getBlockState(pos).getBlock());
-//      /*  world.notifyBlocksOfNeighborChange(x + 1, y, z, world.getBlock(x, y, z));
-//        world.notifyBlocksOfNeighborChange(x, y - 1, z, world.getBlock(x, y, z));
-//        world.notifyBlocksOfNeighborChange(x, y + 1, z, world.getBlock(x, y, z));
-//        world.notifyBlocksOfNeighborChange(x, y, z - 1, world.getBlock(x, y, z));
-//        world.notifyBlocksOfNeighborChange(x, y, z + 1, world.getBlock(x, y, z));*/
 //    }
 //}

@@ -1,7 +1,7 @@
 package lilrichy.lilrichymod.blocks.blockTable;
 
 import lilrichy.lilrichymod.recipes.BlockTableRecipes;
-import lilrichy.lilrichymod.reference.Reference;
+import lilrichy.lilrichymod.utility.ParticleHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.ClickType;
@@ -67,7 +67,9 @@ public class TileEntityBlockTable extends TileEntity implements IInventory, ITic
     public ItemStack[] getCurrentRecipe() {
         if (inputHasItems()) {
             if (BlockTableRecipes.recipes().getCraftingResult(getStackInSlot(FIRST_INPUT_SLOT), getStackInSlot(FIRST_INPUT_SLOT + 1)) != null) {
+
                 return BlockTableRecipes.recipes().getCraftingResult(getStackInSlot(FIRST_INPUT_SLOT), getStackInSlot(FIRST_INPUT_SLOT + 1));
+
             }
         }
         return null;
@@ -78,11 +80,12 @@ public class TileEntityBlockTable extends TileEntity implements IInventory, ITic
             this.decrStackSize(0, decreaseAmt);
             this.decrStackSize(1, decreaseAmt);
             player.inventory.addItemStackToInventory(getStackInSlot(slot));
-             worldObj.playSound(player,pos, SoundEvents.BLOCK_ANVIL_USE, SoundCategory.BLOCKS, 0.3F, .1f);
+            worldObj.playSound(player, pos, SoundEvents.BLOCK_ANVIL_USE, SoundCategory.BLOCKS, 0.3F, .1f);
             this.markDirty();
-
+            ParticleHelper.surroundBlock(worldObj, pos, 100);
         }
     }
+
 
     public void getInput() {
         this.input = new ItemStack[]{getStackInSlot(FIRST_INPUT_SLOT), getStackInSlot(FIRST_INPUT_SLOT + 1)};
@@ -270,9 +273,10 @@ public class TileEntityBlockTable extends TileEntity implements IInventory, ITic
 //    }
 
 
+    //// TODO: 7/6/2016 Make this a proper name reference
     @Override
     public String getName() {
-        return Reference.ModBlocks.BLOCK_TABLE.getUnlocalizedName();
+        return "Block Table";
     }
 
     @Override

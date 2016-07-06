@@ -8,7 +8,7 @@ public class Reference {
     //Version 1.x = 1.7.10
     //Version 2.x = 1.8.9
     //Version 3.x = 1.9.4
-    public static final String MOD_VERSION = "3.0";
+    public static final String MOD_VERSION = "3.0.0";
 
     public static final String ACCEPTED_VERSIONS = "[1.9.4]";
 
@@ -129,7 +129,10 @@ public class Reference {
 
         BLOCK_TABLE("blockTable", "BlockBlockTable"),
 
-        BEARDED_AZALEA("beardedAzalea", "BlockBeardedAzalea");
+        BEARDED_AZALEA("beardedAzalea", "BlockBeardedAzalea"),
+
+        PLAYER_DETECTOR("playerDetector", "BlockPlayerDetector"),
+        PLAYER_DETECTOR_ACTIVATED("playerDetectorActivated", "BlockPlayerDetectorActivated");
 
         private String unlocalizedName;
         private String registryName;
