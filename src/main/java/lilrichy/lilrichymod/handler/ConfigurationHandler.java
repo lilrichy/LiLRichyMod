@@ -14,9 +14,8 @@ import java.io.File;
 public class ConfigurationHandler {
     public static Configuration configuration;
     public static boolean loadPlayerDetector, loadAdvancedDetector;
-    public static boolean smeltingRecipes, itemRecipes, panelRecipes, thermalExpansionRecipes, coalDustRecipe, enderIORecipies, leaverRecipe;
+    public static boolean smeltingRecipes, itemRecipes, panelRecipes, thermalExpansionRecipes, coalDustRecipe, enderIORecipies, leaverRecipe, charcoalBlockRecipe;
     public static int defaultRangePlayerDetector, defaultRangeAdvancedDetector;
-    public static boolean flipPlayers;
     public static boolean resetConfigFile;
     public static boolean debugMessages;
 
@@ -34,13 +33,13 @@ public class ConfigurationHandler {
         loadAdvancedDetector = configuration.getBoolean("Enable Advanced Detector", SHOULD_LOAD, true, "Enable the Advanced Detector Block.");
         coalDustRecipe = configuration.getBoolean("Coal/Charcoal Dye", SHOULD_LOAD, true, "Enable to make Pulverized Coal and Charcoal useable as Black Dye. *Disabled if Thermal Expansion Recipes are Disabled");
         leaverRecipe = configuration.getBoolean("Leaver from stone", SHOULD_LOAD, true, "Enable to add a convenience recipe to craft a leaver out of any stone block as well as cobblestone.");
+        charcoalBlockRecipe = configuration.getBoolean("Charcoal Block", SHOULD_LOAD, true, "Enable to add a recipe to craft a block of charcoal from 9 charcoal");
 
         String DETECTOR_SETTINGS = "Detector Settings";
         defaultRangePlayerDetector = configuration.getInt("Range Player Detector", DETECTOR_SETTINGS, 2, 1, 20, "Range of the Player Detector");
         defaultRangeAdvancedDetector = configuration.getInt("Range Advanced Detector", DETECTOR_SETTINGS, 5, 1, 20, "Range of the Advanced Detector");
 
         String FUN_SETTINGS = "Fun Settings";
-        flipPlayers = configuration.getBoolean("Flip Players", FUN_SETTINGS, false, "Flip Players Upside Down.");
         debugMessages = configuration.getBoolean("Display Debug Text", FUN_SETTINGS, false, "Displays text used for debugging the mod.");
 
         if (configuration.hasChanged()) {

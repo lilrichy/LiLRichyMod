@@ -31,8 +31,8 @@ public class Recipes {
         // Adds recipe for leaver from stone and stick.
         if (ConfigurationHandler.leaverRecipe) {
             for (ItemStack stack : OreDictionary.getOres("stone")) {
-                GameRegistry.addRecipe(new ItemStack(Blocks.LEVER, 1), "s", "b", 'b',
-                        new ItemStack(stack.getItem(), 1, stack.getItem().getDamage(stack)), 's', new ItemStack(Items.STICK));
+                GameRegistry.addRecipe(new ItemStack(ModBlocks.stoneLever), "s", "b",
+                        'b', new ItemStack(stack.getItem(), 1, stack.getItem().getDamage(stack)), 's', new ItemStack(Items.STICK));
             }
         }
 
@@ -60,13 +60,15 @@ public class Recipes {
         }
 
         //Charcoal Block
-        GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.charcoalBlock),
-                new ItemStack(Items.COAL, 1, 1), new ItemStack(Items.COAL, 1, 1),new ItemStack(Items.COAL, 1, 1),
-        new ItemStack(Items.COAL, 1, 1),new ItemStack(Items.COAL, 1, 1),new ItemStack(Items.COAL, 1, 1),
-        new ItemStack(Items.COAL, 1, 1),new ItemStack(Items.COAL, 1, 1),new ItemStack(Items.COAL, 1, 1));
+        if (ConfigurationHandler.charcoalBlockRecipe) {
+            GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.charcoalBlock),
+                    new ItemStack(Items.COAL, 1, 1), new ItemStack(Items.COAL, 1, 1), new ItemStack(Items.COAL, 1, 1),
+                    new ItemStack(Items.COAL, 1, 1), new ItemStack(Items.COAL, 1, 1), new ItemStack(Items.COAL, 1, 1),
+                    new ItemStack(Items.COAL, 1, 1), new ItemStack(Items.COAL, 1, 1), new ItemStack(Items.COAL, 1, 1));
 
-        GameRegistry.addShapelessRecipe(new ItemStack(Items.COAL, 9, 1),
-                new ItemStack(ModBlocks.charcoalBlock));
+            GameRegistry.addShapelessRecipe(new ItemStack(Items.COAL, 9, 1),
+                    new ItemStack(ModBlocks.charcoalBlock));
+        }
     }
 
     public static void smeltingRecipes() {
