@@ -31,8 +31,8 @@ public class ConfigurationHandler {
         enderIORecipies = configuration.getBoolean("Enable Ender IO Recipes", SHOULD_LOAD, true, "Enable for Sag Mill recipes ex: Concrete to Crushed Concrete");
         loadPlayerDetector = configuration.getBoolean("Enable Player Detector", SHOULD_LOAD, true, "Enable the Player Detector Block.");
         loadAdvancedDetector = configuration.getBoolean("Enable Advanced Detector", SHOULD_LOAD, true, "Enable the Advanced Detector Block.");
-        coalDustRecipe = configuration.getBoolean("Coal/Charcoal Dye", SHOULD_LOAD, true, "Enable to make Pulverized Coal and Charcoal useable as Black Dye. *Disabled if Thermal Expansion Recipes are Disabled");
-        leaverRecipe = configuration.getBoolean("Leaver from stone", SHOULD_LOAD, true, "Enable to add a convenience recipe to craft a leaver out of any stone block as well as cobblestone.");
+        coalDustRecipe = configuration.getBoolean("Coal/Charcoal Dye", SHOULD_LOAD, true, "Enable to make Pulverized Coal and Charcoal usable as Black Dye. *Disabled if Thermal Expansion Recipes are Disabled");
+        leaverRecipe = configuration.getBoolean("Leaver from stone", SHOULD_LOAD, true, "Enable to craft a stone leaver out of any stone block and a stick.");
         charcoalBlockRecipe = configuration.getBoolean("Charcoal Block", SHOULD_LOAD, true, "Enable to add a recipe to craft a block of charcoal from 9 charcoal");
 
         String DETECTOR_SETTINGS = "Detector Settings";
