@@ -1,7 +1,6 @@
 package lilrichy.lilrichymod.creativeTab;
 
 
-
 import lilrichy.lilrichymod.init.ModItems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -17,11 +16,8 @@ public class CreativeTabLiLRichyMod {
     public static final CreativeTabs LR_Tab = new CreativeTabs(MOD_ID.toLowerCase()) {
         @SideOnly(Side.CLIENT)
         @Override
-      //todo
-         public Item getTabIconItem() {
+        public Item getTabIconItem() {
             return ModItems.essenceOfBeard;
-                    //ModBlocks.concrete_block);
         }
     };
-    //Todo Item not rendered in creative tab
 }

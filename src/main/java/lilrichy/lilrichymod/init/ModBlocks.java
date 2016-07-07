@@ -143,8 +143,6 @@ public class ModBlocks {
 //----------------------------------------------------------------------------------------------------------------------
 
 
-    //// TODO: 7/6/2016 Add in the tool tips for crafting recipies to blocks made in the block table.
-    
     public static void register() {
         registerBlock(concrete);
         OreDictionary.registerOre(Reference.ModBlocks.CONCRETE.getUnlocalizedName(), concrete);
