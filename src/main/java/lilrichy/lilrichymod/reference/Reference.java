@@ -16,7 +16,7 @@ public class Reference {
     public static final String SERVER_PROXY_CLASS = "lilrichy.lilrichymod.proxy.ServerProxy";
 
     //Items
-    public static enum ModItems {
+    public enum ModItems {
 
         CONCRETE_MIX("concreteMix", "ItemConcreteMix"),
         ESSENCE_OF_BEARD("essenceOfBeard", "ItemEssenceOfBeard"),
@@ -41,7 +41,7 @@ public class Reference {
     }
 
     //Blocks
-    public static enum ModBlocks {
+    public enum ModBlocks {
 
         CONCRETE("concrete", "BlockConcrete"),
         CONCRETE_ARRANGED_BRICKS("concreteArrangedBricks", "BlockConcreteArrangedBricks"),
@@ -124,6 +124,7 @@ public class Reference {
         CLEAR_GLASS_Yellow("clearGlassYellow", "BlockClearGlassYellow"),
 
         CHARCOAL_BLOCK("charcoalBlock", "BlockCharcoalBlock"),
+        STONE_LEVER("stoneLever", "BlockStoneLever"),
 
         ANIMAL_WARD("animalWard", "BlockAnimalWard"),
         MOB_WARD("mobWard", "BlockMobWard"),

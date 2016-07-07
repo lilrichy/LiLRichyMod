@@ -1,6 +1,7 @@
 package lilrichy.lilrichymod.init;
 
 import lilrichy.lilrichymod.blocks.BlockCharcoalBlock;
+import lilrichy.lilrichymod.blocks.BlockStoneLever;
 import lilrichy.lilrichymod.blocks.blockTable.BlockTable;
 import lilrichy.lilrichymod.blocks.blockTable.TileEntityBlockTable;
 import lilrichy.lilrichymod.blocks.crops.BeardedAzalea;
@@ -128,6 +129,7 @@ public class ModBlocks {
 //----------------------------------------------------------------------------------------------------------------------
 
     public static Block charcoalBlock = new BlockCharcoalBlock();
+    public static Block stoneLever = new BlockStoneLever().setHardness(0.5F);
 
     public static Block animalWard = new BlockAnimalWard();
     public static Block mobWard = new BlockMobWard();
@@ -449,6 +451,9 @@ public class ModBlocks {
         registerBlock(charcoalBlock);
         OreDictionary.registerOre("blockCharcoal", charcoalBlock);
 
+        registerBlock(stoneLever);
+        OreDictionary.registerOre("blockLever", stoneLever);
+
         registerBlock(animalWard);
         GameRegistry.registerTileEntity(TileEntityAnimalWard.class, "lilrichymod:TileEntityAnimalWard");
 
@@ -566,6 +571,7 @@ public class ModBlocks {
 //----------------------------------------------------------------------------------------------------------------------
 
         registerRender(charcoalBlock);
+        registerRender(stoneLever);
 
         registerRender(animalWard);
         registerRender(mobWard);

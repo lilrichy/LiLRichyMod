@@ -90,6 +90,7 @@ tile.stoneMineralsOrange.name=Stone Minerals Orange
 tile.stoneMineralsPurple.name=Stone Minerals Purple
 
 tile.charcoalBlock.name=Block of Charcoal
+tile.stoneLever.name = Stone Lever
 #End of Blocks---------------------------------------------------------------------------------------------------
 
 
