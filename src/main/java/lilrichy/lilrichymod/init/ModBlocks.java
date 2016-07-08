@@ -15,6 +15,8 @@ import lilrichy.lilrichymod.blocks.decorativeBlocks.marble.BlockMarbleBlancoNafi
 import lilrichy.lilrichymod.blocks.decorativeBlocks.marble.BlockMarbleSpottedBianco;
 import lilrichy.lilrichymod.blocks.decorativeBlocks.metal.*;
 import lilrichy.lilrichymod.blocks.decorativeBlocks.stone.*;
+import lilrichy.lilrichymod.blocks.playerDetector.BlockPlayerDetector;
+import lilrichy.lilrichymod.blocks.playerDetector.TileEntityPlayerDetector;
 import lilrichy.lilrichymod.blocks.wards.BlockAnimalWard;
 import lilrichy.lilrichymod.blocks.wards.BlockMobWard;
 import lilrichy.lilrichymod.blocks.wards.TileEntityAnimalWard;
@@ -134,8 +136,7 @@ public class ModBlocks {
     public static Block animalWard = new BlockAnimalWard();
     public static Block mobWard = new BlockMobWard();
     public static Block blockTable = new BlockTable();
-//    public static Block playerDetector = new BlockPlayerDetector(false, Reference.ModBlocks.PLAYER_DETECTOR.getUnlocalizedName(),
-//            Reference.ModBlocks.PLAYER_DETECTOR.getRegistryName());
+    public static Block playerDetector = new BlockPlayerDetector();
 //    public static Block playerDetectorActivated = new BlockPlayerDetector(true,Reference.ModBlocks.PLAYER_DETECTOR_ACTIVATED.getUnlocalizedName(),
 //            Reference.ModBlocks.PLAYER_DETECTOR_ACTIVATED.getRegistryName());
 //----------------------------------------------------------------------------------------------------------------------
@@ -463,9 +464,9 @@ public class ModBlocks {
         registerBlock(blockTable);
         GameRegistry.registerTileEntity(TileEntityBlockTable.class, "lilrichymod:TileEntityBlockTable");
 
-//        registerBlock(playerDetector);
+        registerBlock(playerDetector);
 //        registerBlock(playerDetectorActivated);
-//        GameRegistry.registerTileEntity(TileEntityPlayerDetector.class, "lilrichy:TileEntityPlayerDetector");
+        GameRegistry.registerTileEntity(TileEntityPlayerDetector.class, "lilrichy:TileEntityPlayerDetector");
 
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -576,7 +577,7 @@ public class ModBlocks {
         registerRender(animalWard);
         registerRender(mobWard);
         registerRender(blockTable);
-//        registerRender(playerDetector);
+        registerRender(playerDetector);
 //        registerRender(playerDetectorActivated);
 
 //----------------------------------------------------------------------------------------------------------------------

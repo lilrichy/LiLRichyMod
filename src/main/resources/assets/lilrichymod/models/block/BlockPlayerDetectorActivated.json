@@ -1,6 +1,8 @@
 {
-  "parent": "block/cube_all",
+  "parent": "block/orientable",
   "textures": {
-    "all": "lilrichy:blocks/detector/playerDetectorON"
+    "top": "lilrichymod:blocks/detector/playerDetectorTopBottom",
+    "front": "lilrichymod:blocks/detector/playerDetectorON",
+    "side": "lilrichymod:blocks/detector/playerDetectorON"
   }
 }

@@ -115,11 +115,12 @@ public class Recipes {
                 'e', new ItemStack(ModItems.essenceOfBeard), 'i', new ItemStack(Items.IRON_INGOT));
 
 
-        //// TODO: 6/29/2016
-     /*   //Player Detector
-        GameRegistry.addRecipe(new ItemStack(ModTileEntity.playerDetector, 1), "ici", "ctc", "ici",
-                'i', new ItemStack(Items.iron_ingot), 'c', new ItemStack(Items.comparator), 't', new ItemStack(Blocks.redstone_torch));
+        //Player Detector
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.playerDetector, 1), "ici", "ctc", "ici",
+                'i', new ItemStack(Items.IRON_INGOT), 'c', new ItemStack(Items.COMPARATOR), 't', new ItemStack(Blocks.REDSTONE_TORCH));
 
+        // TODO: 6/29/2016
+        /*
         //Advanced Detector
         GameRegistry.addRecipe(new ItemStack(ModTileEntity.advancedDetector, 1), "idi", "dtd", "idi",
                 'i', new ItemStack(Items.gold_ingot), 'd', new ItemStack(Items.diamond), 't', new ItemStack(ModTileEntity.playerDetector));

@@ -163,7 +163,7 @@ tile.lilrichymod:panels/log_oakPanel.name=Oak Wood Paneling
 tile.lilrichymod:panels/log_sprucePanel.name=Spruce Wood Paneling
 
 #DETECTORS
-tile.lilrichymod:playerDetector.name=Player Detector
+tile.playerDetector.name=Player Detector
 tile.lilrichymod:advancedDetector.name=Advanced Detector
 gui.lilrichymod.AdvancedDetector.button.invert=Inverted
 gui.lilrichymod.AdvancedDetector.button.regular=Regular
