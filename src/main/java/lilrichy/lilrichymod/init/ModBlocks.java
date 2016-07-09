@@ -1,7 +1,6 @@
 package lilrichy.lilrichymod.init;
 
 import lilrichy.lilrichymod.blocks.BlockCharcoalBlock;
-import lilrichy.lilrichymod.blocks.BlockStoneLever;
 import lilrichy.lilrichymod.blocks.blockTable.BlockTable;
 import lilrichy.lilrichymod.blocks.blockTable.TileEntityBlockTable;
 import lilrichy.lilrichymod.blocks.crops.BeardedAzalea;
@@ -15,6 +14,7 @@ import lilrichy.lilrichymod.blocks.decorativeBlocks.marble.BlockMarbleBlancoNafi
 import lilrichy.lilrichymod.blocks.decorativeBlocks.marble.BlockMarbleSpottedBianco;
 import lilrichy.lilrichymod.blocks.decorativeBlocks.metal.*;
 import lilrichy.lilrichymod.blocks.decorativeBlocks.stone.*;
+import lilrichy.lilrichymod.blocks.levers.*;
 import lilrichy.lilrichymod.blocks.playerDetector.BlockPlayerDetector;
 import lilrichy.lilrichymod.blocks.playerDetector.TileEntityPlayerDetector;
 import lilrichy.lilrichymod.blocks.wards.BlockAnimalWard;
@@ -131,7 +131,16 @@ public class ModBlocks {
 //----------------------------------------------------------------------------------------------------------------------
 
     public static Block charcoalBlock = new BlockCharcoalBlock();
+
+//----------------------------------------------------------------------------------------------------------------------
+
+    public static Block ironLever = new BlockIronLever().setHardness(5.0F);
+    public static Block netherBrickLever = new BlockNetherBrickLever().setHardness(2.0F);
+    public static Block obsidianLever = new BlockObsidianLever().setHardness(50.0F);
+    public static Block stoneBrickLever = new BlockStoneBrickLever().setHardness(2.0F);
     public static Block stoneLever = new BlockStoneLever().setHardness(0.5F);
+
+//----------------------------------------------------------------------------------------------------------------------
 
     public static Block animalWard = new BlockAnimalWard();
     public static Block mobWard = new BlockMobWard();
@@ -452,8 +461,25 @@ public class ModBlocks {
         registerBlock(charcoalBlock);
         OreDictionary.registerOre("blockCharcoal", charcoalBlock);
 
+//----------------------------------------------------------------------------------------------------------------------
+
+        registerBlock(ironLever);
+        OreDictionary.registerOre("blockLever", ironLever);
+
+        registerBlock(netherBrickLever);
+        OreDictionary.registerOre("blockLever", netherBrickLever);
+
+        registerBlock(obsidianLever);
+        OreDictionary.registerOre("blockLever", obsidianLever);
+
+        registerBlock(stoneBrickLever);
+        OreDictionary.registerOre("blockLever", stoneBrickLever);
+
         registerBlock(stoneLever);
         OreDictionary.registerOre("blockLever", stoneLever);
+
+
+//----------------------------------------------------------------------------------------------------------------------
 
         registerBlock(animalWard);
         GameRegistry.registerTileEntity(TileEntityAnimalWard.class, "lilrichymod:TileEntityAnimalWard");
@@ -465,7 +491,6 @@ public class ModBlocks {
         GameRegistry.registerTileEntity(TileEntityBlockTable.class, "lilrichymod:TileEntityBlockTable");
 
         registerBlock(playerDetector);
-//        registerBlock(playerDetectorActivated);
         GameRegistry.registerTileEntity(TileEntityPlayerDetector.class, "lilrichy:TileEntityPlayerDetector");
 
 //----------------------------------------------------------------------------------------------------------------------
@@ -572,13 +597,21 @@ public class ModBlocks {
 //----------------------------------------------------------------------------------------------------------------------
 
         registerRender(charcoalBlock);
+
+//----------------------------------------------------------------------------------------------------------------------
+
+        registerRender(ironLever);
+        registerRender(netherBrickLever);
+        registerRender(obsidianLever);
+        registerRender(stoneBrickLever);
         registerRender(stoneLever);
+
+//----------------------------------------------------------------------------------------------------------------------
 
         registerRender(animalWard);
         registerRender(mobWard);
         registerRender(blockTable);
         registerRender(playerDetector);
-//        registerRender(playerDetectorActivated);
 
 //----------------------------------------------------------------------------------------------------------------------
 

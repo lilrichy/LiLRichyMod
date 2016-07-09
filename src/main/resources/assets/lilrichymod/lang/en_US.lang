@@ -90,9 +90,15 @@ tile.stoneMineralsOrange.name=Stone Minerals Orange
 tile.stoneMineralsPurple.name=Stone Minerals Purple
 
 tile.charcoalBlock.name=Block of Charcoal
-tile.stoneLever.name=Stone Lever
-#End of Blocks---------------------------------------------------------------------------------------------------
 
+#LEVERS
+tile.ironLever.name=Iron Lever
+tile.netherBrickLever.name=Nether Brick Lever
+tile.obsidianLever.name=Obsidian Lever
+tile.stoneBrickLever.name=Stone Brick Lever
+tile.stoneLever.name=Stone Lever
+
+#End of Blocks---------------------------------------------------------------------------------------------------
 
 #Stairs----------------------------------------------------------------------------------------------------------
 #METAL

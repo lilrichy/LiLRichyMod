@@ -39,6 +39,13 @@ public class BlockPlayerDetector extends BlockContainer {
         this.setSoundType(SoundType.STONE);
     }
 
+    static void setState(boolean active, World worldIn, BlockPos pos) {
+        if (active)
+            worldIn.setBlockState(pos, ModBlocks.playerDetector.getDefaultState().withProperty(isActivated, true));
+        else
+            worldIn.setBlockState(pos, ModBlocks.playerDetector.getDefaultState().withProperty(isActivated, false));
+    }
+
     @Override
     public EnumBlockRenderType getRenderType(IBlockState state) {
         return EnumBlockRenderType.MODEL;
@@ -91,37 +98,6 @@ public class BlockPlayerDetector extends BlockContainer {
             worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 + d4, d1, d2 + d3, 0.0D, 0.0D, 0.0D);
             worldIn.spawnParticle(EnumParticleTypes.REDSTONE, d0 + d4, d1, d2 + d3, 0.0D, 0.0D, 0.0D);
         }
-    }
-
-    @SideOnly(Side.CLIENT)
-    @SuppressWarnings("incomplete-switch")
-    public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rand) {
-        if (stateIn.getValue(isActivated)) {
-            double d0 = (double) pos.getX() + 0.5D;
-            double d1 = (double) pos.getY() + rand.nextDouble() * 6.0D / 16.0D;
-            double d2 = (double) pos.getZ() + 0.5D;
-            double d3 = 0.52D;
-            double d4 = rand.nextDouble() * 0.6D - 0.3D;
-
-            worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 - d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D);
-            worldIn.spawnParticle(EnumParticleTypes.REDSTONE, d0 - d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D);
-
-            worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 + d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D);
-            worldIn.spawnParticle(EnumParticleTypes.REDSTONE, d0 + d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D);
-
-            worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 + d4, d1, d2 - d3, 0.0D, 0.0D, 0.0D);
-            worldIn.spawnParticle(EnumParticleTypes.REDSTONE, d0 + d4, d1, d2 - d3, 0.0D, 0.0D, 0.0D);
-
-            worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 + d4, d1, d2 + d3, 0.0D, 0.0D, 0.0D);
-            worldIn.spawnParticle(EnumParticleTypes.REDSTONE, d0 + d4, d1, d2 + d3, 0.0D, 0.0D, 0.0D);
-        }
-    }
-
-    static void setState(boolean active, World worldIn, BlockPos pos) {
-        if (active)
-            worldIn.setBlockState(pos, ModBlocks.playerDetector.getDefaultState().withProperty(isActivated, true));
-        else
-            worldIn.setBlockState(pos, ModBlocks.playerDetector.getDefaultState().withProperty(isActivated, false));
     }
 
     //

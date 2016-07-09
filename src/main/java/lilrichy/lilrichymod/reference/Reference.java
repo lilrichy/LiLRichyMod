@@ -124,7 +124,13 @@ public class Reference {
         CLEAR_GLASS_Yellow("clearGlassYellow", "BlockClearGlassYellow"),
 
         CHARCOAL_BLOCK("charcoalBlock", "BlockCharcoalBlock"),
+
         STONE_LEVER("stoneLever", "BlockStoneLever"),
+        NETHER_BRICK_LEVER("netherBrickLever", "BlockNetherBrickLever"),
+        IRON_LEVER("ironLever", "BlockIronLever"),
+        OBSIDIAN_LEVER("obsidianLever", "BlockObsidianLever"),
+        STONE_BRICK_LEVER("stoneBrickLever", "BlockStoneBrickLever"),
+
 
         ANIMAL_WARD("animalWard", "BlockAnimalWard"),
         MOB_WARD("mobWard", "BlockMobWard"),

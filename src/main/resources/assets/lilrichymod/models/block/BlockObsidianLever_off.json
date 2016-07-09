@@ -1,8 +1,8 @@
 {
   "ambientocclusion": false,
   "textures": {
-    "particle": "blocks/stone",
-    "base": "blocks/stone",
+    "particle": "blocks/obsidian",
+    "base": "blocks/obsidian",
     "lever": "blocks/lever"
   },
   "elements": [

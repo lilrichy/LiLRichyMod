@@ -32,7 +32,7 @@ public class ConfigurationHandler {
         loadPlayerDetector = configuration.getBoolean("Enable Player Detector", SHOULD_LOAD, true, "Enable the Player Detector Block.");
         loadAdvancedDetector = configuration.getBoolean("Enable Advanced Detector", SHOULD_LOAD, true, "Enable the Advanced Detector Block.");
         coalDustRecipe = configuration.getBoolean("Coal/Charcoal Dye", SHOULD_LOAD, true, "Enable to make Pulverized Coal and Charcoal usable as Black Dye. *Disabled if Thermal Expansion Recipes are Disabled");
-        leaverRecipe = configuration.getBoolean("Leaver from stone", SHOULD_LOAD, true, "Enable to craft a stone leaver out of any stone block and a stick.");
+        leaverRecipe = configuration.getBoolean("Leaver from stone", SHOULD_LOAD, true, "Enable to craft additional Levers.");
         charcoalBlockRecipe = configuration.getBoolean("Charcoal Block", SHOULD_LOAD, true, "Enable to add a recipe to craft a block of charcoal from 9 charcoal");
 
         String DETECTOR_SETTINGS = "Detector Settings";

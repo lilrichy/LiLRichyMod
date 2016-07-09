@@ -1,8 +1,8 @@
 {
   "ambientocclusion": false,
   "textures": {
-    "particle": "blocks/stone",
-    "base": "blocks/stone",
+    "particle": "blocks/nether_brick",
+    "base": "blocks/nether_brick",
     "lever": "blocks/lever"
   },
   "elements": [

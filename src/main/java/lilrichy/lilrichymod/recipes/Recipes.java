@@ -28,8 +28,21 @@ public class Recipes {
         if (ConfigurationHandler.thermalExpansionRecipes) ModCompatRecipes.thermalExpansionRecipesInit();
         if (ConfigurationHandler.enderIORecipies) ModCompatRecipes.enderIORecipesInit();
 
-        // Adds recipe for leaver from stone and stick.
+        // Lever Recipes.
         if (ConfigurationHandler.leaverRecipe) {
+
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.ironLever), "s", "b",
+                    'b', new ItemStack(Blocks.IRON_BLOCK), 's', new ItemStack(Items.STICK));
+
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.netherBrickLever), "s", "b",
+                    'b', new ItemStack(Blocks.NETHER_BRICK), 's', new ItemStack(Items.STICK));
+
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.obsidianLever), "s", "b",
+                    'b', new ItemStack(Blocks.OBSIDIAN), 's', new ItemStack(Items.STICK));
+
+            GameRegistry.addRecipe(new ItemStack(ModBlocks.stoneBrickLever), "s", "b",
+                    'b', new ItemStack(Blocks.STONEBRICK), 's', new ItemStack(Items.STICK));
+
             for (ItemStack stack : OreDictionary.getOres("stone")) {
                 GameRegistry.addRecipe(new ItemStack(ModBlocks.stoneLever), "s", "b",
                         'b', new ItemStack(stack.getItem(), 1, stack.getItem().getDamage(stack)), 's', new ItemStack(Items.STICK));
