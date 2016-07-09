@@ -1,4 +1,4 @@
-package lilrichy.lilrichymod.blocks.walls;
+package lilrichy.lilrichymod.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFenceGate;

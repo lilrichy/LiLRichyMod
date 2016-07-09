@@ -100,6 +100,7 @@ tile.stoneLever.name=Stone Lever
 
 
 #WALLS
+tile.ironWall.name=Iron Wall
 tile.netherBrickWall.name=Nether Brick Wall
 tile.stoneWall.name=Stone Wall
 tile.stoneBrickWall.name=Stone Brick Wall

@@ -1,6 +1,7 @@
 package lilrichy.lilrichymod.init;
 
 import lilrichy.lilrichymod.blocks.BlockCharcoalBlock;
+import lilrichy.lilrichymod.blocks.ModBlockWall;
 import lilrichy.lilrichymod.blocks.blockTable.BlockTable;
 import lilrichy.lilrichymod.blocks.blockTable.TileEntityBlockTable;
 import lilrichy.lilrichymod.blocks.crops.BeardedAzalea;
@@ -17,7 +18,6 @@ import lilrichy.lilrichymod.blocks.decorativeBlocks.stone.*;
 import lilrichy.lilrichymod.blocks.levers.*;
 import lilrichy.lilrichymod.blocks.playerDetector.BlockPlayerDetector;
 import lilrichy.lilrichymod.blocks.playerDetector.TileEntityPlayerDetector;
-import lilrichy.lilrichymod.blocks.walls.ModBlockWall;
 import lilrichy.lilrichymod.blocks.wards.BlockAnimalWard;
 import lilrichy.lilrichymod.blocks.wards.BlockMobWard;
 import lilrichy.lilrichymod.blocks.wards.TileEntityAnimalWard;
@@ -153,14 +153,16 @@ public class ModBlocks {
 //            Reference.ModBlocks.PLAYER_DETECTOR_ACTIVATED.getRegistryName());
 //----------------------------------------------------------------------------------------------------------------------
 
-    public static BeardedAzalea beardedAzalea = new BeardedAzalea();
-
-    public static Block netherBrickWall = new ModBlockWall(Material.ROCK, 2.0F, 2.0F, SoundType.STONE).setUnlocalizedName("netherBrickWall").setRegistryName("BlockNetherBrickWall");
-    public static Block stoneWall = new ModBlockWall(Material.ROCK, 2.0F, 2.0F, SoundType.STONE).setUnlocalizedName("stoneWall").setRegistryName("BlockStoneWall");
-    public static Block stoneBrickWall = new ModBlockWall(Material.ROCK, 2.0F, 2.0F, SoundType.STONE).setUnlocalizedName("stoneBrickWall").setRegistryName("BlockStoneBrickWall");
+    public static Block ironWall = new ModBlockWall(Material.ROCK, 5.0F, 10.0F, SoundType.METAL).setUnlocalizedName("ironWall").setRegistryName("BlockIronWall");
+    public static Block netherBrickWall = new ModBlockWall(Material.ROCK, 2.0F, 10.0F, SoundType.STONE).setUnlocalizedName("netherBrickWall").setRegistryName("BlockNetherBrickWall");
+    public static Block stoneWall = new ModBlockWall(Material.ROCK, 1.5F, 10.0F, SoundType.STONE).setUnlocalizedName("stoneWall").setRegistryName("BlockStoneWall");
+    public static Block stoneBrickWall = new ModBlockWall(Material.ROCK, 2.0F, 10.0F, SoundType.STONE).setUnlocalizedName("stoneBrickWall").setRegistryName("BlockStoneBrickWall");
 
 //----------------------------------------------------------------------------------------------------------------------
 
+    public static BeardedAzalea beardedAzalea = new BeardedAzalea();
+
+//----------------------------------------------------------------------------------------------------------------------
 
     public static void register() {
         registerBlock(concrete);
@@ -502,15 +504,18 @@ public class ModBlocks {
 
 //----------------------------------------------------------------------------------------------------------------------
 
-        registerBlock(beardedAzalea);
-
+        registerBlock(ironWall);
         registerBlock(netherBrickWall);
         registerBlock(stoneWall);
         registerBlock(stoneBrickWall);
 
-    }
+//----------------------------------------------------------------------------------------------------------------------
+
+        registerBlock(beardedAzalea);
 
 //----------------------------------------------------------------------------------------------------------------------
+
+    }
 
     public static void registerRenders() {
         registerRender(concrete);
@@ -626,14 +631,18 @@ public class ModBlocks {
 
 //----------------------------------------------------------------------------------------------------------------------
 
-        registerRender(beardedAzalea);
-
+        registerRender(ironWall);
         registerRender(netherBrickWall);
         registerRender(stoneWall);
         registerRender(stoneBrickWall);
-    }
 
 //----------------------------------------------------------------------------------------------------------------------
+
+        registerRender(beardedAzalea);
+
+//----------------------------------------------------------------------------------------------------------------------
+
+    }
 
     public static void registerRender(Block block) {
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(

@@ -2,6 +2,21 @@ LiLRichy Mod Change Log
 Version = Minecraft Change . Forge Change . Mod change += incremental NEVER Reset
 Update version in this file, build.gradle, gradle.properties, Reference
 
+v3.0.2
+Updated Player Detector.
+Added 5 levers.
+Added 4 Walls.
+Updated crafting tool tips for block table blocks.
+
+v3.0.1
+Initial Release for v1.9.4
+Added mob and animal wards.
+Block table has had cosmetic upgrades.
+Clear glass in 16 colors.
+Added Charcoal Block.
+Some items from the 1.7.10 version of this mod are not yet implemented.
+Implemented Same versioning system my modpacks use. ex: x.x.x = Minecraft change . Forge change . Mod change
+
 v3.0
 Port mod from Minecraft v1.8.9 to 1.9.4
 Rewrite of blocks, items, recipies, tile entities.

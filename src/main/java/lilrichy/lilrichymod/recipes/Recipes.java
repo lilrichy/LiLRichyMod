@@ -89,6 +89,8 @@ public class Recipes {
         }
 
         //Walls
+        GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.ironWall, 6), "   ", "bbb", "bbb",
+                'b', new ItemStack(Blocks.IRON_BLOCK));
         GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.netherBrickWall, 6), "   ", "bbb", "bbb",
                 'b', new ItemStack(Blocks.NETHER_BRICK));
         GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.stoneBrickWall, 6), "   ", "bbb", "bbb",
@@ -101,8 +103,6 @@ public class Recipes {
 
         GameRegistry.addShapedRecipe(new ItemStack(Blocks.NETHER_BRICK_FENCE, 6), "bbb", "bbb", "   ",
                 'b', new ItemStack(Blocks.NETHER_BRICK));
-
-
     }
 
     public static void smeltingRecipes() {
