@@ -1,4 +1,4 @@
-package lilrichy.lilrichymod.blocks;
+package lilrichy.lilrichymod.blocks.levers;
 
 import lilrichy.lilrichymod.creativeTab.CreativeTabLiLRichyMod;
 import lilrichy.lilrichymod.reference.Reference;
@@ -14,5 +14,4 @@ public class BlockStoneLever extends BlockLever {
         setRegistryName(Reference.ModBlocks.STONE_LEVER.getRegistryName());
         this.setCreativeTab(CreativeTabLiLRichyMod.LR_Tab);
     }
-
 }
