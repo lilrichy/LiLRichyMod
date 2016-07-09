@@ -7,6 +7,7 @@ Updated Player Detector.
 Added 5 levers.
 Added 4 Walls.
 Updated crafting tool tips for block table blocks.
+Changed creative tab icon to block table.
 
 v3.0.1
 Initial Release for v1.9.4

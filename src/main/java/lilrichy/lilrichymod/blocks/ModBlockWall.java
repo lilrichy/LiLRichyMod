@@ -1,5 +1,6 @@
 package lilrichy.lilrichymod.blocks;
 
+import lilrichy.lilrichymod.creativeTab.CreativeTabLiLRichyMod;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFenceGate;
 import net.minecraft.block.SoundType;
@@ -40,7 +41,7 @@ public class ModBlockWall extends Block {
         this.setHardness(hardness);
         this.setResistance(resistance / 3.0F);
         this.setSoundType(soundType);
-        this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+        this.setCreativeTab(CreativeTabLiLRichyMod.LR_Tab);
     }
 
     private static int getAABBIndex(IBlockState state) {
