@@ -7,9 +7,14 @@ import lilrichy.lilrichymod.init.ModItems;
 import lilrichy.lilrichymod.reference.Names;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.CraftingManager;
+import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
+
+import java.util.List;
 
 /**
  * Created by Rich on 11/20/2015.
@@ -82,6 +87,22 @@ public class Recipes {
             GameRegistry.addShapelessRecipe(new ItemStack(Items.COAL, 9, 1),
                     new ItemStack(ModBlocks.charcoalBlock));
         }
+
+        //Walls
+        GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.netherBrickWall, 6), "   ", "bbb", "bbb",
+                'b', new ItemStack(Blocks.NETHER_BRICK));
+        GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.stoneBrickWall, 6), "   ", "bbb", "bbb",
+                'b', new ItemStack(Blocks.STONEBRICK));
+        GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.stoneWall, 6), "   ", "bbb", "bbb",
+                'b', new ItemStack(Blocks.STONE));
+
+        //Alt recipe for nether brick fence due to conflict with wall
+        Recipes.removeRecipe(Item.getItemFromBlock(Blocks.NETHER_BRICK_FENCE));
+
+        GameRegistry.addShapedRecipe(new ItemStack(Blocks.NETHER_BRICK_FENCE, 6), "bbb", "bbb", "   ",
+                'b', new ItemStack(Blocks.NETHER_BRICK));
+
+
     }
 
     public static void smeltingRecipes() {
@@ -142,5 +163,28 @@ public class Recipes {
         //Lectern
         GameRegistry.addRecipe(new ItemStack(ModTileEntity.lectern, 1), "sss", " p ", " s ",
                 's', new ItemStack(Blocks.wooden_slab), 'p', new ItemStack(Blocks.planks));*/
+    }
+
+    /**
+     * Used to remove recipes from the crafting matrix .
+     *
+     * @param toRemove the item that the recipe creates.
+     *                 Ex: Recipes.removeRecipe(ITEM));
+     *                 To remove a BLOCK just get the Item from it.
+     *                 Ex:  Recipes.removeRecipe(Item.getItemFromBlock(BLOCK));
+     */
+    private static int removeRecipe(Item toRemove) {
+        int recipesRemoved = 0;
+        List<IRecipe> recipeList = CraftingManager.getInstance().getRecipeList();
+
+        java.util.Iterator<IRecipe> recipeEntry = recipeList.iterator();
+        while (recipeEntry.hasNext()) {
+            ItemStack outputItem = recipeEntry.next().getRecipeOutput();
+            if (outputItem != null && outputItem.getItem() == toRemove) {
+                recipeEntry.remove();
+                recipesRemoved++;
+            }
+        }
+        return recipesRemoved;
     }
 }

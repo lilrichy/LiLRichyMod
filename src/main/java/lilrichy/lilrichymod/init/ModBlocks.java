@@ -17,6 +17,7 @@ import lilrichy.lilrichymod.blocks.decorativeBlocks.stone.*;
 import lilrichy.lilrichymod.blocks.levers.*;
 import lilrichy.lilrichymod.blocks.playerDetector.BlockPlayerDetector;
 import lilrichy.lilrichymod.blocks.playerDetector.TileEntityPlayerDetector;
+import lilrichy.lilrichymod.blocks.walls.ModBlockWall;
 import lilrichy.lilrichymod.blocks.wards.BlockAnimalWard;
 import lilrichy.lilrichymod.blocks.wards.BlockMobWard;
 import lilrichy.lilrichymod.blocks.wards.TileEntityAnimalWard;
@@ -24,6 +25,8 @@ import lilrichy.lilrichymod.blocks.wards.TileEntityMobWard;
 import lilrichy.lilrichymod.reference.Names;
 import lilrichy.lilrichymod.reference.Reference;
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -136,7 +139,7 @@ public class ModBlocks {
 
     public static Block ironLever = new BlockIronLever().setHardness(5.0F);
     public static Block netherBrickLever = new BlockNetherBrickLever().setHardness(2.0F);
-    public static Block obsidianLever = new BlockObsidianLever().setHardness(50.0F);
+    public static Block obsidianLever = new BlockObsidianLever().setHardness(10.0F);
     public static Block stoneBrickLever = new BlockStoneBrickLever().setHardness(2.0F);
     public static Block stoneLever = new BlockStoneLever().setHardness(0.5F);
 
@@ -151,6 +154,10 @@ public class ModBlocks {
 //----------------------------------------------------------------------------------------------------------------------
 
     public static BeardedAzalea beardedAzalea = new BeardedAzalea();
+
+    public static Block netherBrickWall = new ModBlockWall(Material.ROCK, 2.0F, 2.0F, SoundType.STONE).setUnlocalizedName("netherBrickWall").setRegistryName("BlockNetherBrickWall");
+    public static Block stoneWall = new ModBlockWall(Material.ROCK, 2.0F, 2.0F, SoundType.STONE).setUnlocalizedName("stoneWall").setRegistryName("BlockStoneWall");
+    public static Block stoneBrickWall = new ModBlockWall(Material.ROCK, 2.0F, 2.0F, SoundType.STONE).setUnlocalizedName("stoneBrickWall").setRegistryName("BlockStoneBrickWall");
 
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -497,6 +504,10 @@ public class ModBlocks {
 
         registerBlock(beardedAzalea);
 
+        registerBlock(netherBrickWall);
+        registerBlock(stoneWall);
+        registerBlock(stoneBrickWall);
+
     }
 
 //----------------------------------------------------------------------------------------------------------------------
@@ -617,6 +628,9 @@ public class ModBlocks {
 
         registerRender(beardedAzalea);
 
+        registerRender(netherBrickWall);
+        registerRender(stoneWall);
+        registerRender(stoneBrickWall);
     }
 
 //----------------------------------------------------------------------------------------------------------------------

@@ -98,6 +98,13 @@ tile.obsidianLever.name=Obsidian Lever
 tile.stoneBrickLever.name=Stone Brick Lever
 tile.stoneLever.name=Stone Lever
 
+
+#WALLS
+tile.netherBrickWall.name=Nether Brick Wall
+tile.stoneWall.name=Stone Wall
+tile.stoneBrickWall.name=Stone Brick Wall
+
+
 #End of Blocks---------------------------------------------------------------------------------------------------
 
 #Stairs----------------------------------------------------------------------------------------------------------
