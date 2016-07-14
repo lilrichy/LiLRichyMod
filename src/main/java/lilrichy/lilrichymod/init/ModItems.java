@@ -5,6 +5,7 @@ import lilrichy.lilrichymod.creativeTab.CreativeTabLiLRichyMod;
 import lilrichy.lilrichymod.items.ItemConcreteMix;
 import lilrichy.lilrichymod.items.ItemCrushedConcrete;
 import lilrichy.lilrichymod.items.ItemEssenceOfBeard;
+import lilrichy.lilrichymod.items.ItemExcessEliminator;
 import lilrichy.lilrichymod.reference.Reference;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -23,6 +24,7 @@ public class ModItems {
     public static Item beardedAzaleaSeed;
     public static Item crushedConcrete;
     public static Item essenceOfBeard;
+    public static Item itemExcessEliminator;
 
     public static void init() {
 
@@ -31,6 +33,7 @@ public class ModItems {
         .setRegistryName(Reference.ModItems.BEARDED_AZALEA_SEED.getRegistryName());
         crushedConcrete = new ItemCrushedConcrete();
         essenceOfBeard = new ItemEssenceOfBeard();
+        itemExcessEliminator = new ItemExcessEliminator();
     }
 
     public static void register() {
@@ -38,6 +41,7 @@ public class ModItems {
         GameRegistry.register(beardedAzaleaSeed);
         GameRegistry.register(crushedConcrete);
         GameRegistry.register(essenceOfBeard);
+        GameRegistry.register(itemExcessEliminator);
 
     }
 
@@ -46,6 +50,7 @@ public class ModItems {
         registerRender(beardedAzaleaSeed);
         registerRender(crushedConcrete);
         registerRender(essenceOfBeard);
+        registerRender(itemExcessEliminator);
 
     }
 

@@ -20,12 +20,12 @@ plugins {
     id "net.minecraftforge.gradle.forge" version "2.0.2"
 }
 */
-version = "3.0.2"
+version = "4.0.0"
 group= "lilrichy.lilrichymod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "lilrichymod"
 
 minecraft {
-    version = "1.9.4-12.17.0.1987"
+    version = "1.10.2-12.18.1.2014"
     runDir = "run"
     
     // the mappings can be changed at any time, and must be in the following format.

@@ -8,9 +8,10 @@ public class Reference {
     //Version 1.x = 1.7.10
     //Version 2.x = 1.8.9
     //Version 3.x = 1.9.4
-    public static final String MOD_VERSION = "3.0.2";
+    //Version 4.x = 1.10
+    public static final String MOD_VERSION = "4.0.0";
 
-    public static final String ACCEPTED_VERSIONS = "[1.9.4]";
+    public static final String ACCEPTED_VERSIONS = "[1.10.2]";
 
     public static final String CLIENT_PROXY_CLASS = "lilrichy.lilrichymod.proxy.ClientProxy";
     public static final String SERVER_PROXY_CLASS = "lilrichy.lilrichymod.proxy.ServerProxy";
@@ -21,7 +22,8 @@ public class Reference {
         CONCRETE_MIX("concreteMix", "ItemConcreteMix"),
         ESSENCE_OF_BEARD("essenceOfBeard", "ItemEssenceOfBeard"),
         BEARDED_AZALEA_SEED("beardedAzaleaSeed", "ItemBeardedAzaleaSeed"),
-        CRUSHED_CONCRETE("crushedConcrete", "ItemCrushedConcrete");
+        CRUSHED_CONCRETE("crushedConcrete", "ItemCrushedConcrete"),
+        ITEM_EXCESS_ELIMINATOR("itemExcessEliminator", "ItemExcessEliminator");
 
         private String unlocalizedName;
         private String registryName;

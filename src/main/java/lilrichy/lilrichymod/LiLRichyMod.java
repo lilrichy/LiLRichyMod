@@ -6,6 +6,7 @@ import lilrichy.lilrichymod.handler.FuelHandler;
 import lilrichy.lilrichymod.handler.GuiHandler;
 import lilrichy.lilrichymod.init.ModBlocks;
 import lilrichy.lilrichymod.init.ModItems;
+import lilrichy.lilrichymod.items.ItemExcessEliminator;
 import lilrichy.lilrichymod.proxy.CommonProxy;
 import lilrichy.lilrichymod.recipes.Recipes;
 import lilrichy.lilrichymod.reference.Reference;
@@ -55,6 +56,7 @@ public class LiLRichyMod {
         //NetworkHandler.init();
         MinecraftForge.EVENT_BUS.register(new EventHandler());
         GameRegistry.registerFuelHandler(new FuelHandler());
+        MinecraftForge.EVENT_BUS.register(new ItemExcessEliminator());
 
         //Gui
         NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());

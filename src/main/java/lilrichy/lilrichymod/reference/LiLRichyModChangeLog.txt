@@ -2,6 +2,9 @@ LiLRichy Mod Change Log
 Version = Minecraft Change . Forge Change . Mod change += incremental NEVER Reset
 Update version in this file, build.gradle, gradle.properties, Reference
 
+v4.0.0
+Initial Build for Minecraft v 1.10.2
+
 v3.0.2
 Updated Player Detector.
 Added 5 levers.
