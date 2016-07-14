@@ -11,6 +11,7 @@ import lilrichy.lilrichymod.proxy.CommonProxy;
 import lilrichy.lilrichymod.recipes.Recipes;
 import lilrichy.lilrichymod.reference.Reference;
 import lilrichy.lilrichymod.utility.LogHelper;
+import lilrichy.lilrichymod.utility.OreDicLogMaker;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -29,7 +30,6 @@ public class LiLRichyMod {
 
     @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static CommonProxy proxy;
-
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
@@ -80,6 +80,8 @@ public class LiLRichyMod {
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
         LogHelper.info("PostInit:");
+
+        if (ConfigurationHandler.makeOreDicLog) OreDicLogMaker.CreateOreDicLog();
 
         LogHelper.info("Post Initialization Complete");
         LogHelper.info("Good News Everybody!");

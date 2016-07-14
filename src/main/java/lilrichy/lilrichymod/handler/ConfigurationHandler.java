@@ -17,7 +17,7 @@ public class ConfigurationHandler {
     public static boolean smeltingRecipes, itemRecipes, panelRecipes, thermalExpansionRecipes, coalDustRecipe, enderIORecipies, leaverRecipe, charcoalBlockRecipe;
     public static int defaultRangePlayerDetector, defaultRangeAdvancedDetector;
     public static boolean resetConfigFile;
-    public static boolean debugMessages;
+    public static boolean debugMessages, makeOreDicLog;
 
     private static void loadConfiguration() {
         String GENERAL_SETTINGS = "General Mod Settings";
@@ -41,6 +41,7 @@ public class ConfigurationHandler {
 
         String FUN_SETTINGS = "Fun Settings";
         debugMessages = configuration.getBoolean("Display Debug Text", FUN_SETTINGS, false, "Displays text used for debugging the mod.");
+        makeOreDicLog = configuration.getBoolean("Create Ore Dictionary Log", FUN_SETTINGS, false, "Creates a Folder called: Ore Dictionary Names,  with a Ore Dictionary.txt file with all Ore Dictionary Entries.");
 
         if (configuration.hasChanged()) {
             configuration.save();

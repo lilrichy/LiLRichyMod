@@ -13,13 +13,10 @@ public class Names {
         public static final String CONCRETE = "blockLilrichyConcrete";
         public static final String GLASS_CLEAR = "blockLilrichyClearGlass";
         public static final String LAVA = "blockLilrichyLava";
-        public static final String LAVA_BOWL = "blockLilrichyLavaBowl";
         public static final String METAL = "blockLilrichyMetal";
-        public static final String METAL_ROBOT = "blockLilrichyMetalRobot";
         public static final String MARBLE = "blockLilrichyMarble";
         public static final String COTTAGE = "blockLilrichyCottage";
         public static final String STONE = "blockLilrichyStone";
-        public static final String STONE_MINERALS = "blockLilrichyStoneMinerals";
         public static final String GLASS_PANE = "paneLilrichyGlass";
         public static final String STAIRS = "lilrichyStairs";
     }

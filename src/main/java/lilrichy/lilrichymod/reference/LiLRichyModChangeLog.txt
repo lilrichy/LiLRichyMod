@@ -4,6 +4,8 @@ Update version in this file, build.gradle, gradle.properties, Reference
 
 v4.0.0
 Initial Build for Minecraft v 1.10.2
+Updated some recipes to be more "ore dictionary friendly"
+Added option in config to generate a txt file for all Ore Dictionary entries.
 
 v3.0.2
 Updated Player Detector.
@@ -23,7 +25,7 @@ Implemented Same versioning system my modpacks use. ex: x.x.x = Minecraft change
 
 v3.0
 Port mod from Minecraft v1.8.9 to 1.9.4
-Rewrite of blocks, items, recipies, tile entities.
+Rewrite of blocks, items, recipes, tile entities.
 Rework the way blocks are crafted.
 
 

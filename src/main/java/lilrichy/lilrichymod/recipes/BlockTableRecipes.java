@@ -130,8 +130,6 @@ public class BlockTableRecipes {
                 if (iStack.isItemEqual(stack)) return true;
             for (ItemStack iStack : getOres(Names.OreDicNames.STONE))
                 if (iStack.isItemEqual(stack)) return true;
-            for (ItemStack iStack : getOres(Names.OreDicNames.STONE_MINERALS))
-                if (iStack.isItemEqual(stack)) return true;
             for (ItemStack iStack : getOres(Names.OreDicNames.CONCRETE))
                 if (iStack.isItemEqual(stack)) return true;
             for (ItemStack iStack : getOres(Names.OreDicNames.METAL))
@@ -141,10 +139,6 @@ public class BlockTableRecipes {
             for (ItemStack iStack : getOres(Names.OreDicNames.COTTAGE))
                 if (iStack.isItemEqual(stack)) return true;
             for (ItemStack iStack : getOres(Names.OreDicNames.LAVA))
-                if (iStack.isItemEqual(stack)) return true;
-            for (ItemStack iStack : getOres(Names.OreDicNames.LAVA_BOWL))
-                if (iStack.isItemEqual(stack)) return true;
-            for (ItemStack iStack : getOres(Names.OreDicNames.METAL_ROBOT))
                 if (iStack.isItemEqual(stack)) return true;
         }
         return false;
