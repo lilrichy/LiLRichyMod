@@ -1,6 +1,7 @@
 package lilrichy.lilrichymod.recipes;
 
 
+import lilrichy.lilrichymod.init.ModBlocks;
 import lilrichy.lilrichymod.init.ModItems;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -22,5 +23,9 @@ public class ItemRecipes {
                 'r', new ItemStack(Items.ROTTEN_FLESH), 'e', new ItemStack(Items.SPIDER_EYE),
                 's', new ItemStack(Items.WHEAT_SEEDS));
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.beardedAzaleaSeed), new ItemStack(ModItems.essenceOfBeard));
+
+        //Lamp Base
+        GameRegistry.addRecipe(new ItemStack(ModItems.lampBase, 6), "   ", "   ", "ccc",
+                'c', new ItemStack(ModBlocks.charcoalBlock));
     }
 }

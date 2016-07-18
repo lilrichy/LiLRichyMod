@@ -6,6 +6,9 @@ v4.0.0
 Initial Build for Minecraft v 1.10.2
 Updated some recipes to be more "ore dictionary friendly"
 Added option in config to generate a txt file for all Ore Dictionary entries.
+Added Lamp Block, Glowstone Lamp Block, and Lamp base item.
+Fixed Block Table particle when breaking block.
+Charcoal Block is now a fire source same as Netherrack. "It stays lit and will not get destroyed by fire."
 
 v3.0.2
 Updated Player Detector.

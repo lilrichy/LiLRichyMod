@@ -23,7 +23,7 @@ public class Reference {
         ESSENCE_OF_BEARD("essenceOfBeard", "ItemEssenceOfBeard"),
         BEARDED_AZALEA_SEED("beardedAzaleaSeed", "ItemBeardedAzaleaSeed"),
         CRUSHED_CONCRETE("crushedConcrete", "ItemCrushedConcrete"),
-        ITEM_EXCESS_ELIMINATOR("itemExcessEliminator", "ItemExcessEliminator");
+        LAMP_BASE("itemLampBase", "ItemLampBase");
 
         private String unlocalizedName;
         private String registryName;
@@ -126,6 +126,8 @@ public class Reference {
         CLEAR_GLASS_Yellow("clearGlassYellow", "BlockClearGlassYellow"),
 
         CHARCOAL_BLOCK("charcoalBlock", "BlockCharcoalBlock"),
+        LAMP("lamp", "BlockLamp"),
+        GLOWSTONE_LAMP("glowstoneLamp", "BlockGlowstoneLamp"),
 
         STONE_LEVER("stoneLever", "BlockStoneLever"),
         NETHER_BRICK_LEVER("netherBrickLever", "BlockNetherBrickLever"),
@@ -141,8 +143,7 @@ public class Reference {
 
         BEARDED_AZALEA("beardedAzalea", "BlockBeardedAzalea"),
 
-        PLAYER_DETECTOR("playerDetector", "BlockPlayerDetector"),
-        PLAYER_DETECTOR_ACTIVATED("playerDetectorActivated", "BlockPlayerDetectorActivated");
+        PLAYER_DETECTOR("playerDetector", "BlockPlayerDetector");
 
         private String unlocalizedName;
         private String registryName;

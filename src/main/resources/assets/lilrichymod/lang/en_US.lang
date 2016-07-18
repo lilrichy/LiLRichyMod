@@ -5,6 +5,7 @@ item.deathSock.name=Death Sock
 item.concreteMix.name=Concrete Mix
 item.crushedConcrete.name=Crushed Concrete
 item.essenceOfBeard.name=Essence of Beard
+item.itemLampBase.name=Lamp Base
 
 #BLOCK TABLE
 tile.blockTable.name=Block Table
@@ -90,6 +91,8 @@ tile.stoneMineralsOrange.name=Stone Minerals Orange
 tile.stoneMineralsPurple.name=Stone Minerals Purple
 
 tile.charcoalBlock.name=Block of Charcoal
+tile.lamp.name=Lamp
+tile.glowstoneLamp.name=Glowstone Lamp
 
 #LEVERS
 tile.ironLever.name=Iron Lever

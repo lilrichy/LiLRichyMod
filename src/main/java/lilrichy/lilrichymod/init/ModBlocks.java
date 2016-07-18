@@ -1,6 +1,7 @@
 package lilrichy.lilrichymod.init;
 
 import lilrichy.lilrichymod.blocks.BlockCharcoalBlock;
+import lilrichy.lilrichymod.blocks.BlockLamp;
 import lilrichy.lilrichymod.blocks.ModBlockWall;
 import lilrichy.lilrichymod.blocks.blockTable.BlockTable;
 import lilrichy.lilrichymod.blocks.blockTable.TileEntityBlockTable;
@@ -134,6 +135,8 @@ public class ModBlocks {
 //----------------------------------------------------------------------------------------------------------------------
 
     public static Block charcoalBlock = new BlockCharcoalBlock();
+    public static Block lamp = new BlockLamp(Reference.ModBlocks.LAMP.getUnlocalizedName(), Reference.ModBlocks.LAMP.getRegistryName());
+    public static Block glowstoneLamp = new BlockLamp(Reference.ModBlocks.GLOWSTONE_LAMP.getUnlocalizedName(), Reference.ModBlocks.GLOWSTONE_LAMP.getRegistryName());
 
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -470,6 +473,9 @@ public class ModBlocks {
         registerBlock(charcoalBlock);
         OreDictionary.registerOre("blockCharcoal", charcoalBlock);
 
+        registerBlock(lamp);
+        registerBlock(glowstoneLamp);
+
 //----------------------------------------------------------------------------------------------------------------------
 
         registerBlock(ironLever);
@@ -613,6 +619,8 @@ public class ModBlocks {
 //----------------------------------------------------------------------------------------------------------------------
 
         registerRender(charcoalBlock);
+        registerRender(lamp);
+        registerRender(glowstoneLamp);
 
 //----------------------------------------------------------------------------------------------------------------------
 

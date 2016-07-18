@@ -1,6 +1,7 @@
 {
     "__comment": "Model generated using MrCrayfish's Model Creator (http://mrcrayfish.com/modelcreator/)",
     "textures": {
+      "particle": "lilrichymod:models/BlockTable/CurcitDesignThree",
         "0": "lilrichymod:models/BlockTable/CurcitDesignThree",
         "1": "lilrichymod:models/BlockTable/Arm",
         "2": "lilrichymod:models/BlockTable/CurcitDesignTwo",
