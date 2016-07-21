@@ -128,6 +128,7 @@ public class Reference {
         CHARCOAL_BLOCK("charcoalBlock", "BlockCharcoalBlock"),
         LAMP("lamp", "BlockLamp"),
         GLOWSTONE_LAMP("glowstoneLamp", "BlockGlowstoneLamp"),
+        TINY_GLOWSTONE_LAMP("tinyGlowstoneLamp", "BlockTinyGlowstoneLamp"),
 
         STONE_LEVER("stoneLever", "BlockStoneLever"),
         NETHER_BRICK_LEVER("netherBrickLever", "BlockNetherBrickLever"),

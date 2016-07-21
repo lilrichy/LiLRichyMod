@@ -93,6 +93,7 @@ tile.stoneMineralsPurple.name=Stone Minerals Purple
 tile.charcoalBlock.name=Block of Charcoal
 tile.lamp.name=Lamp
 tile.glowstoneLamp.name=Glowstone Lamp
+tile.tinyGlowstoneLamp.name=Tiny Glowstone Lamp
 
 #LEVERS
 tile.ironLever.name=Iron Lever

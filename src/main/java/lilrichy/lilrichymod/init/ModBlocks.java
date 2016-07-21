@@ -3,6 +3,7 @@ package lilrichy.lilrichymod.init;
 import lilrichy.lilrichymod.blocks.BlockCharcoalBlock;
 import lilrichy.lilrichymod.blocks.BlockLamp;
 import lilrichy.lilrichymod.blocks.ModBlockWall;
+import lilrichy.lilrichymod.blocks.TinyBlockLamp;
 import lilrichy.lilrichymod.blocks.blockTable.BlockTable;
 import lilrichy.lilrichymod.blocks.blockTable.TileEntityBlockTable;
 import lilrichy.lilrichymod.blocks.crops.BeardedAzalea;
@@ -137,6 +138,8 @@ public class ModBlocks {
     public static Block charcoalBlock = new BlockCharcoalBlock();
     public static Block lamp = new BlockLamp(Reference.ModBlocks.LAMP.getUnlocalizedName(), Reference.ModBlocks.LAMP.getRegistryName());
     public static Block glowstoneLamp = new BlockLamp(Reference.ModBlocks.GLOWSTONE_LAMP.getUnlocalizedName(), Reference.ModBlocks.GLOWSTONE_LAMP.getRegistryName());
+    public static Block tinyGlowstoneLamp = new TinyBlockLamp(Reference.ModBlocks.TINY_GLOWSTONE_LAMP.getUnlocalizedName(), Reference.ModBlocks.TINY_GLOWSTONE_LAMP.getRegistryName());
+
 
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -475,6 +478,7 @@ public class ModBlocks {
 
         registerBlock(lamp);
         registerBlock(glowstoneLamp);
+        registerBlock(tinyGlowstoneLamp);
 
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -621,6 +625,7 @@ public class ModBlocks {
         registerRender(charcoalBlock);
         registerRender(lamp);
         registerRender(glowstoneLamp);
+        registerRender(tinyGlowstoneLamp);
 
 //----------------------------------------------------------------------------------------------------------------------
 

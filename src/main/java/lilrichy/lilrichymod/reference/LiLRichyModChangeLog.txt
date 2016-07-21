@@ -3,7 +3,8 @@ Version = Minecraft Change . Forge Change . Mod change += incremental NEVER Rese
 Update version in this file, build.gradle, gradle.properties, Reference
 
 v4.0.1
-
+Added different models for lamps when placed upside down.
+Added Tiny Glowstone Lamp.
 
 v4.0.0
 Initial Build for Minecraft v 1.10.2
