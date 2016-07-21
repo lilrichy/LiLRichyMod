@@ -3,7 +3,7 @@
   "textures": {
     "particle": "lilrichymod:blocks/clearGlass",
     "0": "lilrichymod:blocks/charcoalBlock",
-    "1": "blocks/glowstone",
+    "1": "blocks/torch_on",
     "2": "lilrichymod:blocks/clearGlass"
   },
   "display": {
@@ -40,12 +40,12 @@
   },
   "elements": [
     {
-      "name": "base",
-      "from": [ 0.0, 0.0, 0.0 ],
-      "to": [ 16.0, 2.0, 16.0 ],
+      "name": "Base",
+      "from": [ 3.0, 14.0, 3.0 ],
+      "to": [ 13.0, 16.0, 13.0 ],
       "faces": {
         "north": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 1.0 ] },
-        "east": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 1.0 ] },
+        "east": { "texture": "#0", "uv": [ 0.0, 0.0, 15.0, 1.0 ] },
         "south": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 1.0 ] },
         "west": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 1.0 ] },
         "up": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
@@ -53,24 +53,24 @@
       }
     },
     {
-      "name": "Glowstone",
-      "from": [ 2.0, 2.0, 2.0 ],
-      "to": [ 14.0, 14.0, 14.0 ],
+      "name": "Torch",
+      "from": [ 7.0, 5.0, 7.0 ],
+      "to": [ 9.0, 14.0, 9.0 ],
       "faces": {
-        "north": { "texture": "#1", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
-        "east": { "texture": "#1", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
-        "south": { "texture": "#1", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
-        "west": { "texture": "#1", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
-        "up": { "texture": "#1", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
-        "down": { "texture": "#1", "uv": [ 0.0, 0.0, 16.0, 16.0 ] }
+        "north": { "texture": "#1", "uv": [ 7.0, 6.0, 9.0, 16.0 ], "rotation": 180 },
+        "east": { "texture": "#1", "uv": [ 7.0, 6.0, 9.0, 16.0 ], "rotation": 180 },
+        "south": { "texture": "#1", "uv": [ 7.0, 6.0, 9.0, 16.0 ], "rotation": 180 },
+        "west": { "texture": "#1", "uv": [ 7.0, 6.0, 9.0, 16.0 ], "rotation": 180 },
+        "up": { "texture": "#1", "uv": [ 7.0, 14.0, 9.0, 16.0 ] },
+        "down": { "texture": "#1", "uv": [ 7.0, 6.0, 9.0, 8.0 ] }
       }
     },
     {
       "name": "Glass",
-      "from": [ 0.0, 2.0, 0.0 ],
-      "to": [ 16.0, 16.0, 16.0 ],
+      "from": [ 1.5, 2.0, 1.5 ],
+      "to": [ 14.5, 14.0, 14.5 ],
       "faces": {
-        "north": { "texture": "#2", "uv": [ 0.0, 0.0, 16.0, 14.0 ] },
+        "north": { "texture": "#2", "uv": [ 0.0, 0.0, 16.0, 15.0 ] },
         "east": { "texture": "#2", "uv": [ 0.0, 0.0, 16.0, 14.0 ] },
         "south": { "texture": "#2", "uv": [ 0.0, 0.0, 16.0, 14.0 ] },
         "west": { "texture": "#2", "uv": [ 0.0, 0.0, 16.0, 14.0 ] },

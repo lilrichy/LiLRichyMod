@@ -1,5 +1,10 @@
 {
   "variants": {
-    "normal": { "model": "lilrichymod:BlockLamp" }
+    "up=false": {
+      "model": "lilrichymod:BlockLamp"
+    },
+    "up=true": {
+      "model": "lilrichymod:BlockLampUp"
+    }
   }
 }

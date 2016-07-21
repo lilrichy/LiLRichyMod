@@ -1,5 +1,10 @@
 {
   "variants": {
-    "normal": { "model": "lilrichymod:BlockGlowstoneLamp" }
+    "up=false": {
+      "model": "lilrichymod:BlockGlowstoneLamp"
+    },
+    "up=true": {
+      "model": "lilrichymod:BlockGlowstoneLampUp"
+    }
   }
 }

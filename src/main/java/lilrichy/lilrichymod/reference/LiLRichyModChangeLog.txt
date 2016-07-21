@@ -2,6 +2,9 @@ LiLRichy Mod Change Log
 Version = Minecraft Change . Forge Change . Mod change += incremental NEVER Reset
 Update version in this file, build.gradle, gradle.properties, Reference
 
+v4.0.1
+
+
 v4.0.0
 Initial Build for Minecraft v 1.10.2
 Updated some recipes to be more "ore dictionary friendly"
