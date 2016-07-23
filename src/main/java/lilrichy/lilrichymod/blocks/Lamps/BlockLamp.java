@@ -1,4 +1,4 @@
-package lilrichy.lilrichymod.blocks;
+package lilrichy.lilrichymod.blocks.Lamps;
 
 import lilrichy.lilrichymod.creativeTab.CreativeTabLiLRichyMod;
 import net.minecraft.block.Block;

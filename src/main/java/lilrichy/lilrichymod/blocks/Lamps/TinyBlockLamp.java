@@ -1,4 +1,4 @@
-package lilrichy.lilrichymod.blocks;
+package lilrichy.lilrichymod.blocks.Lamps;
 
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
@@ -15,8 +15,8 @@ import java.util.List;
  */
 public class TinyBlockLamp extends BlockLamp {
 
-    public static final AxisAlignedBB axisAlignedBB = new AxisAlignedBB(0.35D, 0.0D, 0.65D, 0.65D, 0.35D, 0.35D);
-    public static final AxisAlignedBB axisAlignedBBUP = new AxisAlignedBB(0.35D, 0.65D, 0.65D, 0.65D, 1.0D, 0.35D);
+    private static final AxisAlignedBB axisAlignedBB = new AxisAlignedBB(0.35D, 0.0D, 0.65D, 0.65D, 0.35D, 0.35D);
+    private static final AxisAlignedBB axisAlignedBBUP = new AxisAlignedBB(0.35D, 0.65D, 0.65D, 0.65D, 1.0D, 0.35D);
 
     public TinyBlockLamp(String unlocalizedName, String registryName) {
         super(unlocalizedName, registryName);

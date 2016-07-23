@@ -52,6 +52,10 @@ public class BlockRecipes {
         GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.tinyGlowstoneLamp, 4),
                 new ItemStack(ModBlocks.glowstoneLamp));
 
+        //Hanging Glowstone Lamp
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.hangingGlowstoneLamp, 4), " b ", "gsg", "ggg",
+                'g', "blockGlass", 'b', new ItemStack(ModItems.lampBase), 's', "glowstone"));
+
         //Walls
         GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.ironWall, 6), "   ", "bbb", "bbb",
                 'b', new ItemStack(Blocks.IRON_BLOCK));
