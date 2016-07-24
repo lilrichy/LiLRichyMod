@@ -2,10 +2,7 @@ package lilrichy.lilrichymod.init;
 
 
 import lilrichy.lilrichymod.creativeTab.CreativeTabLiLRichyMod;
-import lilrichy.lilrichymod.items.ItemConcreteMix;
-import lilrichy.lilrichymod.items.ItemCrushedConcrete;
-import lilrichy.lilrichymod.items.ItemEssenceOfBeard;
-import lilrichy.lilrichymod.items.ItemLampBase;
+import lilrichy.lilrichymod.items.*;
 import lilrichy.lilrichymod.reference.Reference;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -26,6 +23,9 @@ public class ModItems {
     public static Item essenceOfBeard;
     public static Item lampBase;
 
+    public static Item tape;
+    public static Item tapeMeasure;
+
     public static void init() {
 
         concreteMix = new ItemConcreteMix();
@@ -34,6 +34,9 @@ public class ModItems {
         crushedConcrete = new ItemCrushedConcrete();
         essenceOfBeard = new ItemEssenceOfBeard();
         lampBase = new ItemLampBase();
+
+        tape = new ItemTape();
+        tapeMeasure = new ItemTapeMeasure();
     }
 
     public static void register() {
@@ -43,6 +46,9 @@ public class ModItems {
         GameRegistry.register(essenceOfBeard);
         GameRegistry.register(lampBase);
 
+        GameRegistry.register(tape);
+        GameRegistry.register(tapeMeasure);
+
     }
 
     public static void registerRenders() {
@@ -51,6 +57,9 @@ public class ModItems {
         registerRender(crushedConcrete);
         registerRender(essenceOfBeard);
         registerRender(lampBase);
+
+        registerRender(tape);
+        registerRender(tapeMeasure);
 
     }
 

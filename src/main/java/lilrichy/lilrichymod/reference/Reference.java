@@ -23,7 +23,10 @@ public class Reference {
         ESSENCE_OF_BEARD("essenceOfBeard", "ItemEssenceOfBeard"),
         BEARDED_AZALEA_SEED("beardedAzaleaSeed", "ItemBeardedAzaleaSeed"),
         CRUSHED_CONCRETE("crushedConcrete", "ItemCrushedConcrete"),
-        LAMP_BASE("itemLampBase", "ItemLampBase");
+        LAMP_BASE("itemLampBase", "ItemLampBase"),
+
+        TAPE_MEASURE("itemTapeMeasure", "ItemTapeMeasure"),
+        TAPE("itemTape", "ItemTape");
 
         private String unlocalizedName;
         private String registryName;

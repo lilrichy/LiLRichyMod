@@ -6,6 +6,8 @@ item.concreteMix.name=Concrete Mix
 item.crushedConcrete.name=Crushed Concrete
 item.essenceOfBeard.name=Essence of Beard
 item.itemLampBase.name=Lamp Base
+item.itemTapeMeasure.name=Tape Measure
+item.itemTape.name=Tape
 
 #BLOCK TABLE
 tile.blockTable.name=Block Table

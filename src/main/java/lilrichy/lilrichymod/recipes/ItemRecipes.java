@@ -6,6 +6,7 @@ import lilrichy.lilrichymod.init.ModItems;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 
 /**
@@ -27,5 +28,12 @@ public class ItemRecipes {
         //Lamp Base
         GameRegistry.addRecipe(new ItemStack(ModItems.lampBase, 6), "   ", "   ", "ccc",
                 'c', new ItemStack(ModBlocks.charcoalBlock));
+
+        //Tape Measure
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.tape), "   ", " y ", "sss",
+                'y', "dyeYellow", 's', "string"));
+
+        GameRegistry.addRecipe(new ItemStack(ModItems.tapeMeasure), "iii", "iti", "iii",
+                'i', new ItemStack(Items.IRON_INGOT), 't', new ItemStack(ModItems.tape));
     }
 }
