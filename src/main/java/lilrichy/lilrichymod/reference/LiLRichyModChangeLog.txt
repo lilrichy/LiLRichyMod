@@ -2,6 +2,9 @@ LiLRichy Mod Change Log
 Version = Minecraft Change . Forge Change . Mod change += incremental NEVER Reset
 Update version in this file, build.gradle, gradle.properties, Reference
 
+v4.0.2
+Added Ore Dictionary support for lamp base recipe.
+
 v4.0.1
 Added different models for lamps when placed upside down.
 Added Tiny Glowstone Lamp.

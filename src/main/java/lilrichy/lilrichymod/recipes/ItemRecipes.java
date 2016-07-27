@@ -1,7 +1,6 @@
 package lilrichy.lilrichymod.recipes;
 
 
-import lilrichy.lilrichymod.init.ModBlocks;
 import lilrichy.lilrichymod.init.ModItems;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -26,8 +25,8 @@ public class ItemRecipes {
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.beardedAzaleaSeed), new ItemStack(ModItems.essenceOfBeard));
 
         //Lamp Base
-        GameRegistry.addRecipe(new ItemStack(ModItems.lampBase, 6), "   ", "   ", "ccc",
-                'c', new ItemStack(ModBlocks.charcoalBlock));
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.lampBase, 6), "   ", "   ", "ccc",
+                'c', "blockCharcoal"));
 
         //Tape Measure
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.tape), "   ", " y ", "sss",
