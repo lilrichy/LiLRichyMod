@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "up=false": {
+      "model": "lilrichymod:BlockReinforcedGlowstone"
+    },
+    "up=true": {
+      "model": "lilrichymod:BlockReinforcedGlowstone"
+    }
+  }
+}

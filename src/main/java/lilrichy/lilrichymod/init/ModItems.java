@@ -8,6 +8,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemDoor;
 import net.minecraft.item.ItemSeeds;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -26,6 +27,8 @@ public class ModItems {
     public static Item tape;
     public static Item tapeMeasure;
 
+    public static ItemDoor reinforcedObsidianDoor;
+
     public static void init() {
 
         concreteMix = new ItemConcreteMix();
@@ -37,6 +40,8 @@ public class ModItems {
 
         tape = new ItemTape();
         tapeMeasure = new ItemTapeMeasure();
+
+        reinforcedObsidianDoor = new ItemReinforcedObsidianDoor();
     }
 
     public static void register() {
@@ -49,6 +54,8 @@ public class ModItems {
         GameRegistry.register(tape);
         GameRegistry.register(tapeMeasure);
 
+        GameRegistry.register(reinforcedObsidianDoor);
+
     }
 
     public static void registerRenders() {
@@ -60,6 +67,8 @@ public class ModItems {
 
         registerRender(tape);
         registerRender(tapeMeasure);
+
+        registerRender(reinforcedObsidianDoor);
 
     }
 

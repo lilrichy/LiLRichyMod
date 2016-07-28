@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top",
+  "textures": {
+    "bottom": "blocks/obsidian",
+    "top": "lilrichymod:blocks/doors/reinforced_obsidian_upper"
+  }
+}

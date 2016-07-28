@@ -1,9 +1,9 @@
 package lilrichy.lilrichymod.init;
 
 import lilrichy.lilrichymod.blocks.BlockCharcoalBlock;
-import lilrichy.lilrichymod.blocks.Lamps.BlockHangingGlowstoneLamp;
-import lilrichy.lilrichymod.blocks.Lamps.BlockLamp;
-import lilrichy.lilrichymod.blocks.Lamps.TinyBlockLamp;
+import lilrichy.lilrichymod.blocks.BlockObsidianEncasedIron;
+import lilrichy.lilrichymod.blocks.BlockReinforcedObsidianDoor;
+import lilrichy.lilrichymod.blocks.Lamps.*;
 import lilrichy.lilrichymod.blocks.ModBlockWall;
 import lilrichy.lilrichymod.blocks.blockTable.BlockTable;
 import lilrichy.lilrichymod.blocks.blockTable.TileEntityBlockTable;
@@ -28,12 +28,16 @@ import lilrichy.lilrichymod.blocks.wards.TileEntityMobWard;
 import lilrichy.lilrichymod.reference.Names;
 import lilrichy.lilrichymod.reference.Reference;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockDoor;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.properties.IProperty;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.client.renderer.block.statemap.StateMap;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
@@ -137,11 +141,16 @@ public class ModBlocks {
 //----------------------------------------------------------------------------------------------------------------------
 
     public static Block charcoalBlock = new BlockCharcoalBlock();
-    public static Block lamp = new BlockLamp(Reference.ModBlocks.LAMP.getUnlocalizedName(), Reference.ModBlocks.LAMP.getRegistryName());
-    public static Block glowstoneLamp = new BlockLamp(Reference.ModBlocks.GLOWSTONE_LAMP.getUnlocalizedName(), Reference.ModBlocks.GLOWSTONE_LAMP.getRegistryName());
+    public static Block lamp = new BlockLamp(Material.GLASS, Reference.ModBlocks.LAMP.getUnlocalizedName(), Reference.ModBlocks.LAMP.getRegistryName());
+    public static Block glowstoneLamp = new BlockLamp(Material.GLASS, Reference.ModBlocks.GLOWSTONE_LAMP.getUnlocalizedName(), Reference.ModBlocks.GLOWSTONE_LAMP.getRegistryName());
     public static Block tinyGlowstoneLamp = new TinyBlockLamp(Reference.ModBlocks.TINY_GLOWSTONE_LAMP.getUnlocalizedName(), Reference.ModBlocks.TINY_GLOWSTONE_LAMP.getRegistryName());
     public static Block hangingGlowstoneLamp = new BlockHangingGlowstoneLamp(Reference.ModBlocks.HANGING_GLOWSTONE_LAMP.getUnlocalizedName(), Reference.ModBlocks.HANGING_GLOWSTONE_LAMP.getRegistryName());
+    public static Block reinforcedGlowstone = new BlockReinforcedGlowstone(Reference.ModBlocks.REINFORCED_GLOWSTONE.getUnlocalizedName(), Reference.ModBlocks.REINFORCED_GLOWSTONE.getRegistryName());
+    public static Block obsidianEncasedIron = new BlockObsidianEncasedIron();
+    public static Block obsidianReinforcedLamp = new BlockObsidianReinforcedLamp(Reference.ModBlocks.OBSIDIAN_REINFORCED_LAMP.getUnlocalizedName(), Reference.ModBlocks.OBSIDIAN_REINFORCED_LAMP.getRegistryName());
 
+
+    public static Block reinforcedObsidianDoor = new BlockReinforcedObsidianDoor();
 //----------------------------------------------------------------------------------------------------------------------
 
     public static Block ironLever = new BlockIronLever().setHardness(5.0F);
@@ -481,6 +490,12 @@ public class ModBlocks {
         registerBlock(glowstoneLamp);
         registerBlock(tinyGlowstoneLamp);
         registerBlock(hangingGlowstoneLamp);
+        registerBlock(reinforcedGlowstone);
+        registerBlock(obsidianEncasedIron);
+        registerBlock(obsidianReinforcedLamp);
+
+        GameRegistry.register(reinforcedObsidianDoor);
+        ignorePoweredDoor(reinforcedObsidianDoor);
 
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -629,6 +644,10 @@ public class ModBlocks {
         registerRender(glowstoneLamp);
         registerRender(tinyGlowstoneLamp);
         registerRender(hangingGlowstoneLamp);
+        registerRender(reinforcedGlowstone);
+        registerRender(obsidianEncasedIron);
+        registerRender(obsidianReinforcedLamp);
+
 
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -659,6 +678,12 @@ public class ModBlocks {
 //----------------------------------------------------------------------------------------------------------------------
 
     }
+
+    public static void ignorePoweredDoor(Block block) {
+        ModelLoader.setCustomStateMapper(block, (new StateMap.Builder()).ignore(new IProperty[]{
+                BlockDoor.POWERED}).build());
+    }
+
 
     public static void registerRender(Block block) {
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(

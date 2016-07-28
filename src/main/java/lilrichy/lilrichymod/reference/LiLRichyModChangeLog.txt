@@ -4,6 +4,7 @@ Update version in this file, build.gradle, gradle.properties, Reference
 
 v4.0.2
 Added Ore Dictionary support for lamp base recipe.
+Added Obsidian Encased Iron, Reinforced Glowstone, Obsidian Reinforced Lamp, and Obsidian Reinforced Door.
 
 v4.0.1
 Added different models for lamps when placed upside down.

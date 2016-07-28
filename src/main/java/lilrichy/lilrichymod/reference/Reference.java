@@ -26,7 +26,9 @@ public class Reference {
         LAMP_BASE("itemLampBase", "ItemLampBase"),
 
         TAPE_MEASURE("itemTapeMeasure", "ItemTapeMeasure"),
-        TAPE("itemTape", "ItemTape");
+        TAPE("itemTape", "ItemTape"),
+
+        REINFORCED_OBSIDIAN_DOOR("itemReinforcedObsidianDoor", "ItemReinforcedObsidianDoor");
 
         private String unlocalizedName;
         private String registryName;
@@ -133,6 +135,11 @@ public class Reference {
         GLOWSTONE_LAMP("glowstoneLamp", "BlockGlowstoneLamp"),
         TINY_GLOWSTONE_LAMP("tinyGlowstoneLamp", "BlockTinyGlowstoneLamp"),
         HANGING_GLOWSTONE_LAMP("hangingGlowstoneLamp", "BlockHangingGlowstoneLamp"),
+        REINFORCED_GLOWSTONE("reinforcedGlowstone", "BlockReinforcedGlowstone"),
+        OBSIDIAN_ENCASED_IRON("obsidianEncasedIron", "BlockObsidianEncasedIron"),
+        OBSIDIAN_REINFORCED_LAMP("obsidianReinforcedLamp", "BlockObsidianReinforcedLamp"),
+
+        REINFORCED_OBSIDIAN_DOOR("reinforcedObsidianDoor", "BlockReinforcedObsidianDoor"),
 
         STONE_LEVER("stoneLever", "BlockStoneLever"),
         NETHER_BRICK_LEVER("netherBrickLever", "BlockNetherBrickLever"),

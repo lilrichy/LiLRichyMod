@@ -8,6 +8,7 @@ item.essenceOfBeard.name=Essence of Beard
 item.itemLampBase.name=Lamp Base
 item.itemTapeMeasure.name=Tape Measure
 item.itemTape.name=Tape
+item.itemReinforcedObsidianDoor.name=Reinforced Obsidian Door
 
 #BLOCK TABLE
 tile.blockTable.name=Block Table
@@ -45,7 +46,6 @@ tile.metalPlatingDark.name=Metal Plating Dark
 tile.metalRustedIronGrip.name=Metal Rusted Iron Grip
 tile.metalSeafoamTarnish.name=Metal Sea Foam Tarnish
 tile.metalStained.name=Metal Stained
-
 tile.metalBatteredRobotBlue.name=Metal Battered Robot Blue
 tile.metalBatteredRobotOrange.name=Metal Battered Robot Orange
 tile.metalBatteredRobotPurple.name=Metal Battered Robot Purple
@@ -57,7 +57,6 @@ tile.lavaDeepFire.name=Lava Deep Fire
 tile.lavaPelesLake.name=Lava Pele's Lake
 tile.lavaSearingGorge.name=Lava Searing Gorge
 tile.lavaSlumberingVolcano.name=Lava Slumbering Volcano
-
 tile.lavaBowlBlue.name=Lava Bowl Blue
 tile.lavaBowlGreen.name=Lava Bowl Green
 tile.lavaBowlPurple.name=Lava Bowl Purple
@@ -87,16 +86,21 @@ tile.stoneArrangedBricks.name=Arranged Stone Bricks
 tile.stoneBlocks.name=Stone Blocks
 tile.stoneBlocksDark.name=Dark Stone Blocks
 tile.stoneMinerals.name=Stone Minerals
-
 tile.stoneMineralsBlue.name=Stone Minerals Blue
 tile.stoneMineralsOrange.name=Stone Minerals Orange
 tile.stoneMineralsPurple.name=Stone Minerals Purple
 
+#Mis Blocks
 tile.charcoalBlock.name=Block of Charcoal
+tile.obsidianEncasedIron.name=Obsidian Encased Iron
+
+#Lamps
 tile.lamp.name=Lamp
 tile.glowstoneLamp.name=Glowstone Lamp
 tile.tinyGlowstoneLamp.name=Tiny Glowstone Lamp
 tile.hangingGlowstoneLamp.name=Hanging Glowstone Lamp
+tile.reinforcedGlowstone.name=Reinforced Glowstone
+tile.obsidianReinforcedLamp.name=Obsidian Reinforced Lamp
 
 #LEVERS
 tile.ironLever.name=Iron Lever
@@ -104,7 +108,6 @@ tile.netherBrickLever.name=Nether Brick Lever
 tile.obsidianLever.name=Obsidian Lever
 tile.stoneBrickLever.name=Stone Brick Lever
 tile.stoneLever.name=Stone Lever
-
 
 #WALLS
 tile.ironWall.name=Iron Wall

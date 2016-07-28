@@ -1,5 +1,6 @@
 package lilrichy.lilrichymod.blocks.Lamps;
 
+import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -19,7 +20,7 @@ public class TinyBlockLamp extends BlockLamp {
     private static final AxisAlignedBB axisAlignedBBUP = new AxisAlignedBB(0.35D, 0.65D, 0.65D, 0.65D, 1.0D, 0.35D);
 
     public TinyBlockLamp(String unlocalizedName, String registryName) {
-        super(unlocalizedName, registryName);
+        super(Material.GLASS, unlocalizedName, registryName);
     }
 
     @Override

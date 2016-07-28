@@ -1,6 +1,7 @@
 package lilrichy.lilrichymod.recipes;
 
 
+import lilrichy.lilrichymod.init.ModBlocks;
 import lilrichy.lilrichymod.init.ModItems;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -34,5 +35,9 @@ public class ItemRecipes {
 
         GameRegistry.addRecipe(new ItemStack(ModItems.tapeMeasure), "iii", "iti", "iii",
                 'i', new ItemStack(Items.IRON_INGOT), 't', new ItemStack(ModItems.tape));
+
+        //Reinforced Obsidian Door
+        GameRegistry.addRecipe(new ItemStack(ModItems.reinforcedObsidianDoor), "oo", "oo", "oo",
+                'o', new ItemStack(ModBlocks.obsidianEncasedIron));
     }
 }

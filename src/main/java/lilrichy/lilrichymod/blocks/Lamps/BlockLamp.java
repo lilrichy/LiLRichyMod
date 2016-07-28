@@ -23,8 +23,8 @@ public class BlockLamp extends Block {
 
     public static final PropertyBool isUp = PropertyBool.create("up");
 
-    public BlockLamp(String unlocalizedName, String registryName) {
-        super(Material.GLASS);
+    public BlockLamp(Material material, String unlocalizedName, String registryName) {
+        super(material);
         setUnlocalizedName(unlocalizedName);
         setRegistryName(registryName);
         this.setCreativeTab(CreativeTabLiLRichyMod.LR_Tab);

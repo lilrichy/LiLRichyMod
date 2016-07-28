@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "up=false": {
+      "model": "lilrichymod:BlockObsidianReinforcedLamp"
+    },
+    "up=true": {
+      "model": "lilrichymod:BlockObsidianReinforcedLamp"
+    }
+  }
+}

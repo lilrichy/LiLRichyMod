@@ -56,6 +56,16 @@ public class BlockRecipes {
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.hangingGlowstoneLamp, 4), " b ", "gsg", "ggg",
                 'g', "blockGlass", 'b', new ItemStack(ModItems.lampBase), 's', "glowstone"));
 
+        //Reinforced Obsidian Lamp
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.obsidianEncasedIron), "ooo", "oio", "ooo",
+                'o', "obsidian", 'i', "blockIron"));
+
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.reinforcedGlowstone), "bbb", "bgb", "bbb",
+                'b', new ItemStack(Blocks.IRON_BARS), 'g', "glowstone"));
+
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.obsidianReinforcedLamp), "ooo", "oro", "ooo",
+                'o', new ItemStack(ModBlocks.obsidianEncasedIron), 'r', new ItemStack(ModBlocks.reinforcedGlowstone));
+
         //Walls
         GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.ironWall, 6), "   ", "bbb", "bbb",
                 'b', new ItemStack(Blocks.IRON_BLOCK));
