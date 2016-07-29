@@ -9,7 +9,7 @@ public class Reference {
     //Version 2.x = 1.8.9
     //Version 3.x = 1.9.4
     //Version 4.x = 1.10
-    public static final String MOD_VERSION = "4.0.2";
+    public static final String MOD_VERSION = "4.1.3";
 
     public static final String ACCEPTED_VERSIONS = "[1.10.2]";
 
