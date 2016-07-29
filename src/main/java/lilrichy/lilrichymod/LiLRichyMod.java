@@ -34,6 +34,7 @@ public class LiLRichyMod {
     public void preInit(FMLPreInitializationEvent event) {
         LogHelper.info("LILRICHY MOD IS BOOTING UP!!!!!!!!!");
         LogHelper.info("PreInit:");
+        proxy.preInit();
 
         //Config File
         LogHelper.info("Loading Config File");
@@ -65,7 +66,6 @@ public class LiLRichyMod {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
         LogHelper.info("Init:");
-        LogHelper.info("Loading Models");
         proxy.init();
 
         LogHelper.info("Recipes Loading");

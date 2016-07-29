@@ -28,16 +28,12 @@ import lilrichy.lilrichymod.blocks.wards.TileEntityMobWard;
 import lilrichy.lilrichymod.reference.Names;
 import lilrichy.lilrichymod.reference.Reference;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockDoor;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.client.renderer.block.statemap.StateMap;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
@@ -495,7 +491,6 @@ public class ModBlocks {
         registerBlock(obsidianReinforcedLamp);
 
         GameRegistry.register(reinforcedObsidianDoor);
-        ignorePoweredDoor(reinforcedObsidianDoor);
 
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -648,7 +643,6 @@ public class ModBlocks {
         registerRender(obsidianEncasedIron);
         registerRender(obsidianReinforcedLamp);
 
-
 //----------------------------------------------------------------------------------------------------------------------
 
         registerRender(ironLever);
@@ -676,16 +670,9 @@ public class ModBlocks {
         registerRender(beardedAzalea);
 
 //----------------------------------------------------------------------------------------------------------------------
-
     }
 
-    public static void ignorePoweredDoor(Block block) {
-        ModelLoader.setCustomStateMapper(block, (new StateMap.Builder()).ignore(new IProperty[]{
-                BlockDoor.POWERED}).build());
-    }
-
-
-    public static void registerRender(Block block) {
+    private static void registerRender(Block block) {
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(
                 Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName(), "inventory"));
     }

@@ -2,6 +2,9 @@ LiLRichy Mod Change Log
 Version = Minecraft Change . Forge Change . Mod change += incremental NEVER Reset
 Update version in this file, build.gradle, gradle.properties, Reference
 
+v4.0.1
+Fixed Server Crash due to state mapper being on wrong proxy.
+
 v4.0.2
 Added Ore Dictionary support for lamp base recipe.
 Added Obsidian Encased Iron, Reinforced Glowstone, Obsidian Reinforced Lamp, and Obsidian Reinforced Door.
