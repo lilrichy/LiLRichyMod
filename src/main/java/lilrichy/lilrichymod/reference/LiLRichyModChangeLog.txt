@@ -2,6 +2,9 @@ LiLRichy Mod Change Log
 Version = Minecraft Change . Forge Change . Mod change += incremental NEVER Reset
 Update version in this file, build.gradle, gradle.properties, Reference
 
+v4.2.4
+Update Mod to Forge 12.18.1.2043
+
 v4.1.3
 Updated Mod to Forge 12.18.1.2029
 Fixed Server Crash due to state mapper being on wrong proxy.
